@@ -1,9 +1,11 @@
 RewriteEngine On
 
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 # Redirect root to Swedish version
 RewriteRule ^$ /sv/ [R=301,L]
 
-# Serve locale directories
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# Redirect /sv and /en without trailing slash
 RewriteRule ^(sv|en)$ /$1/ [R=301,L]
