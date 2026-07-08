@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/constants";
+import { localeUrl } from "@/lib/locale-url";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SetHtmlLang } from "@/components/layout/set-html-lang";
@@ -24,21 +24,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const languages: Record<string, string> = {};
   for (const loc of routing.locales) {
-    languages[loc] = `${SITE_URL}/${loc}/`;
+    languages[loc] = localeUrl(loc);
   }
-  languages["x-default"] = `${SITE_URL}/sv/`;
+  languages["x-default"] = localeUrl(routing.defaultLocale);
 
   return {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `${SITE_URL}/${locale}/`,
+      canonical: localeUrl(locale),
       languages,
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `${SITE_URL}/${locale}/`,
+      url: localeUrl(locale),
       siteName: "A2M Tech",
       locale: locale === "sv" ? "sv_SE" : "en_US",
       type: "website",
