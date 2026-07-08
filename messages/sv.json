@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "title": "A2M Tech – Pålitlig IT-partner för offentlig sektor",
+    "description": "A2M Tech levererar säkra IT-lösningar, dataplattformar och erfarna konsulter till myndigheter och offentlig verksamhet. Strukturerad leverans enligt upphandling och ramavtal."
+  },
+  "nav": {
+    "services": "Tjänster",
+    "howWeWork": "Så arbetar vi",
+    "forWho": "För vem",
+    "about": "Om oss",
+    "bookMeeting": "Boka introduktion",
+    "menu": "Meny",
+    "closeMenu": "Stäng meny"
+  },
+  "hero": {
+    "badge": "IT-partner för offentlig sektor",
+    "title": "Pålitlig IT-partner för myndigheter och offentlig verksamhet",
+    "subtitle": "Vi levererar säkra IT-lösningar, dataplattformar och erfarna konsulter – med strukturerad leverans enligt upphandlingskrav och etablerade ramavtal.",
+    "ctaPrimary": "Boka introduktion",
+    "trust1": "Erfaren leverans i komplexa IT-miljöer",
+    "trust2": "Säkerhet, kvalitet och dokumentation i fokus",
+    "trust3": "Strukturerad modell för upphandling och ramavtal"
+  },
+  "trustBar": {
+    "security": {
+      "title": "Säkerhet",
+      "description": "Skydd av känslig data och kritiska system enligt etablerade principer."
+    },
+    "documentation": {
+      "title": "Dokumentation",
+      "description": "Tydlig dokumentation och spårbarhet genom hela leveransprocessen."
+    },
+    "procurement": {
+      "title": "Upphandling",
+      "description": "Erfarenhet av offentliga upphandlingar och ramavtal."
+    },
+    "delivery": {
+      "title": "Erfaren leverans",
+      "description": "Senior kompetens med bevisad erfarenhet från komplexa IT-uppdrag."
+    }
+  },
+  "services": {
+    "title": "Tjänster",
+    "subtitle": "Specialistkompetens inom modern IT – från kravställning och utveckling till drift och vidareutveckling.",
+    "mobile": {
+      "title": "Mobilapplikationer",
+      "description": "Utveckling av säkra appar för iOS och Android – från kravställning och design till lansering och förvaltning."
+    },
+    "data": {
+      "title": "Data & analys",
+      "description": "Dataplattformar, pipelines och analys som omvandlar data till beslutsunderlag för verksamheten."
+    },
+    "consulting": {
+      "title": "IT-konsulting",
+      "description": "Seniora konsulter som förstärker er organisation med rätt kompetens vid rätt tidpunkt."
+    },
+    "security": {
+      "title": "Cybersäkerhet",
+      "description": "Säker arkitektur, riskbedömning och skydd av känslig data och kritiska system."
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Automatisering, CI/CD och molninfrastruktur som säkerställer stabil och förutsägbar leverans."
+    },
+    "workspace": {
+      "title": "Digital arbetsplats",
+      "description": "Moderna arbetsverktyg och samarbetslösningar anpassade för er verksamhet."
+    }
+  },
+  "howWeWork": {
+    "title": "Så arbetar vi",
+    "subtitle": "Vi kombinerar teknisk spets med förståelse för offentlig verksamhet – oavsett om ni behöver en hel lösning eller förstärkning i ert team.",
+    "solutions": {
+      "title": "Skräddarsydda lösningar",
+      "description": "Vi bygger och levererar IT-lösningar anpassade efter era krav – från mobilappar och dataplattformar till integrationer och molnmiljöer."
+    },
+    "procurement": {
+      "title": "Upphandlingar & ramavtal",
+      "description": "Vi deltar i offentliga upphandlingar och levererar enligt era ramavtal, kravspecifikationer och kvalitetssäkring."
+    },
+    "consultants": {
+      "title": "Erfarna konsulter & kvalitetssäkrad leverans",
+      "description": "Senior kompetens med tydliga leveransmodeller, förutsägbara processer och fokus på långsiktig kvalitet i varje uppdrag."
+    }
+  },
+  "forWho": {
+    "title": "För vem vi arbetar",
+    "subtitle": "Vi samarbetar med organisationer som värdesätter kvalitet, säkerhet och långsiktiga relationer.",
+    "public": {
+      "title": "Offentlig sektor",
+      "description": "Myndigheter, kommuner och regioner som behöver en pålitlig IT-partner med förståelse för upphandling, säkerhetskrav och offentlig förvaltning."
+    },
+    "business": {
+      "title": "Företag",
+      "description": "Etablerade aktörer som behöver skalbara digitala lösningar och specialistkompetens med hög kvalitet."
+    },
+    "partners": {
+      "title": "Utvalda samarbeten",
+      "description": "Kompletterande kompetens i samverkan med etablerade aktörer vid behov av bredare resurser."
+    }
+  },
+  "about": {
+    "title": "Om A2M Tech",
+    "paragraph1": "A2M Tech AB är ett IT-konsultbolag baserat i Helsingborg. Vårt team har samlad erfarenhet från komplexa IT-uppdrag inom offentlig sektor och näringsliv.",
+    "paragraph2": "Vi kombinerar djup kompetens inom mobilutveckling, data engineering, moln och cybersäkerhet med förståelse för upphandlingsprocesser och verksamhetskrav.",
+    "paragraph3": "Oavsett om ni behöver en komplett lösning, seniora konsulter för ett pågående projekt eller en partner i en upphandling – vi levererar med struktur, kvalitet och förutsägbarhet.",
+    "stats": {
+      "experience": "Samlad erfarenhet",
+      "experienceValue": "10+ år",
+      "focus": "Fokus",
+      "focusValue": "Offentlig sektor & IT",
+      "delivery": "Leverans",
+      "deliveryValue": "Säkerhet & kvalitet"
+    }
+  },
+  "team": {
+    "title": "Vårt team",
+    "subtitle": "Seniora konsulter med djup teknisk kompetens och erfarenhet från offentlig sektor och näringsliv.",
+    "anasRole": "VD & IT-konsult",
+    "anasBio": "Mångsidig IT-konsult med stark grund inom mjukvaruutveckling, infrastruktur och säkerhet. Levererar skalbara och säkra lösningar med tydlig koppling till verksamhetens behov.",
+    "abdulrahmanRole": "Data Engineer",
+    "abdulrahmanBio": "Erfaren data engineer med fokus på skalbara datapipelines, maskininlärning och molnlösningar. Specialiserad på att omvandla data till mätbar verksamhetsnytta.",
+    "tags": {
+      "consulting": "Konsulting",
+      "mobile": "Mobil",
+      "security": "Säkerhet",
+      "data": "Data",
+      "ml": "AI/ML",
+      "cloud": "Moln"
+    }
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "subtitle": "Vi tar gärna ett första samtal om ert uppdrag eller kommande upphandling.",
+    "phone": "Telefon",
+    "email": "E-post",
+    "linkedin": "LinkedIn",
+    "orgNumber": "Org.nr",
+    "address": "Adress",
+    "bookMeeting": "Boka introduktion via Calendly"
+  },
+  "footer": {
+    "tagline": "Pålitlig IT-partner för offentlig sektor och näringsliv.",
+    "rights": "Alla rättigheter förbehållna.",
+    "company": "A2M Tech AB"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "title": "A2M Tech – Trusted IT Partner for the Public Sector",
+    "description": "A2M Tech delivers secure IT solutions, data platforms, and experienced consultants to agencies and public organisations. Structured delivery aligned with procurement and framework agreements."
+  },
+  "nav": {
+    "services": "Services",
+    "howWeWork": "How we work",
+    "forWho": "Who we serve",
+    "about": "About",
+    "bookMeeting": "Book an introduction",
+    "menu": "Menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "IT partner for the public sector",
+    "title": "Trusted IT partner for agencies and public organisations",
+    "subtitle": "We deliver secure IT solutions, data platforms, and experienced consultants – with structured delivery aligned with procurement requirements and established framework agreements.",
+    "ctaPrimary": "Book an introduction",
+    "trust1": "Proven delivery in complex IT environments",
+    "trust2": "Security, quality, and documentation at the core",
+    "trust3": "Structured approach to procurement and framework agreements"
+  },
+  "trustBar": {
+    "security": {
+      "title": "Security",
+      "description": "Protection of sensitive data and critical systems following established principles."
+    },
+    "documentation": {
+      "title": "Documentation",
+      "description": "Clear documentation and traceability throughout the delivery process."
+    },
+    "procurement": {
+      "title": "Procurement",
+      "description": "Experience with public procurements and framework agreements."
+    },
+    "delivery": {
+      "title": "Proven delivery",
+      "description": "Senior expertise with demonstrated experience from complex IT engagements."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Specialist expertise in modern IT – from requirements and development to operations and continuous improvement.",
+    "mobile": {
+      "title": "Mobile applications",
+      "description": "Development of secure apps for iOS and Android – from requirements and design to launch and maintenance."
+    },
+    "data": {
+      "title": "Data & analytics",
+      "description": "Data platforms, pipelines, and analytics that turn data into decision support for your organisation."
+    },
+    "consulting": {
+      "title": "IT consulting",
+      "description": "Senior consultants who strengthen your organisation with the right skills at the right time."
+    },
+    "security": {
+      "title": "Cybersecurity",
+      "description": "Secure architecture, risk assessment, and protection of sensitive data and critical systems."
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Automation, CI/CD, and cloud infrastructure that ensures stable and predictable delivery."
+    },
+    "workspace": {
+      "title": "Digital workspace",
+      "description": "Modern workplace tools and collaboration solutions tailored to your organisation."
+    }
+  },
+  "howWeWork": {
+    "title": "How we work",
+    "subtitle": "We combine technical excellence with an understanding of public sector operations – whether you need a full solution or team reinforcement.",
+    "solutions": {
+      "title": "Tailored solutions",
+      "description": "We build and deliver IT solutions adapted to your requirements – from mobile apps and data platforms to integrations and cloud environments."
+    },
+    "procurement": {
+      "title": "Procurements & framework agreements",
+      "description": "We participate in public procurements and deliver according to your framework agreements, specifications, and quality assurance."
+    },
+    "consultants": {
+      "title": "Experienced consultants & quality-assured delivery",
+      "description": "Senior expertise with clear delivery models, predictable processes, and a focus on long-term quality in every engagement."
+    }
+  },
+  "forWho": {
+    "title": "Who we work with",
+    "subtitle": "We collaborate with organisations that value quality, security, and long-term relationships.",
+    "public": {
+      "title": "Public sector",
+      "description": "Agencies, municipalities, and regions that need a reliable IT partner with an understanding of procurement, security requirements, and public administration."
+    },
+    "business": {
+      "title": "Business",
+      "description": "Established organisations needing scalable digital solutions and specialist expertise of the highest quality."
+    },
+    "partners": {
+      "title": "Selected collaborations",
+      "description": "Complementary expertise in cooperation with established partners when broader resources are required."
+    }
+  },
+  "about": {
+    "title": "About A2M Tech",
+    "paragraph1": "A2M Tech AB is an IT consultancy based in Helsingborg, Sweden. Our team brings combined experience from complex IT engagements in the public sector and business.",
+    "paragraph2": "We combine deep expertise in mobile development, data engineering, cloud, and cybersecurity with an understanding of procurement processes and operational requirements.",
+    "paragraph3": "Whether you need a complete solution, senior consultants for an ongoing project, or a partner in a procurement – we deliver with structure, quality, and predictability.",
+    "stats": {
+      "experience": "Combined experience",
+      "experienceValue": "10+ years",
+      "focus": "Focus",
+      "focusValue": "Public sector & IT",
+      "delivery": "Delivery",
+      "deliveryValue": "Security & quality"
+    }
+  },
+  "team": {
+    "title": "Our team",
+    "subtitle": "Senior consultants with deep technical expertise and experience from the public sector and business.",
+    "anasRole": "CEO & IT Consultant",
+    "anasBio": "A versatile IT consultant with a strong foundation in software development, infrastructure, and security. Delivers scalable, secure solutions with a clear link to operational needs.",
+    "abdulrahmanRole": "Data Engineer",
+    "abdulrahmanBio": "Experienced data engineer focused on scalable data pipelines, machine learning, and cloud solutions. Specialised in turning data into measurable business value.",
+    "tags": {
+      "consulting": "Consulting",
+      "mobile": "Mobile",
+      "security": "Security",
+      "data": "Data",
+      "ml": "AI/ML",
+      "cloud": "Cloud"
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "We welcome an initial conversation about your engagement or upcoming procurement.",
+    "phone": "Phone",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "orgNumber": "Org. no.",
+    "address": "Address",
+    "bookMeeting": "Book an introduction via Calendly"
+  },
+  "footer": {
+    "tagline": "Trusted IT partner for the public sector and business.",
+    "rights": "All rights reserved.",
+    "company": "A2M Tech AB"
+  }
+}
