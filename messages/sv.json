@@ -657,13 +657,13 @@
     "controllerTitle": "Personuppgiftsansvarig",
     "controllerBody": "A2M Tech AB, e-post abbe.mofleh@a2m-tech.com, telefon 010-114 65 59.",
     "collectTitle": "Vilka uppgifter samlar vi in?",
-    "collectBody": "Via kontaktformuläret och nyhetsbrevsformuläret kan ni lämna namn, organisation, e-post, telefon och meddelande. Om ni ringer oss behandlar vi de uppgifter som behövs för att återkomma. För webbanalys (efter samtycke) samlas aggregerade besöksmått in via Umami.",
+    "collectBody": "Via kontaktformuläret och nyhetsbrevsformuläret kan ni lämna namn, organisation, e-post, telefon och meddelande. Om ni ringer oss behandlar vi de uppgifter som behövs för att återkomma. För webbanalys samlas aggregerade besöksmått in via Umami. Besöksaviseringar kan innehålla sid-URL, referrer och teknisk metadata.",
     "purposeTitle": "Ändamål",
     "purposeBody": "Att besvara förfrågningar, föra dialog om eventuella uppdrag, skicka insikter ni själva prenumererat på, samt – med samtycke – förstå hur webbplatsen används.",
     "shareTitle": "Delning",
     "shareBody": "Nyhetsbrevsprenumerationer synkas till vår självhostade Listmonk-instans. LinkedIn används endast om ni själva kontaktar oss där. Vi säljer inte personuppgifter.",
     "analyticsTitle": "Analys",
-    "analyticsBody": "Umami körs först efter att ni godkänt analyscookies. Umami är privacy-vänlig, förstapart och används utan reklamprofiler. Google Analytics 4 aktiveras endast om ni uttryckligen godkänner marknadsföringskategorin och den är konfigurerad.",
+    "analyticsBody": "Privacy-vänlig analys via Umami körs vid besök för att förbättra webbplatsen. Google Analytics 4 aktiveras endast efter uttryckligt samtycke. Besöksaviseringar kan skickas internt till A2M Tech med sidoadress, referrer och UTM (rate-begränsat).",
     "rightsTitle": "Era rättigheter",
     "rightsBody": "Ni kan begära tillgång, rättelse eller radering enligt gällande lagstiftning, samt avregistrera er från nyhetsbrevet. Kontakta abbe.mofleh@a2m-tech.com.",
     "contactTitle": "Kontakt"
@@ -671,13 +671,13 @@
   "cookies": {
     "title": "Cookies",
     "updated": "Senast uppdaterad: 16 augusti 2026",
-    "intro": "Vi använder cookies och liknande teknik enligt kategorierna nedan. Ni styr analys via cookie-banner vid första besök.",
+    "intro": "Vi använder nödvändiga funktioner och privacy-vänlig analys. Ni får information via banner vid första besök.",
     "necessaryTitle": "Nödvändiga",
-    "necessaryBody": "Krävs för grundläggande funktion. Lagrar ert cookie-val lokalt (localStorage). Kan inte stängas av.",
+    "necessaryBody": "Lagrar cookie-val och sessionsflagga för besöksavisering lokalt i webbläsaren.",
     "analyticsTitle": "Analys (Umami)",
-    "analyticsBody": "Efter samtycke laddas Umami från umami.volontera.se för att mäta sidvisningar, källor och engagemang. Inga reklamcookies. Respekterar Do Not Track.",
+    "analyticsBody": "Umami laddas direkt vid besök från umami.volontera.se. Mäter sidvisningar, källor och engagemang utan reklamcookies. Vid nytt besök kan en avisering skickas till A2M Tech (rate-begränsad).",
     "thirdTitle": "Marknadsföring / tredje part",
-    "thirdBody": "Google Analytics 4 aktiveras endast om ni godkänner marknadsföringskategorin och den är konfigurerad. Länkar till LinkedIn kan leda till tjänster som sätter egna cookies enligt deras villkor."
+    "thirdBody": "Google Analytics 4 aktiveras endast efter uttryckligt godkännande. Länkar till LinkedIn kan sätta egna cookies enligt deras villkor."
   },
   "notFound": {
     "title": "Sidan hittades inte",
@@ -720,19 +720,10 @@
   },
   "cookieBanner": {
     "eyebrow": "Kakor & analys",
-    "body": "Vi använder nödvändiga funktioner för att sajten ska fungera. Med ert samtycke aktiverar vi privacy-vänlig webbanalys (Umami) för att förstå hur sajten används. Ni kan ändra valet när som helst.",
-    "categories": "Kakategorier",
-    "necessary": "Nödvändiga",
-    "necessaryHint": "Alltid på. Lagrar ert cookie-val lokalt i webbläsaren.",
-    "analytics": "Analys",
-    "analyticsHint": "Umami – förstapart, ingen reklam, respekterar Do Not Track.",
-    "marketing": "Marknadsföring / GA4",
-    "marketingHint": "Google Analytics 4 – endast om ni uttryckligen godkänner.",
+    "body": "Vi använder privacy-vänlig webbanalys (Umami) direkt för att förstå hur sajten används – utan reklamprofiler. Eventuell Google Analytics kräver separat godkännande.",
     "acceptAll": "Acceptera alla",
-    "necessaryOnly": "Endast nödvändiga",
-    "showDetails": "Anpassa",
-    "hideDetails": "Dölj detaljer",
-    "save": "Spara val",
+    "necessaryOnly": "Utan Google Analytics",
+    "gotIt": "Jag förstår",
     "policy": "Cookiepolicy"
   }
 }

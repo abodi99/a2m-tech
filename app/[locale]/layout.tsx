@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/footer";
 import { SkipLink } from "@/components/layout/skip-link";
 import { SetHtmlLang } from "@/components/layout/set-html-lang";
 import { CookieConsent } from "@/components/analytics/cookie-consent";
+import { VisitNotifier } from "@/components/analytics/visit-notifier";
 
 const umamiUrl = process.env.NEXT_PUBLIC_UMAMI_URL ?? "";
 const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ?? "";
@@ -33,12 +34,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  const analyticsCfg = JSON.stringify({
-    umamiUrl,
-    umamiWebsiteId,
-    gaMeasurementId,
-  });
-
   return (
     <NextIntlClientProvider messages={messages}>
       <SetHtmlLang />
@@ -47,53 +42,51 @@ export default async function LocaleLayout({ children, params }: Props) {
       <main id="main-content">{children}</main>
       <Footer />
 
-      {/* Loaders only — scripts activate after cookie consent */}
-      <Script id="a2m-analytics-init" strategy="afterInteractive">
-        {`
+      {/* Umami loads immediately — privacy-friendly first-party analytics */}
+      {umamiUrl && umamiWebsiteId && (
+        <Script
+          src={`${umamiUrl.replace(/\/$/, "")}/script.js`}
+          data-website-id={umamiWebsiteId}
+          data-domains="a2m-tech.com,www.a2m-tech.com"
+          strategy="afterInteractive"
+        />
+      )}
+
+      {/* GA4 only after marketing consent */}
+      {gaMeasurementId && (
+        <Script id="a2m-ga4-init" strategy="afterInteractive">
+          {`
 (function(){
-  var cfg = ${analyticsCfg};
-  window.__a2mAnalytics = cfg;
-
-  window.loadUmami = function(){
-    if (window.__umamiLoaded || !cfg.umamiUrl || !cfg.umamiWebsiteId) return;
-    window.__umamiLoaded = true;
-    var s = document.createElement('script');
-    s.defer = true;
-    s.src = String(cfg.umamiUrl).replace(/\\/$/, '') + '/script.js';
-    s.setAttribute('data-website-id', cfg.umamiWebsiteId);
-    s.setAttribute('data-domains', 'a2m-tech.com');
-    s.setAttribute('data-do-not-track', 'true');
-    document.head.appendChild(s);
-  };
-
+  window.__GA_ID = ${JSON.stringify(gaMeasurementId)};
   window.loadGA4 = function(){
-    if (window.__ga4Loaded || !cfg.gaMeasurementId) return;
+    if (window.__ga4Loaded || !window.__GA_ID) return;
     window.__ga4Loaded = true;
     var s = document.createElement('script');
     s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + cfg.gaMeasurementId;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.__GA_ID;
     document.head.appendChild(s);
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', cfg.gaMeasurementId, {
+    gtag('config', window.__GA_ID, {
       anonymize_ip: true,
       cookie_flags: 'SameSite=None;Secure'
     });
   };
-
   try {
     var raw = localStorage.getItem('a2m_cookie_prefs');
-    if (!raw) return;
-    var prefs = JSON.parse(raw);
-    if (prefs && prefs.analytics) window.loadUmami();
-    if (prefs && prefs.marketing) window.loadGA4();
+    if (raw) {
+      var prefs = JSON.parse(raw);
+      if (prefs && prefs.marketing) window.loadGA4();
+    }
   } catch (e) {}
 })();
-        `}
-      </Script>
+          `}
+        </Script>
+      )}
 
+      <VisitNotifier />
       <CookieConsent />
     </NextIntlClientProvider>
   );

@@ -657,13 +657,13 @@
     "controllerTitle": "Controller",
     "controllerBody": "A2M Tech AB, email abbe.mofleh@a2m-tech.com, phone 010-114 65 59.",
     "collectTitle": "What data do we collect?",
-    "collectBody": "Via the contact form and newsletter form you may provide name, organisation, email, phone and message. If you call us we process the data needed to respond. For web analytics (after consent) aggregated visit metrics are collected via Umami.",
+    "collectBody": "Via the contact form and newsletter form you may provide name, organisation, email, phone and message. If you call us we process the data needed to respond. For web analytics, aggregated visit metrics are collected via Umami. Visit alerts may include page URL, referrer and technical metadata.",
     "purposeTitle": "Purpose",
     "purposeBody": "To answer enquiries, discuss potential assignments, send insights you subscribed to, and – with consent – understand how the website is used.",
     "shareTitle": "Sharing",
     "shareBody": "Newsletter subscriptions are synced to our self-hosted Listmonk instance. LinkedIn is used only if you contact us there. We do not sell personal data.",
     "analyticsTitle": "Analytics",
-    "analyticsBody": "Umami runs only after you accept analytics cookies. Umami is privacy-friendly, first-party and used without advertising profiles. Google Analytics 4 is activated only if you explicitly allow the marketing category and it is configured.",
+    "analyticsBody": "Privacy-friendly analytics via Umami runs on visit to improve the website. Google Analytics 4 is activated only after explicit consent. Visit alerts may be sent internally to A2M Tech with page URL, referrer and UTM data (rate-limited).",
     "rightsTitle": "Your rights",
     "rightsBody": "You may request access, rectification or erasure under applicable law, and unsubscribe from the newsletter. Contact abbe.mofleh@a2m-tech.com.",
     "contactTitle": "Contact"
@@ -671,13 +671,13 @@
   "cookies": {
     "title": "Cookies",
     "updated": "Last updated: 16 August 2026",
-    "intro": "We use cookies and similar technology in the categories below. You control analytics via the cookie banner on first visit.",
+    "intro": "We use necessary features and privacy-friendly analytics. You are informed via a banner on first visit.",
     "necessaryTitle": "Necessary",
-    "necessaryBody": "Required for basic function. Stores your cookie choice locally (localStorage). Cannot be turned off.",
+    "necessaryBody": "Stores cookie choice and a session flag for visit alerts locally in the browser.",
     "analyticsTitle": "Analytics (Umami)",
-    "analyticsBody": "After consent, Umami loads from umami.volontera.se to measure pageviews, sources and engagement. No advertising cookies. Respects Do Not Track.",
+    "analyticsBody": "Umami loads immediately on visit from umami.volontera.se. It measures pageviews, sources and engagement without advertising cookies. New visits may trigger a rate-limited alert email to A2M Tech.",
     "thirdTitle": "Marketing / third party",
-    "thirdBody": "Google Analytics 4 is activated only if you allow the marketing category and it is configured. Links to LinkedIn may lead to services that set their own cookies under their terms."
+    "thirdBody": "Google Analytics 4 is activated only after explicit approval. Links to LinkedIn may set their own cookies under their terms."
   },
   "notFound": {
     "title": "Page not found",
@@ -720,19 +720,10 @@
   },
   "cookieBanner": {
     "eyebrow": "Cookies & analytics",
-    "body": "We use necessary features so the site works. With your consent we enable privacy-friendly analytics (Umami) to understand how the site is used. You can change your choice at any time.",
-    "categories": "Cookie categories",
-    "necessary": "Necessary",
-    "necessaryHint": "Always on. Stores your cookie choice locally in the browser.",
-    "analytics": "Analytics",
-    "analyticsHint": "Umami – first-party, no ads, respects Do Not Track.",
-    "marketing": "Marketing / GA4",
-    "marketingHint": "Google Analytics 4 – only if you explicitly allow it.",
+    "body": "We use privacy-friendly web analytics (Umami) immediately to understand how the site is used — without advertising profiles. Google Analytics requires separate approval.",
     "acceptAll": "Accept all",
-    "necessaryOnly": "Necessary only",
-    "showDetails": "Customize",
-    "hideDetails": "Hide details",
-    "save": "Save choices",
+    "necessaryOnly": "Without Google Analytics",
+    "gotIt": "Got it",
     "policy": "Cookie policy"
   }
 }
