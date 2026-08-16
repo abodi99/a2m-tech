@@ -103,7 +103,7 @@
     "legal": "Juridik",
     "privacy": "Integritet",
     "cookies": "Cookies",
-    "bookMeeting": "Skicka en förfrågan",
+    "bookMeeting": "Kontakta oss",
     "rights": "Alla rättigheter förbehållna."
   },
   "common": {
@@ -118,7 +118,8 @@
     "bookMeeting": "Inled en dialog",
     "callUs": "Ring oss",
     "ctaSecondary": "Granska vår leveransförmåga",
-    "registeredOffice": "Helsingborg"
+    "registeredOffice": "Helsingborg",
+    "sendEmail": "Skicka e-post"
   },
   "home": {
     "eyebrow": "IT-leveranser för offentlig sektor och etablerade verksamheter",
@@ -705,5 +706,16 @@
     "ctaBody": "Har ni ett liknande uppdrag eller vill förstå hur A2M Tech kan bistå i er situation? Vi tar ett kort inledande samtal utan bindning.",
     "ctaButton": "Ta kontakt",
     "sector": "Sektor"
+  },
+  "newsletter": {
+    "heading": "Håll dig uppdaterad",
+    "body": "Få insikter om offentlig upphandling och digital leverans direkt i inkorgen. Max ett brev i månaden.",
+    "placeholder": "din@epost.se",
+    "submit": "Prenumerera",
+    "successTitle": "Tack — du är med på listan.",
+    "successBody": "Vi hör av oss när det finns något värt att läsa.",
+    "errorGeneral": "Något gick fel. Försök igen eller kontakta oss direkt.",
+    "invalidEmail": "Ange en giltig e-postadress.",
+    "disclaimer": "Inga spam. Avregistrera dig när som helst."
   }
 }

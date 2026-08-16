@@ -43,6 +43,10 @@ export const contacts = {
     status: "verified" as VerificationStatus,
     note: "Confirm with owner if registry address differs.",
   },
+  /** Primary contact email – verified mailbox on company domain */
+  email: "abbe.mofleh@a2m-tech.com",
+  emailHref: "mailto:abbe.mofleh@a2m-tech.com",
+  /** @deprecated Calendly is no longer used – contact via email */
   calendly: "https://calendly.com/a2m-tech",
   linkedin: "https://www.linkedin.com/company/a2m-tech",
 } as const;

@@ -93,20 +93,14 @@ export default async function ProcuringPage({ params }: Props) {
         <p className="mt-3 max-w-2xl text-ink-700">{t("contactBody")}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href={contacts.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              buttonVariants()
-            )}
+            href={contacts.emailHref}
+            className={cn(buttonVariants())}
           >
-            {common("bookMeeting")}
+            {common("sendEmail")}
           </a>
           <a
             href={contacts.phoneHref}
-            className={cn(
-              buttonVariants({ variant: "outline" })
-            )}
+            className={cn(buttonVariants({ variant: "outline" }))}
           >
             {contacts.phoneDisplay}
           </a>

@@ -8,9 +8,11 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SkipLink } from "@/components/layout/skip-link";
 import { SetHtmlLang } from "@/components/layout/set-html-lang";
+import { CookieConsent } from "@/components/analytics/cookie-consent";
 
-const umamiUrl = process.env.NEXT_PUBLIC_UMAMI_URL ?? "";
-const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ?? "";
+const umamiUrl         = process.env.NEXT_PUBLIC_UMAMI_URL          ?? "";
+const umamiWebsiteId   = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID   ?? "";
+const gaMeasurementId  = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID  ?? "";
 
 type Props = {
   children: React.ReactNode;
@@ -38,14 +40,47 @@ export default async function LocaleLayout({ children, params }: Props) {
       <Header />
       <main id="main-content">{children}</main>
       <Footer />
+
+      {/* ── Umami analytics (privacy-friendly, no consent required) ── */}
       {umamiUrl && umamiWebsiteId && (
         <Script
           src={`${umamiUrl}/script.js`}
           data-website-id={umamiWebsiteId}
           strategy="afterInteractive"
           data-domains="a2m-tech.com"
+          data-do-not-track="true"
         />
       )}
+
+      {/* ── Google Analytics 4 loader (activates only after cookie consent) ── */}
+      {gaMeasurementId && (
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.__GA_ID = ${JSON.stringify(gaMeasurementId)};
+            window.loadGA4 = function() {
+              if (window.__ga4Loaded) return;
+              window.__ga4Loaded = true;
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.__GA_ID;
+              document.head.appendChild(s);
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', window.__GA_ID, { anonymize_ip: true });
+            };
+            try {
+              if (localStorage.getItem('a2m_cookie_consent') === 'accepted') {
+                window.loadGA4();
+              }
+            } catch(e) {}
+          `}
+        </Script>
+      )}
+
+      {/* ── GDPR cookie consent banner (shown only when GA4 is configured) ── */}
+      {gaMeasurementId && <CookieConsent />}
     </NextIntlClientProvider>
   );
 }

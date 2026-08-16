@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { company, contacts } from "@/content/site";
 import { footerNav1, footerNav2, legalNav } from "@/lib/nav";
 import { LanguageSwitcher } from "./language-switcher";
+import { NewsletterForm } from "@/components/newsletter/newsletter-form";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -75,9 +76,9 @@ export function Footer() {
                   <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
                   <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                 </svg>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  {t("bookMeeting")}
-                </Link>
+                <a href={contacts.emailHref} className="hover:text-white transition-colors break-all">
+                  {contacts.email}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-signal/70" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
@@ -125,24 +126,22 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Legal */}
+          {/* Col 4: Newsletter signup + legal links */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-white/45">
-              {t("legal")}
-            </p>
-            <ul className="mt-5 space-y-3">
-              {legalNav.map((item) => (
-                <li key={item.key}>
-                  <Link href={item.href} className="text-sm text-white/70 transition-colors hover:text-white">
-                    {t(item.key)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-xs leading-relaxed text-white/55">
-                {t("trustNote")}
+            <NewsletterForm source="footer" />
+            <div className="mt-8 pt-8 border-t border-white/10">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/45 mb-4">
+                {t("legal")}
               </p>
+              <ul className="space-y-3">
+                {legalNav.map((item) => (
+                  <li key={item.key}>
+                    <Link href={item.href} className="text-sm text-white/70 transition-colors hover:text-white">
+                      {t(item.key)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

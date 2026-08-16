@@ -630,7 +630,7 @@ export default async function InvestorsPage({ params }: Props) {
     ? "För frågor om bolagets utveckling, strategi eller framtida finansiering är ni välkomna att kontakta A2M Tech."
     : "For questions about the company's development, strategy or future financing, you are welcome to contact A2M Tech.";
   const ctaPrimary = isSv ? "Kontakta A2M Tech" : "Contact A2M Tech";
-  const ctaSecondary = isSv ? "Boka ett samtal" : "Book a conversation";
+  const ctaSecondary = isSv ? "Skicka e-post" : "Send an email";
 
   // Section headings
   const h = (sv: string, en: string) => (isSv ? sv : en);
@@ -972,9 +972,7 @@ export default async function InvestorsPage({ params }: Props) {
                   {ctaPrimary}
                 </Link>
                 <a
-                  href={contacts.calendly}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={contacts.emailHref}
                   className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-white/30 px-7 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#003347]"
                 >
                   {ctaSecondary}

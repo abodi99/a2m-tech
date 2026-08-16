@@ -58,9 +58,7 @@ export default async function PrivacyPage({ params }: Props) {
           <p className="mt-3 text-ink-700">
             <a href={contacts.phoneHref}>{contacts.phoneDisplay}</a>
             {" · "}
-            <a href={contacts.calendly} target="_blank" rel="noopener noreferrer">
-              Calendly
-            </a>
+            <a href={contacts.emailHref}>{contacts.email}</a>
           </p>
         </section>
       </div>

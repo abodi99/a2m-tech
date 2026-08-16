@@ -103,7 +103,7 @@
     "legal": "Legal",
     "privacy": "Privacy",
     "cookies": "Cookies",
-    "bookMeeting": "Send an enquiry",
+    "bookMeeting": "Contact us",
     "rights": "All rights reserved."
   },
   "common": {
@@ -118,7 +118,8 @@
     "bookMeeting": "Start a dialogue",
     "callUs": "Call us",
     "ctaSecondary": "Review our delivery capability",
-    "registeredOffice": "Helsingborg"
+    "registeredOffice": "Helsingborg",
+    "sendEmail": "Send an email"
   },
   "home": {
     "eyebrow": "IT delivery for public sector and established organisations",
@@ -705,5 +706,16 @@
     "ctaBody": "Do you have a similar assignment or want to understand how A2M Tech can assist in your situation? We are happy to have a brief initial conversation with no obligation.",
     "ctaButton": "Get in touch",
     "sector": "Sector"
+  },
+  "newsletter": {
+    "heading": "Stay informed",
+    "body": "Receive insights on public procurement and digital delivery straight to your inbox. At most once a month.",
+    "placeholder": "your@email.com",
+    "submit": "Subscribe",
+    "successTitle": "Thank you — you are on the list.",
+    "successBody": "We will be in touch when there is something worth reading.",
+    "errorGeneral": "Something went wrong. Please try again or contact us directly.",
+    "invalidEmail": "Please enter a valid email address.",
+    "disclaimer": "No spam. Unsubscribe at any time."
   }
 }

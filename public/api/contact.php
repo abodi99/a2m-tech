@@ -68,8 +68,8 @@ if (empty($message) || strlen($message) < 10 || strlen($message) > 5000) {
     exit;
 }
 
-// Destination email – replace with @a2m-tech.com when mailbox is ready
-$toEmail   = 'anas-mofleh@hotmail.com';
+// Primary contact mailbox
+$toEmail   = 'abbe.mofleh@a2m-tech.com';
 $toName    = 'A2M Tech';
 $fromEmail = 'noreply@a2m-tech.com';
 
