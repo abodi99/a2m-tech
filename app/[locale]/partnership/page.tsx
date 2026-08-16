@@ -52,7 +52,7 @@ export default async function PartnershipPage({ params }: Props) {
           <Link href="/contact" className={buttonVariants()}>
             {t("cta")}
           </Link>
-          <Link href="/delivery-capability" className={buttonVariants({ variant: "outline" })}>
+          <Link href="/about" className={buttonVariants({ variant: "outline" })}>
             {locale === "sv" ? "Leveransförmåga" : "Delivery capability"}
           </Link>
         </div>

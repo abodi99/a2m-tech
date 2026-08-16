@@ -6,7 +6,6 @@ const pathnames: AppPathname[] = [
   "/",
   "/services",
   "/public-sector",
-  "/delivery-capability",
   "/quality-security",
   "/for-procuring-organizations",
   "/partnership",

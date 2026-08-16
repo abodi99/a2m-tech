@@ -27,10 +27,10 @@ export default async function ServicesPage({ params }: Props) {
   const crumbs = await getTranslations("breadcrumbs");
 
   const items = [
-    { key: "i1" as const, href: "/delivery-capability" as const },
-    { key: "i2" as const, href: "/delivery-capability" as const },
+    { key: "i1" as const, href: "/about" as const },
+    { key: "i2" as const, href: "/about" as const },
     { key: "i3" as const, href: "/contact" as const },
-    { key: "i4" as const, href: "/delivery-capability" as const },
+    { key: "i4" as const, href: "/about" as const },
   ];
 
   return (

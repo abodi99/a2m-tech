@@ -14,10 +14,6 @@ export const routing = defineRouting({
       sv: "/offentlig-sektor",
       en: "/public-sector",
     },
-    "/delivery-capability": {
-      sv: "/leveransformaga",
-      en: "/delivery-capability",
-    },
     "/quality-security": {
       sv: "/kvalitet-sakerhet",
       en: "/quality-security",

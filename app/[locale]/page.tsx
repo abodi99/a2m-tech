@@ -83,33 +83,16 @@ export default async function HomePage({ params }: Props) {
                 >
                   {t("ctaPrimary")}
                 </Link>
-                <Link
-                  href="/delivery-capability"
-                  className="inline-flex items-center justify-center rounded-lg border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
+                <a
+                  href={contacts.phoneHref}
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
                 >
-                  {t("ctaSecondary")}
-                </Link>
-              </div>
-
-              {/* Trust strip */}
-              <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-8 text-sm text-white/60">
-                {(["heroTrustItem1", "heroTrustItem2", "heroTrustItem3"] as const).map((key) => (
-                  <li key={key} className="flex items-center gap-2">
-                    <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
-                      <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
-                    </svg>
-                    {t(key)}
-                  </li>
-                ))}
-                <li className="flex items-center gap-2">
-                  <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                  <svg className="h-4 w-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
                     <path fillRule="evenodd" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v1c0 5.523 4.477 10 10 10h1a1.5 1.5 0 0 0 1.5-1.5v-1.09a1.5 1.5 0 0 0-1.077-1.443l-2.2-.628a1.5 1.5 0 0 0-1.585.526l-.388.51a.75.75 0 0 1-.92.22 8.5 8.5 0 0 1-3.977-3.978.75.75 0 0 1 .22-.919l.51-.388a1.5 1.5 0 0 0 .526-1.585L3.59 3.077A1.5 1.5 0 0 0 2.5 2H1.5Z" clipRule="evenodd" />
                   </svg>
-                  <a href={contacts.phoneHref} className="transition-colors hover:text-white">
-                    {contacts.phoneDisplay}
-                  </a>
-                </li>
-              </ul>
+                  {contacts.phoneDisplay}
+                </a>
+              </div>
             </div>
 
             {/* Right: Abstract civic-tech illustration */}

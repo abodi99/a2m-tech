@@ -5,7 +5,6 @@ export type NavItem = {
   key:
     | "services"
     | "publicSector"
-    | "delivery"
     | "procuring"
     | "about"
     | "contact"
@@ -18,22 +17,27 @@ export type NavItem = {
 export const primaryNav: NavItem[] = [
   { href: "/services", key: "services" },
   { href: "/public-sector", key: "publicSector" },
-  { href: "/delivery-capability", key: "delivery" },
   { href: "/about", key: "about" },
   { href: "/for-procuring-organizations", key: "procuring" },
 ];
 
-export const footerNav: NavItem[] = [
+/** Footer nav split into two columns for symmetry */
+export const footerNav1: NavItem[] = [
   { href: "/services", key: "services" },
   { href: "/public-sector", key: "publicSector" },
-  { href: "/delivery-capability", key: "delivery" },
   { href: "/quality-security", key: "quality" },
   { href: "/partnership", key: "partnership" },
+];
+
+export const footerNav2: NavItem[] = [
   { href: "/for-procuring-organizations", key: "procuring" },
   { href: "/about", key: "about" },
   { href: "/insights", key: "insights" },
   { href: "/contact", key: "contact" },
 ];
+
+/** @deprecated use footerNav1 + footerNav2 */
+export const footerNav: NavItem[] = [...footerNav1, ...footerNav2];
 
 export const legalNav = [
   { href: "/privacy" as const, key: "privacy" as const },
