@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#176BE0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#004869" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#176BE0" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#004869" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="400" rx="24" fill="url(#bgGrad)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#004869" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="80" x2="480" y2="80"/>
+    <line x1="0" y1="160" x2="480" y2="160"/>
+    <line x1="0" y1="240" x2="480" y2="240"/>
+    <line x1="0" y1="320" x2="480" y2="320"/>
+    <line x1="80" y1="0" x2="80" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="400"/>
+    <line x1="240" y1="0" x2="240" y2="400"/>
+    <line x1="320" y1="0" x2="320" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+  </g>
+
+  <!-- Network nodes + connections -->
+  <g>
+    <circle cx="110" cy="120" r="9" fill="#176BE0" fill-opacity="0.85"/>
+    <circle cx="370" cy="120" r="9" fill="#176BE0" fill-opacity="0.85"/>
+    <circle cx="90" cy="300" r="7" fill="#004869" fill-opacity="0.62"/>
+    <circle cx="390" cy="300" r="7" fill="#004869" fill-opacity="0.62"/>
+
+    <g stroke="url(#lineGrad)" stroke-width="2" stroke-opacity="0.70">
+      <line x1="110" y1="120" x2="165" y2="95"/>
+      <line x1="370" y1="120" x2="315" y2="95"/>
+      <line x1="110" y1="120" x2="90" y2="300"/>
+      <line x1="370" y1="120" x2="390" y2="300"/>
+      <line x1="90" y1="300" x2="240" y2="360"/>
+      <line x1="390" y1="300" x2="240" y2="360"/>
+    </g>
+
+    <path d="M130 190 Q180 145 240 165" stroke="#176BE0" stroke-width="2.2" stroke-opacity="0.60" fill="none" stroke-dasharray="4 4"/>
+    <path d="M350 190 Q300 145 240 165" stroke="#176BE0" stroke-width="2.2" stroke-opacity="0.60" fill="none" stroke-dasharray="4 4"/>
+
+    <circle cx="240" cy="360" r="8" fill="#176BE0" fill-opacity="0.72"/>
+    <circle cx="190" cy="160" r="4" fill="#176BE0" fill-opacity="0.95"/>
+    <circle cx="290" cy="160" r="4" fill="#176BE0" fill-opacity="0.95"/>
+  </g>
+
+  <!-- Central shield -->
+  <path
+    d="M240 62 L316 102 V205 C316 265 278 314 240 335 C202 314 164 265 164 205 V102 Z"
+    fill="#004869"
+    fill-opacity="0.16"
+    stroke="#004869"
+    stroke-opacity="0.65"
+    stroke-width="2.5"
+  />
+  <path
+    d="M210 205 L232 227 L278 178"
+    stroke="#176BE0"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Procurement document (on right, not behind shield) -->
+  <g>
+    <!-- Document body -->
+    <rect
+      x="268" y="160" width="184" height="205" rx="20"
+      fill="#176BE0"
+      fill-opacity="0.30"
+      stroke="#176BE0"
+      stroke-opacity="1"
+      stroke-width="6"
+    />
+    <!-- Folded corner -->
+    <path
+      d="M452 160 L452 215 L410 160 Z"
+      fill="#176BE0"
+      fill-opacity="0.48"
+      stroke="#176BE0"
+      stroke-opacity="1"
+      stroke-width="6"
+    />
+
+    <!-- Text lines -->
+    <path d="M312 242 H430" stroke="#176BE0" stroke-opacity="1" stroke-width="7" stroke-linecap="round"/>
+    <path d="M312 272 H410" stroke="#176BE0" stroke-opacity="0.90" stroke-width="7" stroke-linecap="round"/>
+    <path d="M312 302 H388" stroke="#176BE0" stroke-opacity="0.78" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Seal -->
+    <circle cx="428" cy="210" r="26" fill="#176BE0" fill-opacity="0.28" stroke="#176BE0" stroke-opacity="1" stroke-width="6"/>
+    <path
+      d="M418 210 L424 216 L440 199"
+      stroke="#176BE0"
+      stroke-opacity="1"
+      stroke-width="6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+  </g>
+</svg>
+

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ubuntu } from "@/lib/fonts";
+import { sourceSans, ubuntu } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${ubuntu.variable} h-full scroll-smooth`} suppressHydrationWarning>
-      <body className="min-h-full antialiased">{children}</body>
+    <html
+      className={`${sourceSans.variable} ${ubuntu.variable} h-full`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-full font-sans antialiased">{children}</body>
     </html>
   );
 }

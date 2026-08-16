@@ -1,147 +1,445 @@
 {
   "metadata": {
-    "title": "A2M Tech – Trusted IT Partner for the Public Sector",
-    "description": "A2M Tech delivers secure IT solutions, data platforms, and experienced consultants to agencies and public organisations. Structured delivery aligned with procurement and framework agreements."
+    "home": {
+      "title": "A2M Tech – Digital delivery with accountability over time",
+      "description": "A2M Tech AB delivers digital assignments for companies and organizations — with clear documentation, follow-up and operations."
+    },
+    "services": {
+      "title": "Services | A2M Tech",
+      "description": "Needs-based IT services: defined assignments, team delivery and specialist reinforcement with traceable documentation."
+    },
+    "publicSector": {
+      "title": "Public sector | A2M Tech",
+      "description": "Practices for procurement-aware delivery: requirements, documentation, quality and operations — without overstated claims."
+    },
+    "delivery": {
+      "title": "Delivery capability | A2M Tech",
+      "description": "Five stages from need to operations: commitment, delivery, follow-up and long-term stability."
+    },
+    "procuring": {
+      "title": "For procuring organizations | A2M Tech",
+      "description": "Assessment fact sheet: company facts, delivery models and materials available or provided on request."
+    },
+    "quality": {
+      "title": "Quality and security | A2M Tech",
+      "description": "How A2M Tech works with traceability, deviation handling, documentation and robust digital services."
+    },
+    "partnership": {
+      "title": "Partnership | A2M Tech",
+      "description": "Collaboration in larger commitments: team delivery, specialist reinforcement and partnership without overstated claims."
+    },
+    "insights": {
+      "title": "Insights | A2M Tech",
+      "description": "Planned articles on delivery governance, continuity and materials for procuring organizations."
+    },
+    "about": {
+      "title": "About | A2M Tech",
+      "description": "A2M Tech AB. Ownership and accountability in digital delivery — without startup rhetoric."
+    },
+    "contact": {
+      "title": "Contact | A2M Tech",
+      "description": "Book a short call via Calendly or call 010-114 65 59. Clear follow-up after booking."
+    },
+    "privacy": {
+      "title": "Privacy | A2M Tech",
+      "description": "How A2M Tech handles personal data for contact and booking."
+    },
+    "cookies": {
+      "title": "Cookies | A2M Tech",
+      "description": "Cookie information for a2m-tech.com. Analytics is off by default."
+    },
+    "notFound": {
+      "title": "Page not found | A2M Tech",
+      "description": "This page does not exist. Return home or use the navigation."
+    }
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
   },
   "nav": {
-    "services": "Services",
-    "howWeWork": "How we work",
-    "forWho": "Who we serve",
-    "about": "About",
-    "bookMeeting": "Book an introduction",
+    "mainNav": "Main navigation",
+    "services": "Your needs",
+    "publicSector": "Public sector",
+    "delivery": "Delivery capability",
+    "quality": "Quality & security",
+    "partnership": "Partnership",
+    "procuring": "For procuring orgs",
+    "about": "About A2M Tech",
+    "insights": "Insights",
+    "contact": "Contact",
+    "bookMeeting": "Start a dialogue",
     "menu": "Menu",
     "closeMenu": "Close menu"
   },
-  "hero": {
-    "badge": "IT partner for the public sector",
-    "title": "Trusted IT partner for agencies and public organisations",
-    "subtitle": "We deliver secure IT solutions, data platforms, and experienced consultants – with structured delivery aligned with procurement requirements and established framework agreements.",
-    "ctaPrimary": "Book an introduction",
-    "trust1": "Proven delivery in complex IT environments",
-    "trust2": "Security, quality, and documentation at the core",
-    "trust3": "Structured approach to procurement and framework agreements"
+  "breadcrumbs": {
+    "aria": "Breadcrumbs",
+    "home": "Home",
+    "services": "Your needs",
+    "publicSector": "Public sector",
+    "delivery": "Delivery capability",
+    "quality": "Quality & security",
+    "partnership": "Partnership",
+    "procuring": "For procuring organizations",
+    "about": "About A2M Tech",
+    "insights": "Insights",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
   },
-  "trustBar": {
-    "security": {
-      "title": "Security",
-      "description": "Protection of sensitive data and critical systems following established principles."
+  "footer": {
+    "tagline": "Digital delivery with accountability over time — for the public sector and established organizations.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "bookMeeting": "Start a dialogue",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "orgNumber": "Org. no.",
+    "phone": "Phone",
+    "address": "Address",
+    "linkedin": "LinkedIn",
+    "available": "Available",
+    "onRequest": "On request",
+    "lastUpdated": "Last updated",
+    "readMore": "Read more",
+    "bookMeeting": "Start a dialogue",
+    "callUs": "Call us",
+    "ctaSecondary": "Review our delivery capability",
+    "registeredOffice": "Helsingborg"
+  },
+  "home": {
+    "eyebrow": "Delivery partner for the public sector and established organizations",
+    "title": "Digital delivery with accountability over time.",
+    "subtitle": "A2M Tech helps organizations develop, introduce and operate digital solutions with clear governance, traceable quality and a responsible partner throughout delivery.",
+    "ctaPrimary": "Start a dialogue",
+    "ctaSecondary": "Review our delivery capability",
+    "factsTitle": "Company facts",
+    "factsOrg": "Org. no.",
+    "factsCity": "Registered office",
+    "factsPhone": "Phone",
+    "predictableTitle": "Predictable to order. Clear to follow up.",
+    "predictableIntro": "We describe delivery practices that make assignments easier to order and follow up — without claiming certifications or awarded contracts.",
+    "predictable": {
+      "p1": { "title": "Clear ownership and fixed contact points", "body": "You should know who owns the dialogue and how decisions are documented." },
+      "p2": { "title": "Planned governance and reporting", "body": "Status, deviations and follow-up follow an agreed rhythm." },
+      "p3": { "title": "Traceable requirements and agreements", "body": "Requirements, decisions and changes should be followable during the assignment." },
+      "p4": { "title": "Documentation, handover and continuity", "body": "Knowledge should remain in your organization when people or phases change." },
+      "p5": { "title": "Quality and security during the contract period", "body": "Controls and follow-up are part of how we work — not detached promises." }
     },
-    "documentation": {
-      "title": "Documentation",
-      "description": "Clear documentation and traceability throughout the delivery process."
+    "needsTitle": "Needs we address",
+    "needsSubtitle": "A needs index — not a technology catalogue.",
+    "needs": {
+      "n1": { "title": "Business-near digital development", "body": "When you need to develop or adapt digital services close to operational requirements, with clear acceptance and handover." },
+      "n2": { "title": "Information and decision support", "body": "When information must flow, be assembled and support decisions without losing traceability." },
+      "n3": { "title": "Secure and robust digital environments", "body": "When solutions must run with controlled access, documentation and follow-up." },
+      "n4": { "title": "Modernization and operations", "body": "When existing solutions need modernization, stabilization or long-term operations." },
+      "n5": { "title": "Specialist reinforcement and team delivery", "body": "When you need complementary competence or a coordinated team with a shared plan and status." },
+      "n6": { "title": "Collaboration in procurements and larger commitments", "body": "When complementary capacity is needed alongside other suppliers in a larger assignment." }
     },
-    "procurement": {
-      "title": "Procurement",
-      "description": "Experience with public procurements and framework agreements."
+    "modelTitle": "Five-stage delivery model",
+    "modelSubtitle": "Continuity from need to operations.",
+    "stages": {
+      "s1": "Anchor",
+      "s2": "Plan",
+      "s3": "Execute",
+      "s4": "Follow up",
+      "s5": "Secure continuity"
     },
-    "delivery": {
-      "title": "Proven delivery",
-      "description": "Senior expertise with demonstrated experience from complex IT engagements."
+    "spanLabels": {
+      "a1": "Ownership",
+      "a2": "Documentation",
+      "a3": "Continuity"
+    },
+    "modelCaption": "Each stage has concrete deliverables. This is a working model — not a proprietary brand.",
+    "modelCta": "Read about delivery capability",
+    "audiencesTitle": "Public sector",
+    "audiencesSubtitle": "Formal requirements, transparency and long-term operations.",
+    "audienceBusinessTitle": "Established organizations",
+    "audienceBusinessBody": "When you need a partner that owns digital assignments, reinforces your team or builds further — with clear status and handover.",
+    "audienceBusinessCta": "See your needs",
+    "audiencePublicTitle": "Public sector",
+    "audiencePublicBody": "We work with practices that support assessment, follow-up and maintainability — without claiming more than we can show.",
+    "audiencePublicCta": "Public sector",
+    "procuringTitle": "Information for procuring organizations",
+    "procuringBody": "A scannable fact sheet for due diligence: what is available, what is provided on request, and what we do not publish without verification.",
+    "procuringCta": "Open the fact sheet",
+    "riskTitle": "How we reduce delivery risk",
+    "riskItems": {
+      "r1": { "title": "Designated ownership", "body": "Clear contact points and ownership of the assignment dialogue." },
+      "r2": { "title": "Documented handover", "body": "So knowledge and status can be carried forward." },
+      "r3": { "title": "Change and deviation handling", "body": "Changes and deviations are handled visibly and in writing." },
+      "r4": { "title": "Continuity through staff changes", "body": "Delivery should continue without person dependence." }
+    },
+    "processTitle": "How we work",
+    "processBody": "Clear documentation and regular follow-up create the conditions for sustainable digital deliveries.",
+    "processItems": {
+      "documentation": "Traceable decision and requirements documentation throughout the delivery",
+      "collaboration": "Structured communication with dedicated contact channels",
+      "followUp": "Regular follow-up with reporting and deviation management"
+    },
+    "videoTitle": "How it works in practice",
+    "videoBody": "Brief presentation of our way of working and approach to deliveries.",
+    "videoPlaceholder": "Video available when authentic material exists",
+    "videoNote": "We never use generic marketing videos",
+    "evidenceTitle": "Materials for assessment",
+    "evidenceBody": "We do not publish fabricated references, customer logos or certificates. Company facts, contact channels and delivery description are here. Additional materials — such as CVs, methods or registry extracts — are provided on request in a relevant procurement or selection process.",
+    "evidenceCta": "See what is available",
+    "closeTitle": "Looking for an accountable partner for an upcoming assignment?",
+    "closeBody": "Start a dialogue via Calendly or call us. After booking you receive confirmation and we prepare from the information you share — without manufactured urgency.",
+    "partnershipTitle": "Partnership",
+    "partnershipBody": "We can complement larger deliveries with other actors when the assignment needs broader capacity.",
+    "partnershipCta": "Read about partnership",
+    "qualityTitle": "Quality and security",
+    "qualityBody": "Security, traceability and follow-up are built into how we plan and hand over — not as detached promises.",
+    "qualityCta": "Quality & security",
+    "visual": {
+      "heroAlt": "Delivery continuity from anchoring to stewardship with ownership, documentation and continuity.",
+      "governanceCaption": "Governance layers",
+      "layer1": "Ownership and contact points",
+      "layer2": "Requirements, decisions and traceability",
+      "layer3": "Quality and deviation handling",
+      "layer4": "Handover and operations",
+      "factSheetCaption": "Supplier facts",
+      "factLegal": "Legal name",
+      "factPhone": "Phone",
+      "factScope": "Geography",
+      "factScopeValue": "Sweden · remote and on site",
+      "factStatus": "Materials",
+      "factStatusValue": "On request in a relevant process",
+      "riskCaption": "Accountability chain"
     }
   },
   "services": {
     "title": "Services",
-    "subtitle": "Specialist expertise in modern IT – from requirements and development to operations and continuous improvement.",
-    "mobile": {
-      "title": "Mobile applications",
-      "description": "Development of secure apps for iOS and Android – from requirements and design to launch and maintenance."
+    "intro": "We start from needs, not a product catalogue. Below we describe how we work when the assignment is a solution, a team or specialist reinforcement.",
+    "items": {
+      "i1": {
+        "title": "Defined assignments",
+        "body": "From requirements and plan to execution and handover. You get clear deliverables, documentation and acceptance points.",
+        "link": "Delivery capability"
+      },
+      "i2": {
+        "title": "Team delivery",
+        "body": "A coordinated team with a shared plan, status reporting and ownership of the whole delivery.",
+        "link": "Delivery capability"
+      },
+      "i3": {
+        "title": "Specialist reinforcement",
+        "body": "When you need complementary competence inside your existing organization — with a clear role and follow-up.",
+        "link": "Contact"
+      },
+      "i4": {
+        "title": "Integrations and further development",
+        "body": "When existing systems need to be connected, modernized or extended — with documentation that can be operated.",
+        "link": "Delivery capability"
+      }
     },
-    "data": {
-      "title": "Data & analytics",
-      "description": "Data platforms, pipelines, and analytics that turn data into decision support for your organisation."
+    "closing": "Technology choices follow the assignment’s requirements. We describe solutions in terms of need, risk and operability — not trendy tool lists."
+  },
+  "publicSector": {
+    "title": "Public sector",
+    "intro": "Public organizations need clarity, traceability and long-term operations. Here we describe practices we work by — without legal or contractual claims.",
+    "checklistTitle": "Practices we work by",
+    "items": {
+      "c1": "Requirements and scope are documented before execution.",
+      "c2": "Status and deviations are communicated in writing and on time.",
+      "c3": "Deliverables are tied to acceptance criteria where relevant.",
+      "c4": "Documentation must be hand-overable to your organization.",
+      "c5": "Security and access are handled according to an agreed model.",
+      "c6": "Operations and further development are planned during delivery.",
+      "c7": "We avoid publishing claims about frameworks, ISO or references without verification."
     },
-    "consulting": {
-      "title": "IT consulting",
-      "description": "Senior consultants who strengthen your organisation with the right skills at the right time."
-    },
-    "security": {
-      "title": "Cybersecurity",
-      "description": "Secure architecture, risk assessment, and protection of sensitive data and critical systems."
-    },
-    "devops": {
-      "title": "DevOps",
-      "description": "Automation, CI/CD, and cloud infrastructure that ensures stable and predictable delivery."
-    },
-    "workspace": {
-      "title": "Digital workspace",
-      "description": "Modern workplace tools and collaboration solutions tailored to your organisation."
+    "note": "This page is not legal advice and does not replace your procurement documents.",
+    "ctaDelivery": "See delivery capability",
+    "ctaProcuring": "Fact sheet for procuring organizations",
+    "visualCaption": "Public-sector requirement layers",
+    "statementEyebrow": "Delivery under formal conditions",
+    "statement": "Clarity, traceability and operability — practices that can be followed up during the contract period.",
+    "visual": {
+      "l1": "Requirements and documentation",
+      "l2": "Information security",
+      "l3": "Accessibility and interoperability",
+      "l4": "Follow-up and continuity"
     }
   },
-  "howWeWork": {
-    "title": "How we work",
-    "subtitle": "We combine technical excellence with an understanding of public sector operations – whether you need a full solution or team reinforcement.",
-    "solutions": {
-      "title": "Tailored solutions",
-      "description": "We build and deliver IT solutions adapted to your requirements – from mobile apps and data platforms to integrations and cloud environments."
+  "delivery": {
+    "title": "Delivery capability",
+    "intro": "Our model follows five stages. Each stage has concrete deliverables so the assignment can be ordered, followed up and operated. This is a working model — not a proprietary brand.",
+    "stages": {
+      "s1": {
+        "title": "Anchor",
+        "body": "Need, goals, roles and mandate are clarified before execution.",
+        "deliverables": "Needs description, roles, scope boundary, initial risk list."
+      },
+      "s2": {
+        "title": "Plan",
+        "body": "Commitment, risk, time, quality and acceptance are defined so the assignment can be followed up.",
+        "deliverables": "Commitment description, plan, communication and acceptance model."
+      },
+      "s3": {
+        "title": "Execute",
+        "body": "Transparent status, documented decisions and controlled changes during the work.",
+        "deliverables": "Ongoing status, decision points, change log."
+      },
+      "s4": {
+        "title": "Follow up",
+        "body": "Quality, deviations, actions and reporting are summarized visibly.",
+        "deliverables": "Follow-up record, deviation handling, remaining items."
+      },
+      "s5": {
+        "title": "Secure continuity",
+        "body": "Handover, competence sharing, operations and improvement are planned so delivery can continue.",
+        "deliverables": "Handover package, operating routines, contact points."
+      }
     },
-    "procurement": {
-      "title": "Procurements & framework agreements",
-      "description": "We participate in public procurements and deliver according to your framework agreements, specifications, and quality assurance."
-    },
-    "consultants": {
-      "title": "Experienced consultants & quality-assured delivery",
-      "description": "Senior expertise with clear delivery models, predictable processes, and a focus on long-term quality in every engagement."
-    }
+    "deliverablesLabel": "Example deliverables",
+    "visualizationTitle": "Delivery visualization",
+    "visualizationBody": "Timelines, quality gates and documentation trails create transparency throughout the delivery.",
+    "riskTitle": "Reduce delivery risk",
+    "riskBody": "Risk is reduced through early scoping, visible status and handover-ready documentation — not by promising more than the assignment allows.",
+    "visualCaption": "Five delivery stages"
   },
-  "forWho": {
-    "title": "Who we work with",
-    "subtitle": "We collaborate with organisations that value quality, security, and long-term relationships.",
-    "public": {
-      "title": "Public sector",
-      "description": "Agencies, municipalities, and regions that need a reliable IT partner with an understanding of procurement, security requirements, and public administration."
+  "quality": {
+    "title": "Quality and security",
+    "intro": "Here we describe how we work with quality, information security and follow-up in digital assignments — as practices, not certification claims.",
+    "items": {
+      "q1": { "title": "Traceability", "body": "Requirements, decisions and changes are documented so they can be followed during the assignment." },
+      "q2": { "title": "Deviation handling", "body": "Deviations are communicated on time, with action and follow-up." },
+      "q3": { "title": "Documentation", "body": "Documentation must be hand-overable and usable in your organization." },
+      "q4": { "title": "Robust digital services", "body": "We plan for operability, access control and controlled change." }
     },
-    "business": {
-      "title": "Business",
-      "description": "Established organisations needing scalable digital solutions and specialist expertise of the highest quality."
+    "note": "We do not list ISO certificates, clearances or frameworks without documented verification.",
+    "cta": "To the procuring-organization fact sheet",
+    "visualCaption": "Quality layers"
+  },
+  "partnership": {
+    "title": "Partnership",
+    "intro": "A2M Tech can complement larger commitments with other actors. We describe delivery forms — not awarded framework agreements.",
+    "items": {
+      "p1": { "title": "Team delivery", "body": "A coordinated team with a shared plan, status and documentation." },
+      "p2": { "title": "Specialist reinforcement", "body": "Complementary competence inside an existing organization for a limited period." },
+      "p3": { "title": "Partner collaboration", "body": "When the assignment needs broader capacity alongside other suppliers." }
     },
-    "partners": {
-      "title": "Selected collaborations",
-      "description": "Complementary expertise in cooperation with established partners when broader resources are required."
-    }
+    "note": "Governance of subcontractors and partners is described in dialogue based on the assignment’s requirements.",
+    "cta": "Start a dialogue"
+  },
+  "insights": {
+    "title": "Insights",
+    "intro": "Articles are published only when content is complete and fact-checked. Below are planned topics — not published articles.",
+    "roadmapNote": "See the full editorial plan in the documentation.",
+    "topics": {
+      "t1": "From award to operations: creating a followable delivery",
+      "t2": "What should a continuity and handover plan contain?",
+      "t3": "What materials does a procuring organization need from a digital supplier?",
+      "t4": "How buyers and suppliers handle deviations without losing pace",
+      "t5": "Checklist for clear ownership in digital assignments",
+      "t6": "How to evaluate a long-term delivery partner"
+    },
+    "cta": "Contact us"
+  },
+  "procuring": {
+    "title": "For procuring organizations",
+    "intro": "A scannable assessment sheet. We publish only verified facts. Other materials are provided on request in a relevant process.",
+    "printHint": "This page is print-friendly.",
+    "companyTitle": "Company facts",
+    "visualCaption": "Supplier facts",
+    "deliveryTitle": "Delivery models",
+    "models": {
+      "definedAssignment": "Defined assignment",
+      "teamDelivery": "Team delivery",
+      "specialistReinforcement": "Specialist reinforcement",
+      "partnerCollaboration": "Partner collaboration"
+    },
+    "languagesTitle": "Languages",
+    "languages": "Swedish and English",
+    "legalName": "Legal name",
+    "geographyTitle": "Geography",
+    "geographyBody": "Sweden. Remote and on site by agreement.",
+    "docsTitle": "Documentation and materials",
+    "docs": {
+      "companyRegistration": "Company registration / registry extract",
+      "financials": "Financial information",
+      "insurance": "Insurance certificates",
+      "qualityRoutines": "Quality routines",
+      "securityDocumentation": "Security documentation",
+      "sustainability": "Sustainability materials",
+      "references": "References",
+      "cvs": "CVs / competence profiles"
+    },
+    "omittedNote": "Certificates, framework awards and customer names are not published here without documented verification.",
+    "contactTitle": "Contact for follow-up",
+    "contactBody": "Book a short call or phone us. Personal email addresses are not published as the company address.",
+    "docColumn": "Material",
+    "statusColumn": "Status"
   },
   "about": {
-    "title": "About A2M Tech",
-    "paragraph1": "A2M Tech AB is an IT consultancy based in Helsingborg, Sweden. Our team brings combined experience from complex IT engagements in the public sector and business.",
-    "paragraph2": "We combine deep expertise in mobile development, data engineering, cloud, and cybersecurity with an understanding of procurement processes and operational requirements.",
-    "paragraph3": "Whether you need a complete solution, senior consultants for an ongoing project, or a partner in a procurement – we deliver with structure, quality, and predictability.",
-    "stats": {
-      "experience": "Combined experience",
-      "experienceValue": "10+ years",
-      "focus": "Focus",
-      "focusValue": "Public sector & IT",
-      "delivery": "Delivery",
-      "deliveryValue": "Security & quality"
-    }
-  },
-  "team": {
-    "title": "Our team",
-    "subtitle": "Senior consultants with deep technical expertise and experience from the public sector and business.",
-    "anasRole": "CEO & IT Consultant",
-    "anasBio": "A versatile IT consultant with a strong foundation in software development, infrastructure, and security. Delivers scalable, secure solutions with a clear link to operational needs.",
-    "abdulrahmanRole": "Data Engineer",
-    "abdulrahmanBio": "Experienced data engineer focused on scalable data pipelines, machine learning, and cloud solutions. Specialised in turning data into measurable business value.",
-    "tags": {
-      "consulting": "Consulting",
-      "mobile": "Mobile",
-      "security": "Security",
-      "data": "Data",
-      "ml": "AI/ML",
-      "cloud": "Cloud"
-    }
+    "title": "About",
+    "intro": "A2M Tech AB works on digital deliveries where ownership, documentation and follow-up are part of the assignment — not an afterthought.",
+    "ownershipTitle": "Ownership and accountability",
+    "ownershipBody": "We keep a clear line: what was promised must be followable. We avoid startup rhetoric and do not publish claims we cannot substantiate.",
+    "teamTitle": "People",
+    "teamIntro": "Named people with verified LinkedIn profiles. Detailed biographies and portraits are not published without explicit material.",
+    "anasRole": "Founder",
+    "anasBio": "Responsible for company direction and client dialogue.",
+    "abdulrahmanRole": "Technology & delivery",
+    "abdulrahmanBio": "Responsible for technical delivery and execution.",
+    "linkedin": "LinkedIn profile",
+    "locationTitle": "Location",
+    "locationBody": "We work across Sweden — remotely and on site by agreement. We are not limited to a single city.",
+    "workspaceCaption": "Flexible work environment: office space in Helsingborg and remote work according to project needs"
   },
   "contact": {
-    "title": "Get in touch",
-    "subtitle": "We welcome an initial conversation about your engagement or upcoming procurement.",
-    "phone": "Phone",
-    "email": "Email",
-    "linkedin": "LinkedIn",
-    "orgNumber": "Org. no.",
-    "address": "Address",
-    "bookMeeting": "Book an introduction via Calendly"
+    "title": "Contact",
+    "intro": "Choose what works for you. We use Calendly for booking so you get confirmation immediately.",
+    "bookTitle": "Book a call",
+    "bookBody": "A short introduction call via Calendly. No contact form on the site — we avoid uncertain personal-data handling on static hosting.",
+    "bookCta": "Open Calendly",
+    "phoneTitle": "Phone",
+    "afterTitle": "What happens after booking?",
+    "afterItems": {
+      "a1": "You receive a confirmation from Calendly.",
+      "a2": "We prepare based on the information you share in the booking.",
+      "a3": "The call covers needs, scope and possible next steps — without manufactured urgency."
+    },
+    "socialTitle": "Other channels",
+    "noEmailNote": "A company address on our own domain will be published when verified. Personal emails are not shown as the company address."
   },
-  "footer": {
-    "tagline": "Trusted IT partner for the public sector and business.",
-    "rights": "All rights reserved.",
-    "company": "A2M Tech AB"
+  "privacy": {
+    "title": "Privacy",
+    "updated": "Last updated: 16 August 2026",
+    "intro": "This page describes how A2M Tech AB handles personal data in connection with the website and contact.",
+    "controllerTitle": "Controller",
+    "controllerBody": "A2M Tech AB.",
+    "collectTitle": "What data do we collect?",
+    "collectBody": "Via Calendly you may provide name, email and other information you enter. If you call us, we process the data needed to respond. There is no contact form on the website.",
+    "purposeTitle": "Purpose",
+    "purposeBody": "To answer inquiries, book meetings and discuss potential assignments.",
+    "shareTitle": "Sharing",
+    "shareBody": "Booking uses Calendly (third party). LinkedIn is used if you choose to contact us there. We do not sell personal data.",
+    "analyticsTitle": "Analytics",
+    "analyticsBody": "Web analytics is off by default. If analytics is enabled in the future, it will require explicit consent.",
+    "rightsTitle": "Your rights",
+    "rightsBody": "You may request access, rectification or erasure under applicable law. Contact us by phone or Calendly.",
+    "contactTitle": "Contact"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "updated": "Last updated: 16 August 2026",
+    "intro": "a2m-tech.com is a static website. We do not use tracking cookies by default.",
+    "necessaryTitle": "Necessary",
+    "necessaryBody": "Technically necessary browser functions and any language preference you control via navigation. No cookie banner is shown when no analytics runs.",
+    "analyticsTitle": "Analytics",
+    "analyticsBody": "No web analytics is enabled in the default setup. If analytics is introduced, it will be consent-gated.",
+    "thirdTitle": "Third parties",
+    "thirdBody": "Links to Calendly and LinkedIn may lead to services that set their own cookies under their terms."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This address does not exist or has moved. Go to the home page or choose a page from the menu.",
+    "home": "Go to home",
+    "contact": "Contact"
   }
 }

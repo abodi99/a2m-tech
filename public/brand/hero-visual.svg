@@ -26,38 +26,68 @@
     <line x1="400" y1="0" x2="400" y2="400"/>
   </g>
 
+  <!-- Document / procurement -->
+  <g>
+    <!-- Placed lower so it stays visible under the shield in the hero card -->
+    <rect x="105" y="235" width="270" height="145" rx="18"
+          fill="#004869" fill-opacity="0.12" stroke="#004869" stroke-opacity="0.42" stroke-width="2"/>
+    <!-- Folded corner -->
+    <path d="M375 235 L375 270 L338 235 Z" fill="#176BE0" fill-opacity="0.18" stroke="#176BE0" stroke-opacity="0.42" stroke-width="2"/>
+    <!-- Document lines -->
+    <path d="M140 288 H320" stroke="#004869" stroke-opacity="0.44" stroke-width="3" stroke-linecap="round"/>
+    <path d="M140 315 H300" stroke="#004869" stroke-opacity="0.33" stroke-width="3" stroke-linecap="round"/>
+    <path d="M140 342 H280" stroke="#004869" stroke-opacity="0.26" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Seal (trust / approval) -->
+  <g>
+    <circle cx="190" cy="260" r="26" fill="#176BE0" fill-opacity="0.11" stroke="#176BE0" stroke-opacity="0.6" stroke-width="3"/>
+    <path d="M180 260 L188 268 L202 252" stroke="#176BE0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
   <!-- Central shield -->
-  <path d="M240 60 L320 100 V200 C320 260 280 310 240 330 C200 310 160 260 160 200 V100 Z"
-        fill="#004869" fill-opacity="0.12" stroke="#004869" stroke-width="2" stroke-opacity="0.4"/>
+  <path d="M240 62 L316 102 V205 C316 265 278 314 240 335 C202 314 164 265 164 205 V102 Z"
+        fill="#004869" fill-opacity="0.12" stroke="#004869" stroke-width="2" stroke-opacity="0.45"/>
 
   <!-- Shield checkmark -->
-  <path d="M210 200 L230 225 L275 175" stroke="#176BE0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M210 205 L232 227 L278 178" stroke="#176BE0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
   <!-- Network nodes -->
-  <circle cx="100" cy="120" r="8" fill="#176BE0" fill-opacity="0.7"/>
-  <circle cx="380" cy="120" r="8" fill="#176BE0" fill-opacity="0.7"/>
-  <circle cx="80" cy="280" r="6" fill="#004869" fill-opacity="0.5"/>
-  <circle cx="400" cy="280" r="6" fill="#004869" fill-opacity="0.5"/>
-  <circle cx="240" cy="370" r="7" fill="#176BE0" fill-opacity="0.6"/>
+  <circle cx="110" cy="120" r="8" fill="#176BE0" fill-opacity="0.75"/>
+  <circle cx="370" cy="120" r="8" fill="#176BE0" fill-opacity="0.75"/>
+  <circle cx="90" cy="300" r="6" fill="#004869" fill-opacity="0.55"/>
+  <circle cx="390" cy="300" r="6" fill="#004869" fill-opacity="0.55"/>
+  <circle cx="240" cy="360" r="7" fill="#176BE0" fill-opacity="0.62"/>
 
   <!-- Connection lines -->
-  <g stroke="url(#lineGrad)" stroke-width="1.5" stroke-opacity="0.5">
-    <line x1="100" y1="120" x2="160" y2="100"/>
-    <line x1="380" y1="120" x2="320" y2="100"/>
-    <line x1="100" y1="120" x2="80" y2="280"/>
-    <line x1="380" y1="120" x2="400" y2="280"/>
-    <line x1="80" y1="280" x2="240" y2="370"/>
-    <line x1="400" y1="280" x2="240" y2="370"/>
-    <line x1="160" y1="200" x2="100" y2="120"/>
-    <line x1="320" y1="200" x2="380" y2="120"/>
+  <g stroke="url(#lineGrad)" stroke-width="1.5" stroke-opacity="0.55">
+    <line x1="110" y1="120" x2="165" y2="95"/>
+    <line x1="370" y1="120" x2="315" y2="95"/>
+    <line x1="110" y1="120" x2="90" y2="300"/>
+    <line x1="370" y1="120" x2="390" y2="300"/>
+    <line x1="90" y1="300" x2="240" y2="360"/>
+    <line x1="390" y1="300" x2="240" y2="360"/>
   </g>
 
   <!-- Data flow arcs -->
-  <path d="M120 180 Q180 140 240 160" stroke="#176BE0" stroke-width="1.5" stroke-opacity="0.4" fill="none" stroke-dasharray="4 4"/>
-  <path d="M360 180 Q300 140 240 160" stroke="#176BE0" stroke-width="1.5" stroke-opacity="0.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M130 190 Q180 145 240 165" stroke="#176BE0" stroke-width="1.5" stroke-opacity="0.42" fill="none" stroke-dasharray="4 4"/>
+  <path d="M350 190 Q300 145 240 165" stroke="#176BE0" stroke-width="1.5" stroke-opacity="0.42" fill="none" stroke-dasharray="4 4"/>
 
   <!-- Small accent dots -->
-  <circle cx="180" cy="160" r="3" fill="#176BE0" fill-opacity="0.8"/>
-  <circle cx="300" cy="160" r="3" fill="#176BE0" fill-opacity="0.8"/>
-  <circle cx="240" cy="240" r="4" fill="#004869" fill-opacity="0.6"/>
+  <circle cx="190" cy="160" r="3" fill="#176BE0" fill-opacity="0.85"/>
+  <circle cx="290" cy="160" r="3" fill="#176BE0" fill-opacity="0.85"/>
+
+  <!-- Visible procurement document overlay (rendered on top) -->
+  <g>
+    <rect x="255" y="230" width="210" height="140" rx="18"
+          fill="#176BE0" fill-opacity="0.12" stroke="#176BE0" stroke-opacity="0.70" stroke-width="2.5"/>
+    <path d="M465 230 L465 270 L425 230 Z" fill="#176BE0" fill-opacity="0.28" stroke="#176BE0" stroke-opacity="0.75" stroke-width="2.5"/>
+    <path d="M285 278 H430" stroke="#176BE0" stroke-opacity="0.65" stroke-width="3" stroke-linecap="round"/>
+    <path d="M285 305 H410" stroke="#176BE0" stroke-opacity="0.46" stroke-width="3" stroke-linecap="round"/>
+    <path d="M285 332 H392" stroke="#176BE0" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Mini check to communicate verified delivery -->
+    <circle cx="410" cy="258" r="14" fill="#176BE0" fill-opacity="0.16" stroke="#176BE0" stroke-opacity="0.80" stroke-width="3"/>
+    <path d="M402 258 L408 264 L420 252" stroke="#176BE0" stroke-opacity="0.95" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
 </svg>

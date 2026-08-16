@@ -1,147 +1,445 @@
 {
   "metadata": {
-    "title": "A2M Tech – Pålitlig IT-partner för offentlig sektor",
-    "description": "A2M Tech levererar säkra IT-lösningar, dataplattformar och erfarna konsulter till myndigheter och offentlig verksamhet. Strukturerad leverans enligt upphandling och ramavtal."
+    "home": {
+      "title": "A2M Tech – Digitala leveranser med ansvar över tid",
+      "description": "A2M Tech AB levererar digitala uppdrag till företag och organisationer – med tydlig dokumentation, uppföljning och förvaltning."
+    },
+    "services": {
+      "title": "Tjänster | A2M Tech",
+      "description": "Behovsbaserade IT-tjänster: lösningar, teamleverans och specialistförstärkning med spårbar dokumentation."
+    },
+    "publicSector": {
+      "title": "Offentlig sektor | A2M Tech",
+      "description": "Praktiker för upphandlingsnära leverans: krav, dokumentation, kvalitet och förvaltning utan överdrivna löften."
+    },
+    "delivery": {
+      "title": "Leveransförmåga | A2M Tech",
+      "description": "Fem steg från behov till förvaltning: åtagande, leverans, uppföljning och långsiktig stabilitet."
+    },
+    "procuring": {
+      "title": "För upphandlande organisationer | A2M Tech",
+      "description": "Faktablad för bedömning: bolagsfakta, leveransmodeller och underlag som finns tillgängligt eller på begäran."
+    },
+    "quality": {
+      "title": "Kvalitet och säkerhet | A2M Tech",
+      "description": "Hur A2M Tech arbetar med spårbarhet, avvikelsehantering, dokumentation och robusta digitala tjänster."
+    },
+    "partnership": {
+      "title": "Partnerskap | A2M Tech",
+      "description": "Samverkan i större åtaganden: teamleverans, specialistförstärkning och partnerskap utan överdrivna löften."
+    },
+    "insights": {
+      "title": "Insikter | A2M Tech",
+      "description": "Planerade artiklar om leveransstyrning, kontinuitet och underlag för upphandlande organisationer."
+    },
+    "about": {
+      "title": "Om oss | A2M Tech",
+      "description": "A2M Tech AB. Ansvar och ägarskap i digitala leveranser – utan startup-retorik."
+    },
+    "contact": {
+      "title": "Kontakt | A2M Tech",
+      "description": "Boka ett kort samtal via Calendly eller ring 010-114 65 59. Tydlig uppföljning efter bokning."
+    },
+    "privacy": {
+      "title": "Integritet | A2M Tech",
+      "description": "Hur A2M Tech hanterar personuppgifter vid kontakt och bokning."
+    },
+    "cookies": {
+      "title": "Cookies | A2M Tech",
+      "description": "Information om cookies på a2m-tech.com. Analys är avstängd som standard."
+    },
+    "notFound": {
+      "title": "Sidan hittades inte | A2M Tech",
+      "description": "Sidan finns inte. Gå tillbaka till startsidan eller navigera via menyn."
+    }
+  },
+  "a11y": {
+    "skipToContent": "Hoppa till innehåll"
   },
   "nav": {
-    "services": "Tjänster",
-    "howWeWork": "Så arbetar vi",
-    "forWho": "För vem",
-    "about": "Om oss",
-    "bookMeeting": "Boka introduktion",
+    "mainNav": "Huvudnavigering",
+    "services": "Ert behov",
+    "publicSector": "Offentlig sektor",
+    "delivery": "Leveransförmåga",
+    "quality": "Kvalitet & säkerhet",
+    "partnership": "Partnerskap",
+    "procuring": "För upphandlare",
+    "about": "Om A2M Tech",
+    "insights": "Insikter",
+    "contact": "Kontakt",
+    "bookMeeting": "Inled en dialog",
     "menu": "Meny",
     "closeMenu": "Stäng meny"
   },
-  "hero": {
-    "badge": "IT-partner för offentlig sektor",
-    "title": "Pålitlig IT-partner för myndigheter och offentlig verksamhet",
-    "subtitle": "Vi levererar säkra IT-lösningar, dataplattformar och erfarna konsulter – med strukturerad leverans enligt upphandlingskrav och etablerade ramavtal.",
-    "ctaPrimary": "Boka introduktion",
-    "trust1": "Erfaren leverans i komplexa IT-miljöer",
-    "trust2": "Säkerhet, kvalitet och dokumentation i fokus",
-    "trust3": "Strukturerad modell för upphandling och ramavtal"
+  "breadcrumbs": {
+    "aria": "Brödsmulor",
+    "home": "Start",
+    "services": "Ert behov",
+    "publicSector": "Offentlig sektor",
+    "delivery": "Leveransförmåga",
+    "quality": "Kvalitet & säkerhet",
+    "partnership": "Partnerskap",
+    "procuring": "För upphandlande organisationer",
+    "about": "Om A2M Tech",
+    "insights": "Insikter",
+    "contact": "Kontakt",
+    "privacy": "Integritet",
+    "cookies": "Cookies"
   },
-  "trustBar": {
-    "security": {
-      "title": "Säkerhet",
-      "description": "Skydd av känslig data och kritiska system enligt etablerade principer."
+  "footer": {
+    "tagline": "Digitala leveranser med ansvar över tid – för offentlig sektor och etablerade verksamheter.",
+    "navigation": "Navigering",
+    "contact": "Kontakt",
+    "legal": "Juridik",
+    "privacy": "Integritet",
+    "cookies": "Cookies",
+    "bookMeeting": "Inled en dialog",
+    "rights": "Alla rättigheter förbehållna."
+  },
+  "common": {
+    "orgNumber": "Org.nr",
+    "phone": "Telefon",
+    "address": "Adress",
+    "linkedin": "LinkedIn",
+    "available": "Tillgängligt",
+    "onRequest": "På begäran",
+    "lastUpdated": "Senast uppdaterad",
+    "readMore": "Läs mer",
+    "bookMeeting": "Inled en dialog",
+    "callUs": "Ring oss",
+    "ctaSecondary": "Granska vår leveransförmåga",
+    "registeredOffice": "Helsingborg"
+  },
+  "home": {
+    "eyebrow": "Leveranspartner för offentlig sektor och etablerade verksamheter",
+    "title": "Digitala leveranser med ansvar över tid.",
+    "subtitle": "A2M Tech hjälper organisationer att utveckla, införa och förvalta digitala lösningar med tydlig styrning, spårbar kvalitet och en ansvarig partner genom hela leveransen.",
+    "ctaPrimary": "Inled en dialog",
+    "ctaSecondary": "Granska vår leveransförmåga",
+    "factsTitle": "Bolagsfakta",
+    "factsOrg": "Org.nr",
+    "factsCity": "Säte",
+    "factsPhone": "Telefon",
+    "predictableTitle": "Förutsägbart att beställa. Tydligt att följa upp.",
+    "predictableIntro": "Vi beskriver leveranspraktiker som gör uppdraget lättare att beställa och följa upp – utan att påstå certifieringar eller tilldelade avtal.",
+    "predictable": {
+      "p1": { "title": "Tydligt ansvar och fasta kontaktvägar", "body": "Ni ska veta vem som äger dialogen och hur beslut dokumenteras." },
+      "p2": { "title": "Planerad styrning och rapportering", "body": "Status, avvikelser och uppföljning sker enligt överenskommen rytm." },
+      "p3": { "title": "Spårbara krav och överenskommelser", "body": "Krav, beslut och förändringar ska kunna följas bakåt under uppdraget." },
+      "p4": { "title": "Dokumentation, överlämning och kontinuitet", "body": "Kunskap ska kunna stanna i er organisation när personer eller faser byts." },
+      "p5": { "title": "Kvalitet och säkerhet under avtalstiden", "body": "Kontroller och uppföljning ingår i hur vi arbetar – inte som lösa löften." }
     },
-    "documentation": {
-      "title": "Dokumentation",
-      "description": "Tydlig dokumentation och spårbarhet genom hela leveransprocessen."
+    "needsTitle": "Behov vi möter",
+    "needsSubtitle": "Ett behovsindex – inte en teknikkatalog.",
+    "needs": {
+      "n1": { "title": "Verksamhetsnära digital utveckling", "body": "När ni behöver utveckla eller anpassa digitala tjänster nära verksamhetens krav, med tydlig acceptans och överlämning." },
+      "n2": { "title": "Informations- och beslutsstöd", "body": "När information ska kunna flöda, sammanställas och stödja beslut utan att tappa spårbarhet." },
+      "n3": { "title": "Säkra och robusta digitala miljöer", "body": "När lösningar ska kunna drivas med kontrollerad åtkomst, dokumentation och uppföljning." },
+      "n4": { "title": "Modernisering och förvaltning", "body": "När befintliga lösningar behöver moderniseras, stabiliseras eller förvaltas över tid." },
+      "n5": { "title": "Specialistförstärkning och teamleverans", "body": "När ni behöver kompletterande kompetens eller ett samlat team med gemensam plan och status." },
+      "n6": { "title": "Samverkan i upphandlingar och större åtaganden", "body": "När kompletterande kapacitet behövs i samverkan med andra leverantörer i ett större uppdrag." }
     },
-    "procurement": {
-      "title": "Upphandling",
-      "description": "Erfarenhet av offentliga upphandlingar och ramavtal."
+    "modelTitle": "Leveransmodell i fem steg",
+    "modelSubtitle": "Kontinuitet från behov till förvaltning.",
+    "stages": {
+      "s1": "Förankra",
+      "s2": "Planera",
+      "s3": "Genomföra",
+      "s4": "Följa upp",
+      "s5": "Säkra kontinuitet"
     },
-    "delivery": {
-      "title": "Erfaren leverans",
-      "description": "Senior kompetens med bevisad erfarenhet från komplexa IT-uppdrag."
+    "spanLabels": {
+      "a1": "Ansvar",
+      "a2": "Dokumentation",
+      "a3": "Kontinuitet"
+    },
+    "modelCaption": "Varje steg har konkreta leverabler. Metoden är en arbetsmodell – inte ett proprietärt varumärke.",
+    "modelCta": "Läs om leveransförmåga",
+    "audiencesTitle": "Offentlig sektor",
+    "audiencesSubtitle": "Formella krav, transparens och långsiktig förvaltning.",
+    "audienceBusinessTitle": "Etablerade verksamheter",
+    "audienceBusinessBody": "När ni behöver en partner som tar ansvar för digitala uppdrag, förstärker ert team eller bygger vidare – med tydlig status och överlämning.",
+    "audienceBusinessCta": "Se ert behov",
+    "audiencePublicTitle": "Offentlig sektor",
+    "audiencePublicBody": "Vi arbetar med praktiker som underlättar bedömning, uppföljning och förvaltningsbarhet – utan att påstå mer än vi kan visa.",
+    "audiencePublicCta": "Offentlig sektor",
+    "procuringTitle": "Information för upphandlande organisationer",
+    "procuringBody": "Ett scanningsbart faktablad för due diligence: vad som är tillgängligt, vad som lämnas på begäran, och vad vi inte publicerar utan verifiering.",
+    "procuringCta": "Öppna faktabladet",
+    "riskTitle": "Så minskar vi leveransrisk",
+    "riskItems": {
+      "r1": { "title": "Utsett ansvar", "body": "Tydliga kontaktvägar och ägarskap för uppdragets dialog." },
+      "r2": { "title": "Dokumenterad överlämning", "body": "Så att kunskap och status kan föras vidare." },
+      "r3": { "title": "Ändrings- och avvikelsehantering", "body": "Förändringar och avvikelser hanteras synligt och skriftligt." },
+      "r4": { "title": "Kontinuitet vid personbyten", "body": "Leveransen ska kunna fortgå utan personberoende." }
+    },
+    "processTitle": "Så arbetar vi",
+    "processBody": "Tydlig dokumentation och regelbunden uppföljning skapar förutsättningar för hållbara digitala leveranser.",
+    "processItems": {
+      "documentation": "Spårbar besluts- och kravsdokumentation genom hela leveransen",
+      "collaboration": "Strukturerad kommunikation med fasta kontaktvägar",
+      "followUp": "Regelbunden uppföljning med rapportering och avvikelsehantering"
+    },
+    "videoTitle": "Så fungerar det i praktiken",
+    "videoBody": "Kort presentation av vårt sätt att arbeta och förhållningssätt till leveranser.",
+    "videoPlaceholder": "Video kommer när autentiskt material finns tillgängligt",
+    "videoNote": "Vi använder aldrig generiska marknadsföringsfilmer",
+    "evidenceTitle": "Underlag för bedömning",
+    "evidenceBody": "Vi publicerar inte fingerade referenser, kundlogotyper eller certifikat. Bolagsfakta, kontaktvägar och leveransbeskrivning finns här. Ytterligare underlag – till exempel CV, metoder eller registerutdrag – lämnas på begäran i en relevant upphandlings- eller urvalsprocess.",
+    "evidenceCta": "Se vad som finns tillgängligt",
+    "closeTitle": "Söker ni en ansvarstagande partner för ett kommande uppdrag?",
+    "closeBody": "Inled en dialog via Calendly eller ring oss. Efter bokning får ni bekräftelse och vi förbereder oss utifrån den information ni delar – utan påhittad brådska.",
+    "partnershipTitle": "Partnerskap",
+    "partnershipBody": "Vi kan komplettera större leveranser tillsammans med andra aktörer när uppdraget kräver bredare kapacitet.",
+    "partnershipCta": "Läs om partnerskap",
+    "qualityTitle": "Kvalitet och säkerhet",
+    "qualityBody": "Säkerhet, spårbarhet och uppföljning är inbyggda i hur vi planerar och överlämnar – inte som lösryckta löften.",
+    "qualityCta": "Kvalitet & säkerhet",
+    "visual": {
+      "heroAlt": "Leveranskontinuitet från förankring till förvaltning med ansvar, dokumentation och kontinuitet.",
+      "governanceCaption": "Styrningslager",
+      "layer1": "Ansvar och kontaktvägar",
+      "layer2": "Krav, beslut och spårbarhet",
+      "layer3": "Kvalitet och avvikelsehantering",
+      "layer4": "Överlämning och förvaltning",
+      "factSheetCaption": "Leverantörsfakta",
+      "factLegal": "Bolagsnamn",
+      "factPhone": "Telefon",
+      "factScope": "Geografi",
+      "factScopeValue": "Sverige · distans och på plats",
+      "factStatus": "Underlag",
+      "factStatusValue": "På begäran i relevant process",
+      "riskCaption": "Ansvarskedja"
     }
   },
   "services": {
     "title": "Tjänster",
-    "subtitle": "Specialistkompetens inom modern IT – från kravställning och utveckling till drift och vidareutveckling.",
-    "mobile": {
-      "title": "Mobilapplikationer",
-      "description": "Utveckling av säkra appar för iOS och Android – från kravställning och design till lansering och förvaltning."
+    "intro": "Vi utgår från behov, inte från en produktkatalog. Nedan beskriver vi hur vi arbetar när uppdraget är en lösning, ett team eller specialistförstärkning.",
+    "items": {
+      "i1": {
+        "title": "Definierade uppdrag",
+        "body": "Från krav och plan till genomförande och överlämning. Ni får tydliga leverabler, dokumentation och acceptanspunkter.",
+        "link": "Leveransförmåga"
+      },
+      "i2": {
+        "title": "Teamleverans",
+        "body": "Ett samlat team med gemensam plan, statusrapportering och ansvar för leveransens helhet.",
+        "link": "Leveransförmåga"
+      },
+      "i3": {
+        "title": "Specialistförstärkning",
+        "body": "När ni behöver kompletterande kompetens i befintlig organisation – med tydlig roll och uppföljning.",
+        "link": "Kontakt"
+      },
+      "i4": {
+        "title": "Integrationer och vidareutveckling",
+        "body": "När befintliga system behöver kopplas ihop, moderniseras eller byggas vidare – med dokumentation som går att förvalta.",
+        "link": "Leveransförmåga"
+      }
     },
-    "data": {
-      "title": "Data & analys",
-      "description": "Dataplattformar, pipelines och analys som omvandlar data till beslutsunderlag för verksamheten."
+    "closing": "Teknikval styrs av uppdragets krav. Vi beskriver lösningen utifrån behov, risk och förvaltningsbarhet – inte trendiga verktygslistor."
+  },
+  "publicSector": {
+    "title": "Offentlig sektor",
+    "intro": "Offentlig verksamhet ställer krav på tydlighet, spårbarhet och långsiktig förvaltning. Här beskriver vi praktiker vi arbetar efter – utan juridiska eller kontraktsmässiga påståenden.",
+    "checklistTitle": "Praktiker vi arbetar efter",
+    "items": {
+      "c1": "Krav och omfattning dokumenteras innan genomförande.",
+      "c2": "Status och avvikelser kommuniceras skriftligt och i tid.",
+      "c3": "Leverabler knyts till acceptanskriterier där det är relevant.",
+      "c4": "Dokumentation ska kunna överlämnas till er organisation.",
+      "c5": "Säkerhet och behörigheter hanteras enligt överenskommen modell.",
+      "c6": "Förvaltning och vidareutveckling planeras redan under leverans.",
+      "c7": "Vi undviker att publicera påståenden om ramavtal, ISO eller referenser utan verifiering."
     },
-    "consulting": {
-      "title": "IT-konsulting",
-      "description": "Seniora konsulter som förstärker er organisation med rätt kompetens vid rätt tidpunkt."
-    },
-    "security": {
-      "title": "Cybersäkerhet",
-      "description": "Säker arkitektur, riskbedömning och skydd av känslig data och kritiska system."
-    },
-    "devops": {
-      "title": "DevOps",
-      "description": "Automatisering, CI/CD och molninfrastruktur som säkerställer stabil och förutsägbar leverans."
-    },
-    "workspace": {
-      "title": "Digital arbetsplats",
-      "description": "Moderna arbetsverktyg och samarbetslösningar anpassade för er verksamhet."
+    "note": "Denna sida är inte juridisk rådgivning och ersätter inte era upphandlingsdokument.",
+    "ctaDelivery": "Se leveransförmåga",
+    "ctaProcuring": "Faktablad för upphandlande organisationer",
+    "visualCaption": "Offentliga kravlager",
+    "statementEyebrow": "Leverans under formella villkor",
+    "statement": "Tydlighet, spårbarhet och förvaltningsbarhet – praktiker som går att följa upp under avtalstiden.",
+    "visual": {
+      "l1": "Krav och dokumentation",
+      "l2": "Informationssäkerhet",
+      "l3": "Tillgänglighet och interoperabilitet",
+      "l4": "Uppföljning och kontinuitet"
     }
   },
-  "howWeWork": {
-    "title": "Så arbetar vi",
-    "subtitle": "Vi kombinerar teknisk spets med förståelse för offentlig verksamhet – oavsett om ni behöver en hel lösning eller förstärkning i ert team.",
-    "solutions": {
-      "title": "Skräddarsydda lösningar",
-      "description": "Vi bygger och levererar IT-lösningar anpassade efter era krav – från mobilappar och dataplattformar till integrationer och molnmiljöer."
+  "delivery": {
+    "title": "Leveransförmåga",
+    "intro": "Vår modell följer fem steg. Varje steg har konkreta leverabler så att uppdraget går att beställa, följa upp och förvalta. Detta är en arbetsmodell – inte ett proprietärt varumärke.",
+    "stages": {
+      "s1": {
+        "title": "Förankra",
+        "body": "Behov, mål, roller och mandat klargörs innan genomförande.",
+        "deliverables": "Behovsbeskrivning, roller, avgränsning, initial risklista."
+      },
+      "s2": {
+        "title": "Planera",
+        "body": "Åtagande, risk, tid, kvalitet och acceptans formuleras så att uppdraget går att följa upp.",
+        "deliverables": "Åtagandebeskrivning, plan, kommunikations- och acceptansmodell."
+      },
+      "s3": {
+        "title": "Genomföra",
+        "body": "Transparent status, dokumenterade beslut och kontrollerade förändringar under arbetet.",
+        "deliverables": "Löpande status, beslutspunkter, förändringslogg."
+      },
+      "s4": {
+        "title": "Följa upp",
+        "body": "Kvalitet, avvikelser, åtgärder och rapportering sammanfattas synligt.",
+        "deliverables": "Uppföljningsprotokoll, avvikelsehantering, kvarvarande punkter."
+      },
+      "s5": {
+        "title": "Säkra kontinuitet",
+        "body": "Överlämning, kompetensspridning, förvaltning och förbättring planeras så att leveransen kan fortgå.",
+        "deliverables": "Överlämningspaket, förvaltningsrutiner, kontaktpunkter."
+      }
     },
-    "procurement": {
-      "title": "Upphandlingar & ramavtal",
-      "description": "Vi deltar i offentliga upphandlingar och levererar enligt era ramavtal, kravspecifikationer och kvalitetssäkring."
-    },
-    "consultants": {
-      "title": "Erfarna konsulter & kvalitetssäkrad leverans",
-      "description": "Senior kompetens med tydliga leveransmodeller, förutsägbara processer och fokus på långsiktig kvalitet i varje uppdrag."
-    }
+    "deliverablesLabel": "Exempel på leverabler",
+    "visualizationTitle": "Leveransvisualisering",
+    "visualizationBody": "Tidslinjer, kvalitetsportar och dokumentationsspår skapar transparens genom hela leveransen.",
+    "riskTitle": "Minska leveransrisk",
+    "riskBody": "Risk minskas genom tidig avgränsning, synlig status och överlämningsbar dokumentation – inte genom att lova mer än uppdraget medger.",
+    "visualCaption": "Fem steg i leveransen"
   },
-  "forWho": {
-    "title": "För vem vi arbetar",
-    "subtitle": "Vi samarbetar med organisationer som värdesätter kvalitet, säkerhet och långsiktiga relationer.",
-    "public": {
-      "title": "Offentlig sektor",
-      "description": "Myndigheter, kommuner och regioner som behöver en pålitlig IT-partner med förståelse för upphandling, säkerhetskrav och offentlig förvaltning."
+  "quality": {
+    "title": "Kvalitet och säkerhet",
+    "intro": "Här beskriver vi hur vi arbetar med kvalitet, informationssäkerhet och uppföljning i digitala uppdrag – som praktiker, inte som certifikatslöften.",
+    "items": {
+      "q1": { "title": "Spårbarhet", "body": "Krav, beslut och förändringar dokumenteras så att de går att följa under uppdraget." },
+      "q2": { "title": "Avvikelsehantering", "body": "Avvikelser kommuniceras i tid, med åtgärd och uppföljning." },
+      "q3": { "title": "Dokumentation", "body": "Dokumentation ska kunna överlämnas och användas i er organisation." },
+      "q4": { "title": "Robusta digitala tjänster", "body": "Vi planerar för förvaltningsbarhet, behörigheter och kontrollerad förändring." }
     },
-    "business": {
-      "title": "Företag",
-      "description": "Etablerade aktörer som behöver skalbara digitala lösningar och specialistkompetens med hög kvalitet."
+    "note": "Vi listar inte ISO-certifikat, clearance eller ramavtal utan dokumenterad verifiering.",
+    "cta": "Till faktablad för upphandlare",
+    "visualCaption": "Kvalitetslager"
+  },
+  "partnership": {
+    "title": "Partnerskap",
+    "intro": "A2M Tech kan komplettera större åtaganden tillsammans med andra aktörer. Vi beskriver leveransformer – inte tilldelade ramavtal.",
+    "items": {
+      "p1": { "title": "Teamleverans", "body": "Ett samlat team med gemensam plan, status och dokumentation." },
+      "p2": { "title": "Specialistförstärkning", "body": "Kompletterande kompetens i befintlig organisation under en begränsad period." },
+      "p3": { "title": "Partnersamverkan", "body": "När uppdraget kräver bredare kapacitet i samverkan med andra leverantörer." }
     },
-    "partners": {
-      "title": "Utvalda samarbeten",
-      "description": "Kompletterande kompetens i samverkan med etablerade aktörer vid behov av bredare resurser."
-    }
+    "note": "Styrning av underleverantörer och partners beskrivs i dialog utifrån uppdragets krav.",
+    "cta": "Inled en dialog"
+  },
+  "insights": {
+    "title": "Insikter",
+    "intro": "Artiklar publiceras först när innehållet är färdigt och faktakontrollerat. Nedan är planerade ämnen – inte publicerade artiklar.",
+    "roadmapNote": "Se den fullständiga redaktionella planen i dokumentationen.",
+    "topics": {
+      "t1": "Från tilldelning till förvaltning: så skapas en uppföljningsbar leverans",
+      "t2": "Vad bör en kontinuitets- och överlämningsplan innehålla?",
+      "t3": "Vilket underlag behöver en upphandlande organisation från en digital leverantör?",
+      "t4": "Så arbetar beställare och leverantör med avvikelser utan att tappa tempo",
+      "t5": "Checklista för tydlig ansvarsfördelning i digitala uppdrag",
+      "t6": "Så utvärderar ni en långsiktig leveranspartner"
+    },
+    "cta": "Kontakta oss"
+  },
+  "procuring": {
+    "title": "För upphandlande organisationer",
+    "intro": "Ett scanningsbart underlag för bedömning. Vi publicerar endast verifierade fakta. Övrigt lämnas på begäran i relevant process.",
+    "printHint": "Sidan är utskriftsvänlig.",
+    "companyTitle": "Bolagsfakta",
+    "visualCaption": "Leverantörsfakta",
+    "deliveryTitle": "Leveransmodeller",
+    "models": {
+      "definedAssignment": "Definierat uppdrag",
+      "teamDelivery": "Teamleverans",
+      "specialistReinforcement": "Specialistförstärkning",
+      "partnerCollaboration": "Partnersamverkan"
+    },
+    "languagesTitle": "Språk",
+    "languages": "Svenska och engelska",
+    "legalName": "Bolagsnamn",
+    "geographyTitle": "Geografi",
+    "geographyBody": "Sverige. Distans och på plats enligt överenskommelse.",
+    "docsTitle": "Dokumentation och underlag",
+    "docs": {
+      "companyRegistration": "Bolagsregistrering / registerutdrag",
+      "financials": "Ekonomiska uppgifter",
+      "insurance": "Försäkringsintyg",
+      "qualityRoutines": "Kvalitetsrutiner",
+      "securityDocumentation": "Säkerhetsdokumentation",
+      "sustainability": "Hållbarhetsunderlag",
+      "references": "Referenser",
+      "cvs": "CV / kompetensprofiler"
+    },
+    "omittedNote": "Certifikat, ramavtal och kundnamn publiceras inte här utan dokumenterad verifiering.",
+    "contactTitle": "Kontakt för uppföljning",
+    "contactBody": "Boka ett kort samtal eller ring. Personliga e-postadresser publiceras inte som företagsadress.",
+    "docColumn": "Underlag",
+    "statusColumn": "Status"
   },
   "about": {
-    "title": "Om A2M Tech",
-    "paragraph1": "A2M Tech AB är ett IT-konsultbolag baserat i Helsingborg. Vårt team har samlad erfarenhet från komplexa IT-uppdrag inom offentlig sektor och näringsliv.",
-    "paragraph2": "Vi kombinerar djup kompetens inom mobilutveckling, data engineering, moln och cybersäkerhet med förståelse för upphandlingsprocesser och verksamhetskrav.",
-    "paragraph3": "Oavsett om ni behöver en komplett lösning, seniora konsulter för ett pågående projekt eller en partner i en upphandling – vi levererar med struktur, kvalitet och förutsägbarhet.",
-    "stats": {
-      "experience": "Samlad erfarenhet",
-      "experienceValue": "10+ år",
-      "focus": "Fokus",
-      "focusValue": "Offentlig sektor & IT",
-      "delivery": "Leverans",
-      "deliveryValue": "Säkerhet & kvalitet"
-    }
-  },
-  "team": {
-    "title": "Vårt team",
-    "subtitle": "Seniora konsulter med djup teknisk kompetens och erfarenhet från offentlig sektor och näringsliv.",
-    "anasRole": "VD & IT-konsult",
-    "anasBio": "Mångsidig IT-konsult med stark grund inom mjukvaruutveckling, infrastruktur och säkerhet. Levererar skalbara och säkra lösningar med tydlig koppling till verksamhetens behov.",
-    "abdulrahmanRole": "Data Engineer",
-    "abdulrahmanBio": "Erfaren data engineer med fokus på skalbara datapipelines, maskininlärning och molnlösningar. Specialiserad på att omvandla data till mätbar verksamhetsnytta.",
-    "tags": {
-      "consulting": "Konsulting",
-      "mobile": "Mobil",
-      "security": "Säkerhet",
-      "data": "Data",
-      "ml": "AI/ML",
-      "cloud": "Moln"
-    }
+    "title": "Om oss",
+    "intro": "A2M Tech AB arbetar med digitala leveranser där ansvar, dokumentation och uppföljning är en del av uppdraget – inte en eftertanke.",
+    "ownershipTitle": "Ägarskap och ansvar",
+    "ownershipBody": "Vi håller en tydlig linje: vad som lovats ska kunna följas upp. Vi undviker startup-retorik och publicerar inte påståenden vi inte kan styrka.",
+    "teamTitle": "Personer",
+    "teamIntro": "Namngivna personer med verifierade LinkedIn-profiler. Detaljerade biografier och personporträtt publiceras inte utan uttryckligt underlag.",
+    "anasRole": "Grundare",
+    "anasBio": "Ansvarar för bolagets riktning och kunddialog.",
+    "abdulrahmanRole": "Teknik & leverans",
+    "abdulrahmanBio": "Ansvarar för teknisk leverans och genomförande.",
+    "linkedin": "LinkedIn-profil",
+    "locationTitle": "Plats",
+    "locationBody": "Vi arbetar i Sverige – på distans och på plats efter överenskommelse. Vi är inte begränsade till en enskild ort.",
+    "workspaceCaption": "Flexibel arbetsmiljö: kontorsplats i Helsingborg och distansarbete efter uppdragets behov"
   },
   "contact": {
-    "title": "Kontakta oss",
-    "subtitle": "Vi tar gärna ett första samtal om ert uppdrag eller kommande upphandling.",
-    "phone": "Telefon",
-    "email": "E-post",
-    "linkedin": "LinkedIn",
-    "orgNumber": "Org.nr",
-    "address": "Adress",
-    "bookMeeting": "Boka introduktion via Calendly"
+    "title": "Kontakt",
+    "intro": "Välj det sätt som passar er. Vi använder Calendly för bokning så att ni får en bekräftelse direkt.",
+    "bookTitle": "Boka samtal",
+    "bookBody": "Ett kort introduktionssamtal via Calendly. Ingen kontaktformulär på webbplatsen – vi vill undvika osäker hantering av personuppgifter på statisk hosting.",
+    "bookCta": "Öppna Calendly",
+    "phoneTitle": "Telefon",
+    "afterTitle": "Vad händer efter bokning?",
+    "afterItems": {
+      "a1": "Ni får en bekräftelse från Calendly.",
+      "a2": "Vi förbereder oss utifrån den information ni delar i bokningen.",
+      "a3": "Samtalet handlar om behov, omfattning och eventuellt nästa steg – utan påhittad brådska."
+    },
+    "socialTitle": "Övriga kanaler",
+    "noEmailNote": "Företagsadress på egen domän publiceras när den är verifierad. Personliga e-postadresser visas inte som företagsadress."
   },
-  "footer": {
-    "tagline": "Pålitlig IT-partner för offentlig sektor och näringsliv.",
-    "rights": "Alla rättigheter förbehållna.",
-    "company": "A2M Tech AB"
+  "privacy": {
+    "title": "Integritet",
+    "updated": "Senast uppdaterad: 16 augusti 2026",
+    "intro": "Denna sida beskriver hur A2M Tech AB hanterar personuppgifter i samband med webbplatsen och kontakt.",
+    "controllerTitle": "Personuppgiftsansvarig",
+    "controllerBody": "A2M Tech AB.",
+    "collectTitle": "Vilka uppgifter samlar vi in?",
+    "collectBody": "Via Calendly kan ni lämna namn, e-post och annan information ni själva anger. Om ni ringer oss behandlar vi de uppgifter som behövs för att återkomma. Vi har ingen kontaktformulär på webbplatsen.",
+    "purposeTitle": "Ändamål",
+    "purposeBody": "Att besvara förfrågningar, boka möten och föra dialog om eventuella uppdrag.",
+    "shareTitle": "Delning",
+    "shareBody": "Bokning sker via Calendly (tredje part). LinkedIn används om ni väljer att kontakta oss där. Vi säljer inte personuppgifter.",
+    "analyticsTitle": "Analys",
+    "analyticsBody": "Webbanalys är avstängd som standard. Om analys aktiveras i framtiden kräver det uttryckligt samtycke.",
+    "rightsTitle": "Era rättigheter",
+    "rightsBody": "Ni kan begära tillgång, rättelse eller radering enligt gällande lagstiftning. Kontakta oss via telefon eller Calendly.",
+    "contactTitle": "Kontakt"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "updated": "Senast uppdaterad: 16 augusti 2026",
+    "intro": "a2m-tech.com är en statisk webbplats. Vi använder inte spårningscookies som standard.",
+    "necessaryTitle": "Nödvändiga",
+    "necessaryBody": "Tekniskt nödvändiga funktioner i webbläsaren och eventuell språkpreferens som ni själva styr via navigering. Ingen cookie-banner visas när ingen analys körs.",
+    "analyticsTitle": "Analys",
+    "analyticsBody": "Ingen webbanalys är aktiverad i standardutförandet. Om analys införs ska den vara samtyckesstyrd.",
+    "thirdTitle": "Tredje part",
+    "thirdBody": "Länkar till Calendly och LinkedIn kan leda till tjänster som sätter egna cookies enligt deras villkor."
+  },
+  "notFound": {
+    "title": "Sidan hittades inte",
+    "body": "Adressen finns inte eller har flyttats. Gå till startsidan eller välj en sida i menyn.",
+    "home": "Till startsidan",
+    "contact": "Kontakt"
   }
 }

@@ -4,8 +4,41 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# Redirect root to Swedish version
+DirectoryIndex index.html
+
+# Root → Swedish home
 RewriteRule ^$ /sv/ [R=301,L]
 
-# Redirect /sv and /en without trailing slash
+# Locale homes without trailing slash
 RewriteRule ^(sv|en)$ /$1/ [R=301,L]
+
+# Swedish internal keys → localized public paths (SEO)
+RewriteRule ^sv/services/?$ /sv/tjanster/ [R=301,L]
+RewriteRule ^sv/public-sector/?$ /sv/offentlig-sektor/ [R=301,L]
+RewriteRule ^sv/delivery-capability/?$ /sv/leveransformaga/ [R=301,L]
+RewriteRule ^sv/quality-security/?$ /sv/kvalitet-sakerhet/ [R=301,L]
+RewriteRule ^sv/for-procuring-organizations/?$ /sv/for-upphandlande-organisationer/ [R=301,L]
+RewriteRule ^sv/partnership/?$ /sv/partnerskap/ [R=301,L]
+RewriteRule ^sv/about/?$ /sv/om-oss/ [R=301,L]
+RewriteRule ^sv/insights/?$ /sv/insikter/ [R=301,L]
+RewriteRule ^sv/contact/?$ /sv/kontakt/ [R=301,L]
+RewriteRule ^sv/privacy/?$ /sv/integritet/ [R=301,L]
+
+# Trailing slash for locale routes that are directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+  <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|ico|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+ErrorDocument 404 /sv/404.html

@@ -1,20 +1,40 @@
-import { SITE_URL } from "@/lib/constants";
-import { routing } from "@/i18n/routing";
+import type { MetadataRoute } from "next";
+import { routing, type AppPathname } from "@/i18n/routing";
+import { absoluteLocalizedUrl } from "@/lib/locale-url";
+
+const pathnames: AppPathname[] = [
+  "/",
+  "/services",
+  "/public-sector",
+  "/delivery-capability",
+  "/quality-security",
+  "/for-procuring-organizations",
+  "/partnership",
+  "/about",
+  "/insights",
+  "/contact",
+  "/privacy",
+  "/cookies",
+];
 
 export const dynamic = "force-static";
 
-export default function sitemap() {
-  const locales = routing.locales;
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date("2026-08-16");
 
-  return locales.map((locale) => ({
-    url: `${SITE_URL}/${locale}/`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: locale === routing.defaultLocale ? 1 : 0.9,
-    alternates: {
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/`])
-      ),
-    },
-  }));
+  return pathnames.flatMap((pathname) =>
+    routing.locales.map((locale) => ({
+      url: absoluteLocalizedUrl(locale, pathname),
+      lastModified,
+      alternates: {
+        languages: Object.fromEntries([
+          ...routing.locales.map((loc) => [
+            loc,
+            absoluteLocalizedUrl(loc, pathname),
+          ]),
+          ["x-default", absoluteLocalizedUrl(routing.defaultLocale, pathname)],
+        ]),
+      },
+    }))
+  );
 }
