@@ -42,11 +42,11 @@
     },
     "privacy": {
       "title": "Privacy | A2M Tech",
-      "description": "How A2M Tech handles personal data for contact and booking."
+      "description": "How A2M Tech AB processes personal data for contact, newsletter and web analytics."
     },
     "cookies": {
       "title": "Cookies | A2M Tech",
-      "description": "Cookie information for a2m-tech.com. Analytics is off by default."
+      "description": "Cookie policy for a2m-tech.com – necessary cookies and consent-based analytics via Umami."
     },
     "notFound": {
       "title": "Page not found | A2M Tech",
@@ -653,31 +653,31 @@
   "privacy": {
     "title": "Privacy",
     "updated": "Last updated: 16 August 2026",
-    "intro": "This page describes how A2M Tech AB handles personal data in connection with the website and contact.",
+    "intro": "This page describes how A2M Tech AB processes personal data in connection with the website, contact and newsletter.",
     "controllerTitle": "Controller",
-    "controllerBody": "A2M Tech AB.",
+    "controllerBody": "A2M Tech AB, email abbe.mofleh@a2m-tech.com, phone 010-114 65 59.",
     "collectTitle": "What data do we collect?",
-    "collectBody": "Via Calendly you may provide name, email and other information you enter. If you call us, we process the data needed to respond. There is no contact form on the website.",
+    "collectBody": "Via the contact form and newsletter form you may provide name, organisation, email, phone and message. If you call us we process the data needed to respond. For web analytics (after consent) aggregated visit metrics are collected via Umami.",
     "purposeTitle": "Purpose",
-    "purposeBody": "To answer inquiries, book meetings and discuss potential assignments.",
+    "purposeBody": "To answer enquiries, discuss potential assignments, send insights you subscribed to, and – with consent – understand how the website is used.",
     "shareTitle": "Sharing",
-    "shareBody": "Booking uses Calendly (third party). LinkedIn is used if you choose to contact us there. We do not sell personal data.",
+    "shareBody": "Newsletter subscriptions are synced to our self-hosted Listmonk instance. LinkedIn is used only if you contact us there. We do not sell personal data.",
     "analyticsTitle": "Analytics",
-    "analyticsBody": "Web analytics is off by default. If analytics is enabled in the future, it will require explicit consent.",
+    "analyticsBody": "Umami runs only after you accept analytics cookies. Umami is privacy-friendly, first-party and used without advertising profiles. Google Analytics 4 is activated only if you explicitly allow the marketing category and it is configured.",
     "rightsTitle": "Your rights",
-    "rightsBody": "You may request access, rectification or erasure under applicable law. Contact us by phone or Calendly.",
+    "rightsBody": "You may request access, rectification or erasure under applicable law, and unsubscribe from the newsletter. Contact abbe.mofleh@a2m-tech.com.",
     "contactTitle": "Contact"
   },
   "cookies": {
     "title": "Cookies",
     "updated": "Last updated: 16 August 2026",
-    "intro": "a2m-tech.com is a static website. We do not use tracking cookies by default.",
+    "intro": "We use cookies and similar technology in the categories below. You control analytics via the cookie banner on first visit.",
     "necessaryTitle": "Necessary",
-    "necessaryBody": "Technically necessary browser functions and any language preference you control via navigation. No cookie banner is shown when no analytics runs.",
-    "analyticsTitle": "Analytics",
-    "analyticsBody": "No web analytics is enabled in the default setup. If analytics is introduced, it will be consent-gated.",
-    "thirdTitle": "Third parties",
-    "thirdBody": "Links to Calendly and LinkedIn may lead to services that set their own cookies under their terms."
+    "necessaryBody": "Required for basic function. Stores your cookie choice locally (localStorage). Cannot be turned off.",
+    "analyticsTitle": "Analytics (Umami)",
+    "analyticsBody": "After consent, Umami loads from umami.volontera.se to measure pageviews, sources and engagement. No advertising cookies. Respects Do Not Track.",
+    "thirdTitle": "Marketing / third party",
+    "thirdBody": "Google Analytics 4 is activated only if you allow the marketing category and it is configured. Links to LinkedIn may lead to services that set their own cookies under their terms."
   },
   "notFound": {
     "title": "Page not found",
@@ -717,5 +717,22 @@
     "errorGeneral": "Something went wrong. Please try again or contact us directly.",
     "invalidEmail": "Please enter a valid email address.",
     "disclaimer": "No spam. Unsubscribe at any time."
+  },
+  "cookieBanner": {
+    "eyebrow": "Cookies & analytics",
+    "body": "We use necessary features so the site works. With your consent we enable privacy-friendly analytics (Umami) to understand how the site is used. You can change your choice at any time.",
+    "categories": "Cookie categories",
+    "necessary": "Necessary",
+    "necessaryHint": "Always on. Stores your cookie choice locally in the browser.",
+    "analytics": "Analytics",
+    "analyticsHint": "Umami – first-party, no ads, respects Do Not Track.",
+    "marketing": "Marketing / GA4",
+    "marketingHint": "Google Analytics 4 – only if you explicitly allow it.",
+    "acceptAll": "Accept all",
+    "necessaryOnly": "Necessary only",
+    "showDetails": "Customize",
+    "hideDetails": "Hide details",
+    "save": "Save choices",
+    "policy": "Cookie policy"
   }
 }
