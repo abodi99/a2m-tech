@@ -1,13 +1,13 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { company, contacts } from "@/content/site";
-import { cn } from "@/lib/utils";
 import {
   JsonLd,
   buildPageMetadata,
   organizationJsonLd,
   websiteJsonLd,
 } from "@/lib/seo";
+import { PartnerTicker } from "@/components/partners/partner-ticker";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -49,160 +49,85 @@ export default async function HomePage({ params }: Props) {
       <JsonLd data={[organizationJsonLd(), websiteJsonLd(locale)]} />
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-800 to-brand-900 text-white">
-        {/* Subtle grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}
+      <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-brand-900 text-white">
+        {/* Background video – muted autoplay, pauses when motion is reduced */}
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
           aria-hidden
-        />
-        {/* Glow */}
-        <div className="absolute -right-40 -top-40 h-[600px] w-[600px] rounded-full bg-signal/5 blur-3xl" aria-hidden />
-        <div className="absolute -bottom-20 left-1/3 h-[400px] w-[400px] rounded-full bg-brand-800/30 blur-3xl" aria-hidden />
+          suppressHydrationWarning
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <div className="grid items-center gap-12 lg:grid-cols-[1fr_440px]">
-            {/* Left: copy */}
-            <div>
-              <div className="mb-6">
-                <span className="inline-flex items-center gap-2 rounded-full border border-signal/30 bg-signal/10 px-4 py-1.5 text-sm font-medium text-signal">
-                  <span className="h-1.5 w-1.5 rounded-full bg-signal" aria-hidden />
-                  {t("eyebrow")}
-                </span>
-              </div>
-              <h1 className="mb-6 font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-                {t("heroTitle")}
-              </h1>
-              <p className="mb-10 max-w-xl text-lg leading-relaxed text-white/85 lg:text-xl">
-                {t("heroSubtitle")}
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row sm:gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-brand-900 transition-all hover:bg-signal focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
-                >
-                  {t("ctaPrimary")}
-                </Link>
-                <Link
-                  href="/delivery-capability"
-                  className="inline-flex items-center justify-center rounded-lg border border-white/25 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white/50 hover:bg-white/8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
-                >
-                  {t("ctaSecondary")}
-                </Link>
-              </div>
+        {/* Dark gradient overlay for contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-900/90 via-brand-900/75 to-brand-900/60" aria-hidden />
+        {/* Subtle bottom vignette */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-brand-900/80 to-transparent" aria-hidden />
 
-              {/* Trust strip */}
-              <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-white/15 pt-8 text-sm text-white/65">
-                {(["heroTrustItem1", "heroTrustItem2", "heroTrustItem3"] as const).map((key) => (
-                  <li key={key} className="flex items-center gap-2">
-                    <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
-                      <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
-                    </svg>
-                    {t(key)}
-                  </li>
-                ))}
-                <li className="flex items-center gap-2">
-                  <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
-                    <path d="M8 1a4.5 4.5 0 0 0-4.5 4.5c0 1.526.76 2.873 1.926 3.685L4.012 14.5H12l-1.414-5.315A4.5 4.5 0 0 0 12.5 5.5 4.5 4.5 0 0 0 8 1Z" />
-                  </svg>
-                  <a href={contacts.phoneHref} className="transition-colors hover:text-white">
-                    {contacts.phoneDisplay}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Right: Delivery lifecycle card visual */}
-            <div className="hidden lg:block" aria-hidden>
-              <div className="relative">
-                {/* Main card */}
-                <div className="rounded-2xl border border-white/10 bg-white/8 p-6 shadow-2xl backdrop-blur-sm">
-                  <div className="mb-4 flex items-center justify-between">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-signal">
-                      {locale === "sv" ? "Leveranscykel" : "Delivery lifecycle"}
-                    </span>
-                    <span className="rounded-full bg-signal/20 px-2.5 py-0.5 text-xs font-medium text-signal">
-                      {locale === "sv" ? "Aktivt uppdrag" : "Active"}
-                    </span>
-                  </div>
-
-                  <div className="space-y-3">
-                    {([
-                      { phase: locale === "sv" ? "Kravanalyis & förankring" : "Requirements & alignment", done: true },
-                      { phase: locale === "sv" ? "Planering & arkitektur" : "Planning & architecture", done: true },
-                      { phase: locale === "sv" ? "Genomförande" : "Implementation", active: true },
-                      { phase: locale === "sv" ? "Uppföljning & QA" : "Follow-up & QA", done: false },
-                      { phase: locale === "sv" ? "Förvaltning & kontinuitet" : "Management & continuity", done: false },
-                    ] as { phase: string; done?: boolean; active?: boolean }[]).map(({ phase, done, active }) => (
-                      <div key={phase} className={cn(
-                        "flex items-center gap-3 rounded-lg px-3 py-2.5",
-                        active ? "bg-signal/15 ring-1 ring-signal/30" : "bg-white/5"
-                      )}>
-                        <div className={cn(
-                          "flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
-                          done ? "bg-signal" : active ? "border-2 border-signal" : "border border-white/20"
-                        )}>
-                          {done && (
-                            <svg className="h-3 w-3 text-brand-900" viewBox="0 0 12 12" fill="currentColor">
-                              <path d="M10.28 2.28a.75.75 0 0 0-1.06 0L4.5 7l-1.72-1.72a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 0 0 0-1.06z" />
-                            </svg>
-                          )}
-                          {active && <div className="h-1.5 w-1.5 rounded-full bg-signal" />}
-                        </div>
-                        <span className={cn(
-                          "text-sm",
-                          done ? "text-white/60 line-through decoration-white/30" : active ? "font-medium text-white" : "text-white/50"
-                        )}>
-                          {phase}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Contact person */}
-                  <div className="mt-4 flex items-center gap-3 rounded-lg border border-signal/20 bg-signal/5 px-3 py-2.5">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-800 text-xs font-bold text-white">
-                      AM
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-white">
-                        {locale === "sv" ? "Kontaktperson" : "Your contact"}
-                      </p>
-                      <p className="text-xs text-white/55">{contacts.phoneDisplay}</p>
-                    </div>
-                    <div className="ml-auto h-2 w-2 rounded-full bg-signal" />
-                  </div>
-                </div>
-
-                {/* Floating doc card */}
-                <div className="absolute -right-6 -top-6 rounded-xl border border-white/10 bg-brand-900/90 px-4 py-3 shadow-xl backdrop-blur-md">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-signal">
-                    {locale === "sv" ? "Dokumentation" : "Documentation"}
-                  </p>
-                  <p className="mt-0.5 text-xs text-white/70">
-                    {locale === "sv" ? "Spårbar · Komplett · Tillgänglig" : "Traceable · Complete · Accessible"}
-                  </p>
-                </div>
-
-                {/* Floating trust badge */}
-                <div className="absolute -bottom-4 -left-4 rounded-xl border border-white/10 bg-brand-900/90 px-4 py-3 shadow-xl backdrop-blur-md">
-                  <div className="flex items-center gap-2">
-                    <svg className="h-4 w-4 text-signal" viewBox="0 0 16 16" fill="currentColor">
-                      <path fillRule="evenodd" d="M8 1.5a.75.75 0 0 1 .692.461l1.25 3a.75.75 0 0 1-.138.822l-2.25 2.25a.75.75 0 1 1-1.06-1.06l1.85-1.85-.982-2.355A.75.75 0 0 1 8 1.5ZM2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8Zm6-4.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" clipRule="evenodd" />
-                    </svg>
-                    <p className="text-xs font-semibold text-white">
-                      {locale === "sv" ? "100 % transparens" : "100% transparency"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="relative mx-auto w-full max-w-5xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
+          {/* Eyebrow */}
+          <div className="mb-8">
+            <span className="inline-flex items-center gap-2 rounded-full border border-signal/30 bg-signal/10 px-4 py-1.5 text-sm font-medium text-signal">
+              <span className="h-1.5 w-1.5 rounded-full bg-signal" aria-hidden />
+              {t("eyebrow")}
+            </span>
           </div>
+
+          {/* Headline */}
+          <h1 className="mb-7 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+            {t("heroTitle")}
+          </h1>
+
+          {/* Subtitle */}
+          <p className="mb-10 max-w-2xl text-lg leading-relaxed text-white/80 lg:text-xl">
+            {t("heroSubtitle")}
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-brand-900 transition-all hover:bg-signal focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
+            >
+              {t("ctaPrimary")}
+            </Link>
+            <Link
+              href="/delivery-capability"
+              className="inline-flex items-center justify-center rounded-lg border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
+            >
+              {t("ctaSecondary")}
+            </Link>
+          </div>
+
+          {/* Trust strip */}
+          <ul className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-8 text-sm text-white/60">
+            {(["heroTrustItem1", "heroTrustItem2", "heroTrustItem3"] as const).map((key) => (
+              <li key={key} className="flex items-center gap-2">
+                <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                  <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
+                </svg>
+                {t(key)}
+              </li>
+            ))}
+            <li className="flex items-center gap-2">
+              <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                <path fillRule="evenodd" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v1c0 5.523 4.477 10 10 10h1a1.5 1.5 0 0 0 1.5-1.5v-1.09a1.5 1.5 0 0 0-1.077-1.443l-2.2-.628a1.5 1.5 0 0 0-1.585.526l-.388.51a.75.75 0 0 1-.92.22 8.5 8.5 0 0 1-3.977-3.978.75.75 0 0 1 .22-.919l.51-.388a1.5 1.5 0 0 0 .526-1.585L3.59 3.077A1.5 1.5 0 0 0 2.5 2H1.5Z" clipRule="evenodd" />
+              </svg>
+              <a href={contacts.phoneHref} className="transition-colors hover:text-white">
+                {contacts.phoneDisplay}
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
+
+      {/* ── Partner ticker ── */}
+      <PartnerTicker />
 
       {/* ── Mission statement – Civica big-text style ── */}
       <section className="bg-paper py-20">
