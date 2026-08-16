@@ -22,8 +22,8 @@ export function Footer() {
               <Image
                 src="/logo-cropped.png"
                 alt="A2M Tech"
-                width={460}
-                height={170}
+                width={494}
+                height={179}
                 className="h-14 w-auto object-contain brightness-0 invert"
                 unoptimized
               />

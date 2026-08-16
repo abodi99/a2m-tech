@@ -47,9 +47,9 @@ export function Header() {
           <Image
             src="/logo-cropped.png"
             alt="A2M Tech"
-            width={460}
-            height={170}
-            className="h-11 w-auto object-contain transition-opacity group-hover:opacity-85"
+            width={494}
+            height={179}
+            className="h-10 w-auto object-contain transition-opacity group-hover:opacity-85"
             priority
             unoptimized
           />
