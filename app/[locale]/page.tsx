@@ -60,7 +60,7 @@ export default async function HomePage({ params }: Props) {
           aria-hidden
           suppressHydrationWarning
         >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          <source src="/videos/hero-bg.mp4?v=2" type="video/mp4" />
         </video>
 
         {/* Dark gradient overlay for contrast */}
