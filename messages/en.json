@@ -655,7 +655,7 @@
     "updated": "Last updated: 16 August 2026",
     "intro": "This page describes how A2M Tech AB processes personal data in connection with the website, contact and newsletter.",
     "controllerTitle": "Controller",
-    "controllerBody": "A2M Tech AB, email abbe.mofleh@a2m-tech.com, phone 010-114 65 59.",
+    "controllerBody": "A2M Tech AB, email info@a2m-tech.com, phone 010-114 65 59.",
     "collectTitle": "What data do we collect?",
     "collectBody": "Via the contact form and newsletter form you may provide name, organisation, email, phone and message. Technical attribution is then also stored (page, landing page, referrer, UTM, browser language, timezone, screen size). Aggregated web analytics is collected via Umami.",
     "purposeTitle": "Purpose",
@@ -665,7 +665,7 @@
     "analyticsTitle": "Analytics",
     "analyticsBody": "Privacy-friendly analytics via Umami runs on visit (aggregated metrics). Google Analytics 4 is activated only after explicit consent. When someone submits the contact form or subscribes, A2M Tech receives an email with form data plus attribution (landing page, referrer, UTM).",
     "rightsTitle": "Your rights",
-    "rightsBody": "You may request access, rectification or erasure under applicable law, and unsubscribe from the newsletter. Contact abbe.mofleh@a2m-tech.com.",
+    "rightsBody": "You may request access, rectification or erasure under applicable law, and unsubscribe from the newsletter. Contact info@a2m-tech.com.",
     "contactTitle": "Contact"
   },
   "cookies": {

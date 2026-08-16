@@ -655,7 +655,7 @@
     "updated": "Senast uppdaterad: 16 augusti 2026",
     "intro": "Denna sida beskriver hur A2M Tech AB hanterar personuppgifter i samband med webbplatsen, kontakt och nyhetsbrev.",
     "controllerTitle": "Personuppgiftsansvarig",
-    "controllerBody": "A2M Tech AB, e-post abbe.mofleh@a2m-tech.com, telefon 010-114 65 59.",
+    "controllerBody": "A2M Tech AB, e-post info@a2m-tech.com, telefon 010-114 65 59.",
     "collectTitle": "Vilka uppgifter samlar vi in?",
     "collectBody": "Via kontaktformuläret och nyhetsbrevsformuläret kan ni lämna namn, organisation, e-post, telefon och meddelande. Då sparas även teknisk attribution (sida, landningssida, referrer, UTM, webbläsarspråk, tidszon, skärmstorlek). Aggregerad webbanalys sker via Umami.",
     "purposeTitle": "Ändamål",
@@ -665,7 +665,7 @@
     "analyticsTitle": "Analys",
     "analyticsBody": "Privacy-vänlig analys via Umami körs vid besök (aggregerade mått). Google Analytics 4 aktiveras endast efter uttryckligt samtycke. När någon skickar kontaktformulär eller prenumererar får A2M Tech mejl med formulärdata plus attribution (landningssida, referrer, UTM).",
     "rightsTitle": "Era rättigheter",
-    "rightsBody": "Ni kan begära tillgång, rättelse eller radering enligt gällande lagstiftning, samt avregistrera er från nyhetsbrevet. Kontakta abbe.mofleh@a2m-tech.com.",
+    "rightsBody": "Ni kan begära tillgång, rättelse eller radering enligt gällande lagstiftning, samt avregistrera er från nyhetsbrevet. Kontakta info@a2m-tech.com.",
     "contactTitle": "Kontakt"
   },
   "cookies": {

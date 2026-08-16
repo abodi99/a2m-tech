@@ -162,7 +162,7 @@ if (is_readable($configPath)) {
 }
 
 // ── Notify admin ───────────────────────────────────────────────────────────
-$adminEmail = 'abbe.mofleh@a2m-tech.com';
+$adminEmail = 'info@a2m-tech.com';
 $adminSubject = "Ny prenumerant – {$email}";
 $listmonkLine = $listmonkOk === null
     ? 'Listmonk: ej konfigurerad'

@@ -87,7 +87,7 @@ if (empty($message) || strlen($message) < 10 || strlen($message) > 5000) {
 }
 
 // Primary contact mailbox
-$toEmail   = 'abbe.mofleh@a2m-tech.com';
+$toEmail   = 'info@a2m-tech.com';
 $toName    = 'A2M Tech';
 $fromEmail = 'noreply@a2m-tech.com';
 
