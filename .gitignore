@@ -46,3 +46,6 @@ next-env.d.ts
 # deploy archives
 out_*.zip
 deploy-*.zip
+
+# Local server secrets (Listmonk bridge etc.)
+public/api/subscribe.config.php

@@ -102,9 +102,61 @@ if ($fp) {
     fclose($fp);
 }
 
+// ── Optional: forward to Listmonk (Coolify) ────────────────────────────────
+// Create public/api/subscribe.config.php (gitignored) with:
+//   return [
+//     'listmonk_url'  => 'https://list.yourdomain.com',
+//     'listmonk_user' => 'api_user',
+//     'listmonk_pass' => 'api_token',
+//     'listmonk_list' => 1, // list ID in Listmonk
+//   ];
+$listmonkOk = null;
+$configPath = __DIR__ . '/subscribe.config.php';
+if (is_readable($configPath)) {
+    $cfg = include $configPath;
+    if (is_array($cfg)
+        && !empty($cfg['listmonk_url'])
+        && !empty($cfg['listmonk_user'])
+        && !empty($cfg['listmonk_pass'])
+        && !empty($cfg['listmonk_list'])
+    ) {
+        $payload = json_encode([
+            'email'  => $email,
+            'name'   => '',
+            'status' => 'enabled',
+            'lists'  => [(int) $cfg['listmonk_list']],
+            'attribs'=> [
+                'source'       => $source,
+                'locale'       => $locale,
+                'page'         => $page,
+                'utm_source'   => $utmSource,
+                'utm_medium'   => $utmMedium,
+                'utm_campaign' => $utmCampaign,
+            ],
+        ]);
+        $ch = curl_init(rtrim($cfg['listmonk_url'], '/') . '/api/subscribers');
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST           => true,
+            CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+            CURLOPT_USERPWD        => $cfg['listmonk_user'] . ':' . $cfg['listmonk_pass'],
+            CURLOPT_POSTFIELDS     => $payload,
+            CURLOPT_TIMEOUT        => 8,
+        ]);
+        $resp = curl_exec($ch);
+        $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        // 200 = created, 409 = already exists — both OK
+        $listmonkOk = ($code === 200 || $code === 409);
+    }
+}
+
 // ── Notify admin ───────────────────────────────────────────────────────────
 $adminEmail = 'abbe.mofleh@a2m-tech.com';
 $adminSubject = "Ny prenumerant – {$email}";
+$listmonkLine = $listmonkOk === null
+    ? 'Listmonk: ej konfigurerad'
+    : ($listmonkOk ? 'Listmonk: synkad' : 'Listmonk: misslyckades (CSV sparad)');
 $adminBody = <<<TEXT
 Ny prenumerant på a2m-tech.com
 ==============================
@@ -117,6 +169,7 @@ UTM medium:   {$utmMedium}
 UTM campaign: {$utmCampaign}
 IP:           {$_SERVER['REMOTE_ADDR']}
 Tid:          {$row[0]}
+{$listmonkLine}
 TEXT;
 
 $headers  = "From: noreply@a2m-tech.com\r\n";
@@ -127,4 +180,4 @@ mail($adminEmail, mb_encode_mimeheader($adminSubject, 'UTF-8', 'Q'), $adminBody,
 
 // ── Respond ────────────────────────────────────────────────────────────────
 http_response_code(200);
-echo json_encode(['ok' => true]);
+echo json_encode(['ok' => true, 'listmonk' => $listmonkOk]);
