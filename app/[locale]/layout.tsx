@@ -42,15 +42,15 @@ export default async function LocaleLayout({ children, params }: Props) {
       <main id="main-content">{children}</main>
       <Footer />
 
-      {/* Umami loads immediately — privacy-friendly first-party analytics */}
-      {umamiUrl && umamiWebsiteId && (
-        <Script
+      {/* Umami loads immediately in HTML — no consent gate, no hydration wait */}
+      {umamiUrl && umamiWebsiteId ? (
+        <script
+          defer
           src={`${umamiUrl.replace(/\/$/, "")}/script.js`}
           data-website-id={umamiWebsiteId}
           data-domains="a2m-tech.com,www.a2m-tech.com"
-          strategy="afterInteractive"
         />
-      )}
+      ) : null}
 
       {/* GA4 only after marketing consent */}
       {gaMeasurementId && (
