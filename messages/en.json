@@ -430,7 +430,27 @@
       "p3": { "title": "Partner collaboration", "body": "When the assignment needs broader capacity alongside other suppliers." }
     },
     "note": "Governance of subcontractors and partners is described in dialogue based on the assignment’s requirements.",
-    "cta": "Start a dialogue"
+    "cta": "Send an enquiry"
+  },
+  "partners": {
+    "eyebrow": "Partner ecosystem",
+    "title": "Partnerships that strengthen delivery",
+    "body": "A2M Tech collaborates with specialist firms and complementary suppliers when an assignment requires broader capacity or specific expertise. Collaboration is structured with clear accountability and shared delivery governance.",
+    "disclaimer": "All partner organisations are fictional example partners for illustrative purposes.",
+    "desc": {
+      "nordlank":     "System integration for Nordic public-sector organisations",
+      "civora":       "Digital case management and governance in the municipal sector",
+      "styrpunkt":    "Project management and procurement support for complex deliveries",
+      "kontinuum":    "Continuity solutions and operational environment stabilisation",
+      "databro":      "Data flows, API integrations and technical infrastructure",
+      "tryggnod":     "Information security, access control and GDPR compliance",
+      "forankra":     "Organisational development and structured change leadership",
+      "flodesverket": "Process automation and digital case flow management",
+      "samband":      "Communication and coordination in complex multi-party projects",
+      "klarlinje":    "Documentation, traceability and delivery quality assurance",
+      "veridion":     "Verification, audit and independent quality review",
+      "infraholm":    "IT infrastructure, server operations and on-premises environments"
+    }
   },
   "insights": {
     "title": "Insights",

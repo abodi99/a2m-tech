@@ -430,7 +430,27 @@
       "p3": { "title": "Partnersamverkan", "body": "När uppdraget kräver bredare kapacitet i samverkan med andra leverantörer." }
     },
     "note": "Styrning av underleverantörer och partners beskrivs i dialog utifrån uppdragets krav.",
-    "cta": "Inled en dialog"
+    "cta": "Skicka en förfrågan"
+  },
+  "partners": {
+    "eyebrow": "Partnerekosystem",
+    "title": "Partnerskap som stärker leveransen",
+    "body": "A2M Tech samverkar med specialistbolag och kompletterande leverantörer när ett uppdrag kräver bredare kapacitet eller specifik expertis som stärker helheten. Samverkan sker strukturerat med tydlig ansvarsfördelning och gemensam leveransstyrning.",
+    "disclaimer": "Samtliga partnerbolag är fiktiva exempelpartners för illustrativt syfte.",
+    "desc": {
+      "nordlank":     "Systemintegration för nordiska offentliga aktörer",
+      "civora":       "Digital förvaltning och ärendehantering i kommunal sektor",
+      "styrpunkt":    "Projektledning och upphandlingsstöd för komplexa leveranser",
+      "kontinuum":    "Kontinuitetslösningar och stabilisering av driftsmiljöer",
+      "databro":      "Dataflöden, API-integrationer och teknisk infrastruktur",
+      "tryggnod":     "Informationssäkerhet, åtkomstkontroll och GDPR-efterlevnad",
+      "forankra":     "Verksamhetsutveckling och strukturerat förändringsledarskap",
+      "flodesverket": "Processautomation och digitala ärendeflöden",
+      "samband":      "Kommunikation och samordning i komplexa fleraktörsprojekt",
+      "klarlinje":    "Dokumentation, spårbarhet och kvalitetssäkring av leveranser",
+      "veridion":     "Verifiering, revision och oberoende kvalitetsgranskning",
+      "infraholm":    "IT-infrastruktur, serverdrift och driftsmiljöer på premiss"
+    }
   },
   "insights": {
     "title": "Insikter",
