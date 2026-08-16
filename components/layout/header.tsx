@@ -4,7 +4,6 @@ import { useEffect, useId, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { contacts } from "@/content/site";
 import { primaryNav } from "@/lib/nav";
 import { LanguageSwitcher } from "./language-switcher";
 import { buttonVariants } from "@/components/ui/button";
@@ -74,14 +73,12 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <LanguageSwitcher className="hidden sm:inline-flex" />
-          <a
-            href={contacts.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className={cn(buttonVariants({ size: "sm" }), "hidden sm:inline-flex")}
           >
-            {t("bookMeeting")}
-          </a>
+            {t("contact")}
+          </Link>
 
           <button
             type="button"
@@ -142,14 +139,12 @@ export function Header() {
             </Link>
             <div className="mt-3 flex flex-col gap-3 border-t border-line pt-3">
               <LanguageSwitcher />
-              <a
-                href={contacts.calendly}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact"
                 className={cn(buttonVariants(), "w-full")}
               >
-                {t("bookMeeting")}
-              </a>
+                {t("contact")}
+              </Link>
             </div>
           </nav>
         </div>

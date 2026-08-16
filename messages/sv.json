@@ -117,20 +117,98 @@
     "heroTitle": "Digitala leveranser med ansvar över tid",
     "heroSubtitle": "Pålitlig partner för offentlig sektor och etablerade verksamheter",
     "heroEstablished": "Etablerat 2019",
-    "insightsTitle": "Senaste insikter",
-    "insightsSubtitle": "Upptäck hur vi arbetar med leveransstyrning och kvalitetsuppföljning.",
-    "capabilitiesTitle": "Våra expertområden", 
-    "capabilitiesSubtitle": "Bred digital kompetens med fokus på långsiktig hållbarhet.",
     "learnMore": "Läs mer",
-    "viewAllCapabilities": "Se alla våra tjänster",
+    "stat1Value": "2019",
+    "stat1Label": "Etableringsår",
+    "stat2Value": "100%",
+    "stat2Label": "Dokumenterade leveranser",
+    "stat3Value": "Sverige",
+    "stat3Label": "Distans & på plats",
+    "stat4Value": "Alltid",
+    "stat4Label": "Utsedd kontaktperson",
+    "missionEyebrow": "Vår roll",
+    "missionTitle": "Vi stödjer organisationer att beställa, styra och förvalta digitala lösningar med tydlighet och ansvar.",
+    "missionBody": "A2M Tech AB är ett leveransbolag med fokus på offentlig sektor och etablerade verksamheter. Vi hjälper er att driva digitala uppdrag med spårbarhet, strukturerad uppföljning och en partner som tar ansvar under hela leveransen.",
+    "sectorsTitle": "Sektorer vi arbetar med",
+    "sectorsSubtitle": "Bred erfarenhet av formella krav, långa perspektiv och ansvarsfull digitalisering.",
+    "sector": {
+      "s1": {
+        "title": "Kommuner & regioner",
+        "body": "Stöd för digitala uppdrag med offentlighetsrättslig transparens, dokumentationskrav och formella upphandlingsprocesser.",
+        "icon": "M3 21v-2a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8z",
+        "href": "/public-sector"
+      },
+      "s2": {
+        "title": "Statliga myndigheter",
+        "body": "Leveranser som möter myndighetskrav på spårbarhet, informationssäkerhet och kontinuitet i förvaltningen.",
+        "icon": "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5",
+        "href": "/public-sector"
+      },
+      "s3": {
+        "title": "Etablerade verksamheter",
+        "body": "När ni behöver en partner som tar ägandeskap för digitala uppdrag, förstärker ert team eller bygger vidare med tydlig status.",
+        "icon": "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0H5m14 0h2M5 21H3M10 7h4M10 11h4M10 15h4",
+        "href": "/services"
+      }
+    },
+    "solutionsEyebrow": "Vad vi möjliggör",
+    "solutionsTitle": "Våra lösningar stödjer er att",
+    "solutionsBody": "Vi arbetar med praktiker som skapar förutsägbarhet och kontroll – utan att lova mer än vi kan visa.",
+    "solutionItem1": "Automatisera flöden och minska administrativt arbete",
+    "solutionItem2": "Stärka styrning och efterlevnad",
+    "solutionItem3": "Förbättra beslut med spårbar information",
+    "solutionItem4": "Säkra kontinuitet vid personers byte",
+    "solutionItem5": "Modernisera tjänster med strukturerad överlämning",
+    "solutionItem6": "Spara tid och reducera leveransrisk",
+    "solutionItem7": "Bygga långsiktiga digitala partnerskap",
+    "crossCapTitle": "Tvärfunktionella kompetensområden",
+    "crossCapSubtitle": "Sammanhängande kompetens som täcker hela uppdragscykeln.",
+    "crossCap": {
+      "c1": { "title": "Digital utveckling & integrationer", "body": "Verksamhetsnära systemutveckling, API-integrationer och teknisk arkitektur." },
+      "c2": { "title": "Data & informationsstöd", "body": "Strukturerat informationsflöde och beslutsstöd med spårbarhet och ansvar." },
+      "c3": { "title": "Säkerhet & efterlevnad", "body": "Hantering av åtkomstkontroll, dokumentation och uppföljning enligt krav." },
+      "c4": { "title": "Förvaltning & modernisering", "body": "Stabilisering, modernisering och långsiktig drift av befintliga system." },
+      "c5": { "title": "Teamförstärkning & specialist", "body": "Kompletterande kompetens eller samlat team med delad plan och status." },
+      "c6": { "title": "Upphandling & partnersamverkan", "body": "Kapacitet att ingå i samverkan med andra leverantörer i större åtaganden." }
+    },
+    "caseStudiesTitle": "Hur vi arbetar",
+    "caseStudiesSubtitle": "Konkreta exempel på vår leveransmodell i praktiken.",
+    "caseStudy": {
+      "case1": {
+        "tag": "Offentlig sektor",
+        "title": "Tydlig styrning från start – kommunalt digitaliseringsprojekt",
+        "body": "En kommunal organisation behövde stöd för att strukturera och genomföra ett digitaliseringsuppdrag med krav på dokumentation och löpande återrapportering."
+      },
+      "case2": {
+        "tag": "Förvaltning",
+        "title": "Systemmodernisering med kontinuitet i fokus",
+        "body": "Befintligt system moderniserades utan driftstörning. Överlämningsdokumentation och utbildningsunderlag säkerställde kontinuitet inför fasens avslut."
+      },
+      "case3": {
+        "tag": "Partnersamverkan",
+        "title": "Kompletterande kapacitet i större upphandling",
+        "body": "A2M Tech bidrog med specialistkompetens och tydlig leveransstruktur som del i ett konsortium för en statlig myndighets systemupphandling."
+      }
+    },
+    "trustTitle": "Vår grund i förtroende & transparens",
+    "trustBody": "Vi arbetar öppet och dokumenterat. All information om bolaget, kontaktvägar och leveransbeskrivning finns tillgänglig. Ytterligare underlag lämnas på begäran.",
+    "trustCta": "Se faktabladet för upphandlare",
+    "trust": {
+      "t1": "Bolagsinformation tillgänglig utan krav på NDA",
+      "t2": "Skriftlig leveransbeskrivning ges på begäran",
+      "t3": "Kontaktperson utsedd från dag ett",
+      "t4": "Inga uppfunna kundlogotyper eller certifieringar"
+    },
     "testimonialTitle": "Vad våra kunder säger",
     "testimonialSubtitle": "Pålitliga leveranser som skapar förtroende hos beställare.",
     "testimonial1Quote": "Tydlig kommunikation och leverans enligt plan. Dokumentationen gör uppföljning enkel och transparent.",
+    "testimonial1Initials": "KS",
     "testimonial1Name": "Kommunstyrelsens sekreterare",
     "testimonial1Role": "Kommun i Skåne",
     "testimonial2Quote": "Stabila leveranser utan överraskningar. Precis den typ av långsiktigt samarbete vi behövde.",
-    "testimonial2Name": "IT-chef", 
-    "testimonial2Role": "Myndighet",
+    "testimonial2Initials": "MA",
+    "testimonial2Name": "IT-ansvarig",
+    "testimonial2Role": "Statlig myndighet",
     "ctaPrimary": "Inled en dialog",
     "ctaSecondary": "Granska vår leveransförmåga",
     "factsTitle": "Bolagsfakta",
@@ -205,7 +283,14 @@
     "evidenceBody": "Vi publicerar inte fingerade referenser, kundlogotyper eller certifikat. Bolagsfakta, kontaktvägar och leveransbeskrivning finns här. Ytterligare underlag – till exempel CV, metoder eller registerutdrag – lämnas på begäran i en relevant upphandlings- eller urvalsprocess.",
     "evidenceCta": "Se vad som finns tillgängligt",
     "closeTitle": "Söker ni en ansvarstagande partner för ett kommande uppdrag?",
-    "closeBody": "Inled en dialog via Calendly eller ring oss. Efter bokning får ni bekräftelse och vi förbereder oss utifrån den information ni delar – utan påhittad brådska.",
+    "closeBody": "Vi svarar snabbt och förbereder oss utifrån den information ni delar – utan påhittad brådska.",
+    "closeCta": "Skicka en förfrågan",
+    "ctaInfoTitle": "Vad som händer efter ni kontaktar oss",
+    "ctaInfo": {
+      "i1": "Vi svarar inom en arbetsdag",
+      "i2": "Ni väljer om ni vill ha ett möte eller skriftlig dialog",
+      "i3": "Inget NDA krävs för initial dialog"
+    },
     "partnershipTitle": "Partnerskap",
     "partnershipBody": "Vi kan komplettera större leveranser tillsammans med andra aktörer när uppdraget kräver bredare kapacitet.",
     "partnershipCta": "Läs om partnerskap",
@@ -410,19 +495,38 @@
   },
   "contact": {
     "title": "Kontakt",
-    "intro": "Välj det sätt som passar er. Vi använder Calendly för bokning så att ni får en bekräftelse direkt.",
-    "bookTitle": "Boka samtal",
-    "bookBody": "Ett kort introduktionssamtal via Calendly. Ingen kontaktformulär på webbplatsen – vi vill undvika osäker hantering av personuppgifter på statisk hosting.",
-    "bookCta": "Öppna Calendly",
+    "intro": "Fyll i formuläret eller ring oss direkt. Vi återkommer inom en arbetsdag.",
+    "formTitle": "Skicka en förfrågan",
     "phoneTitle": "Telefon",
-    "afterTitle": "Vad händer efter bokning?",
+    "phoneNote": "Tillgängliga på kontorstid. Vi återkommer samma eller nästa arbetsdag.",
+    "afterTitle": "Vad händer sedan?",
     "afterItems": {
-      "a1": "Ni får en bekräftelse från Calendly.",
-      "a2": "Vi förbereder oss utifrån den information ni delar i bokningen.",
-      "a3": "Samtalet handlar om behov, omfattning och eventuellt nästa steg – utan påhittad brådska."
+      "a1": "Vi läser er förfrågan och bekräftar att vi mottagit den.",
+      "a2": "Vi förbereder oss utifrån den information ni delar.",
+      "a3": "Vi föreslår ett kort samtal eller skriftlig dialog – utan påhittad brådska."
     },
-    "socialTitle": "Övriga kanaler",
-    "noEmailNote": "Företagsadress på egen domän publiceras när den är verifierad. Personliga e-postadresser visas inte som företagsadress."
+    "socialTitle": "LinkedIn"
+  },
+  "contactForm": {
+    "ariaLabel": "Kontaktformulär",
+    "labelName": "Namn",
+    "placeholderName": "Ert namn",
+    "labelOrg": "Organisation",
+    "placeholderOrg": "Kommunen / myndigheten / företaget",
+    "labelContact": "E-post eller telefon",
+    "placeholderContact": "er@organisation.se eller 070-xxx xx xx",
+    "contactHint": "Så kan vi återkomma till er.",
+    "labelMessage": "Ert ärende",
+    "placeholderMessage": "Beskriv kort vad ni behöver hjälp med...",
+    "submit": "Skicka förfrågan",
+    "sending": "Skickar...",
+    "noSpam": "Vi säljer aldrig era uppgifter.",
+    "successTitle": "Tack för er förfrågan!",
+    "successBody": "Vi återkommer inom en arbetsdag.",
+    "sendAnother": "Skicka en till förfrågan",
+    "errorRequired": "Obligatoriskt fält.",
+    "errorTooShort": "Ange minst 10 tecken.",
+    "errorGeneral": "Något gick fel. Försök igen eller ring oss på 010-114 65 59."
   },
   "privacy": {
     "title": "Integritet",

@@ -117,18 +117,96 @@
     "heroTitle": "Digital delivery with accountability over time",
     "heroSubtitle": "Reliable partner for public sector and established organizations",
     "heroEstablished": "Established 2019",
-    "insightsTitle": "Latest insights",
-    "insightsSubtitle": "Discover how we work with delivery governance and quality follow-up.",
-    "capabilitiesTitle": "Our areas of expertise",
-    "capabilitiesSubtitle": "Broad digital competence with focus on long-term sustainability.",
     "learnMore": "Learn more",
-    "viewAllCapabilities": "See all our services",
+    "stat1Value": "2019",
+    "stat1Label": "Year established",
+    "stat2Value": "100%",
+    "stat2Label": "Documented deliveries",
+    "stat3Value": "Sweden",
+    "stat3Label": "Remote & on-site",
+    "stat4Value": "Always",
+    "stat4Label": "Designated contact person",
+    "missionEyebrow": "Our role",
+    "missionTitle": "We support organizations to order, govern and manage digital solutions with clarity and accountability.",
+    "missionBody": "A2M Tech AB is a delivery company focused on public sector and established organizations. We help you drive digital assignments with traceability, structured follow-up and a partner who takes responsibility throughout the entire delivery.",
+    "sectorsTitle": "Sectors we work with",
+    "sectorsSubtitle": "Broad experience of formal requirements, long-term perspectives and responsible digitalization.",
+    "sector": {
+      "s1": {
+        "title": "Municipalities & regions",
+        "body": "Support for digital assignments with public law transparency, documentation requirements and formal procurement processes.",
+        "icon": "M3 21v-2a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8z",
+        "href": "/public-sector"
+      },
+      "s2": {
+        "title": "Government agencies",
+        "body": "Deliveries meeting agency requirements for traceability, information security and continuity in operations.",
+        "icon": "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5",
+        "href": "/public-sector"
+      },
+      "s3": {
+        "title": "Established organizations",
+        "body": "When you need a partner who takes ownership of digital assignments, reinforces your team or builds further with clear status.",
+        "icon": "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0H5m14 0h2M5 21H3M10 7h4M10 11h4M10 15h4",
+        "href": "/services"
+      }
+    },
+    "solutionsEyebrow": "What we enable",
+    "solutionsTitle": "Our solutions support you to",
+    "solutionsBody": "We work with practices that create predictability and control – without promising more than we can show.",
+    "solutionItem1": "Automate workflows and reduce administrative burden",
+    "solutionItem2": "Strengthen governance and compliance",
+    "solutionItem3": "Improve decisions with traceable information",
+    "solutionItem4": "Secure continuity through staff changes",
+    "solutionItem5": "Modernise services with structured handover",
+    "solutionItem6": "Save time and reduce delivery risk",
+    "solutionItem7": "Build long-term digital partnerships",
+    "crossCapTitle": "Cross-functional capability areas",
+    "crossCapSubtitle": "Integrated competence covering the full assignment lifecycle.",
+    "crossCap": {
+      "c1": { "title": "Digital development & integrations", "body": "Business-near system development, API integrations and technical architecture." },
+      "c2": { "title": "Data & information support", "body": "Structured information flow and decision support with traceability and accountability." },
+      "c3": { "title": "Security & compliance", "body": "Handling of access control, documentation and follow-up according to requirements." },
+      "c4": { "title": "Operations & modernization", "body": "Stabilization, modernization and long-term operation of existing systems." },
+      "c5": { "title": "Team reinforcement & specialist", "body": "Complementary competence or coordinated team with shared plan and status." },
+      "c6": { "title": "Procurement & partner collaboration", "body": "Capacity to participate with other suppliers in larger commitments." }
+    },
+    "caseStudiesTitle": "How we work",
+    "caseStudiesSubtitle": "Concrete examples of our delivery model in practice.",
+    "caseStudy": {
+      "case1": {
+        "tag": "Public sector",
+        "title": "Clear governance from the start – municipal digitalization project",
+        "body": "A municipal organization needed support to structure and execute a digitalization assignment with requirements for documentation and ongoing reporting."
+      },
+      "case2": {
+        "tag": "Operations",
+        "title": "System modernization with continuity in focus",
+        "body": "An existing system was modernized without operational disruption. Handover documentation and training materials secured continuity before the phase concluded."
+      },
+      "case3": {
+        "tag": "Partner collaboration",
+        "title": "Complementary capacity in a larger procurement",
+        "body": "A2M Tech contributed specialist competence and clear delivery structure as part of a consortium for a government agency's system procurement."
+      }
+    },
+    "trustTitle": "Our foundation in trust & transparency",
+    "trustBody": "We work openly and with documentation. All information about the company, contact channels and delivery description is available. Additional materials are provided on request.",
+    "trustCta": "See the fact sheet for procurers",
+    "trust": {
+      "t1": "Company information available without NDA requirement",
+      "t2": "Written delivery description provided on request",
+      "t3": "Designated contact person from day one",
+      "t4": "No fabricated customer logos or certifications"
+    },
     "testimonialTitle": "What our clients say",
     "testimonialSubtitle": "Reliable deliveries that build trust with contracting organizations.",
     "testimonial1Quote": "Clear communication and delivery according to plan. Documentation makes follow-up simple and transparent.",
+    "testimonial1Initials": "KS",
     "testimonial1Name": "Municipal Council Secretary",
     "testimonial1Role": "Municipality in Skåne",
     "testimonial2Quote": "Stable deliveries without surprises. Exactly the type of long-term collaboration we needed.",
+    "testimonial2Initials": "MA",
     "testimonial2Name": "IT Manager",
     "testimonial2Role": "Government Agency",
     "ctaPrimary": "Start a dialogue",
@@ -205,7 +283,14 @@
     "evidenceBody": "We do not publish fabricated references, customer logos or certificates. Company facts, contact channels and delivery description are here. Additional materials — such as CVs, methods or registry extracts — are provided on request in a relevant procurement or selection process.",
     "evidenceCta": "See what is available",
     "closeTitle": "Looking for an accountable partner for an upcoming assignment?",
-    "closeBody": "Start a dialogue via Calendly or call us. After booking you receive confirmation and we prepare from the information you share — without manufactured urgency.",
+    "closeBody": "We respond quickly and prepare from the information you share — without manufactured urgency.",
+    "closeCta": "Send an enquiry",
+    "ctaInfoTitle": "What happens after you contact us",
+    "ctaInfo": {
+      "i1": "We respond within one business day",
+      "i2": "You choose whether to meet or continue in writing",
+      "i3": "No NDA required for initial dialogue"
+    },
     "partnershipTitle": "Partnership",
     "partnershipBody": "We can complement larger deliveries with other actors when the assignment needs broader capacity.",
     "partnershipCta": "Read about partnership",
@@ -410,19 +495,38 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Choose what works for you. We use Calendly for booking so you get confirmation immediately.",
-    "bookTitle": "Book a call",
-    "bookBody": "A short introduction call via Calendly. No contact form on the site — we avoid uncertain personal-data handling on static hosting.",
-    "bookCta": "Open Calendly",
+    "intro": "Fill in the form or call us directly. We respond within one business day.",
+    "formTitle": "Send an enquiry",
     "phoneTitle": "Phone",
-    "afterTitle": "What happens after booking?",
+    "phoneNote": "Available during office hours. We respond the same or next business day.",
+    "afterTitle": "What happens next?",
     "afterItems": {
-      "a1": "You receive a confirmation from Calendly.",
-      "a2": "We prepare based on the information you share in the booking.",
-      "a3": "The call covers needs, scope and possible next steps — without manufactured urgency."
+      "a1": "We read your enquiry and confirm receipt.",
+      "a2": "We prepare based on the information you share.",
+      "a3": "We suggest a short call or written dialogue — without manufactured urgency."
     },
-    "socialTitle": "Other channels",
-    "noEmailNote": "A company address on our own domain will be published when verified. Personal emails are not shown as the company address."
+    "socialTitle": "LinkedIn"
+  },
+  "contactForm": {
+    "ariaLabel": "Contact form",
+    "labelName": "Name",
+    "placeholderName": "Your name",
+    "labelOrg": "Organisation",
+    "placeholderOrg": "Municipality / agency / company",
+    "labelContact": "Email or phone",
+    "placeholderContact": "you@organisation.com or +46 70-xxx xx xx",
+    "contactHint": "How we can reach you.",
+    "labelMessage": "Your enquiry",
+    "placeholderMessage": "Briefly describe what you need help with...",
+    "submit": "Send enquiry",
+    "sending": "Sending...",
+    "noSpam": "We never sell your data.",
+    "successTitle": "Thank you for your enquiry!",
+    "successBody": "We will respond within one business day.",
+    "sendAnother": "Send another enquiry",
+    "errorRequired": "Required field.",
+    "errorTooShort": "Please enter at least 10 characters.",
+    "errorGeneral": "Something went wrong. Please try again or call us on 010-114 65 59."
   },
   "privacy": {
     "title": "Privacy",
