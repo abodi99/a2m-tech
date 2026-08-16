@@ -51,6 +51,10 @@
     "notFound": {
       "title": "Page not found | A2M Tech",
       "description": "This page does not exist. Return home or use the navigation."
+    },
+    "investors": {
+      "title": "Investors | A2M Tech AB",
+      "description": "Information about A2M Tech's direction, development priorities, financial perspective and contact routes for investors and strategic stakeholders."
     }
   },
   "a11y": {
@@ -70,7 +74,8 @@
     "contact": "Contact",
     "bookMeeting": "Start a dialogue",
     "menu": "Menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "investors": "Investors"
   },
   "breadcrumbs": {
     "aria": "Breadcrumbs",
@@ -86,7 +91,8 @@
     "cases": "Cases",
     "contact": "Contact",
     "privacy": "Privacy",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "investors": "Investors"
   },
   "footer": {
     "tagline": "Digital delivery with accountability over time.",

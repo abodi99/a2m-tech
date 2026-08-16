@@ -51,6 +51,10 @@
     "notFound": {
       "title": "Sidan hittades inte | A2M Tech",
       "description": "Sidan finns inte. Gå tillbaka till startsidan eller navigera via menyn."
+    },
+    "investors": {
+      "title": "Investerare | A2M Tech AB",
+      "description": "Information om A2M Techs inriktning, utvecklingsprioriteringar, finansiella perspektiv och kontaktvägar för investerare och strategiska intressenter."
     }
   },
   "a11y": {
@@ -70,7 +74,8 @@
     "contact": "Kontakt",
     "bookMeeting": "Inled en dialog",
     "menu": "Meny",
-    "closeMenu": "Stäng meny"
+    "closeMenu": "Stäng meny",
+    "investors": "Investerare"
   },
   "breadcrumbs": {
     "aria": "Brödsmulor",
@@ -86,7 +91,8 @@
     "cases": "Kundcase",
     "contact": "Kontakt",
     "privacy": "Integritet",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "investors": "Investerare"
   },
   "footer": {
     "tagline": "Digitala leveranser med ansvar över tid.",

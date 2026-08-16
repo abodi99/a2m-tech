@@ -13,6 +13,7 @@ const pathnames: AppPathname[] = [
   "/partnership",
   "/about",
   "/insights",
+  "/investors",
   "/contact",
   "/privacy",
   "/cookies",

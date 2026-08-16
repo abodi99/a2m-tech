@@ -50,6 +50,10 @@ export const routing = defineRouting({
       sv: "/kundcase",
       en: "/cases",
     },
+    "/investors": {
+      sv: "/investerare",
+      en: "/investors",
+    },
   },
 });
 

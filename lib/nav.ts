@@ -11,7 +11,8 @@ export type NavItem = {
     | "quality"
     | "partnership"
     | "insights"
-    | "cases";
+    | "cases"
+    | "investors";
 };
 
 /** Compact primary nav per brief */
@@ -35,6 +36,7 @@ export const footerNav2: NavItem[] = [
   { href: "/about", key: "about" },
   { href: "/insights", key: "insights" },
   { href: "/cases", key: "cases" },
+  { href: "/investors", key: "investors" },
   { href: "/contact", key: "contact" },
 ];
 

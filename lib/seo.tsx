@@ -16,6 +16,7 @@ type MetaKey =
   | "procuring"
   | "partnership"
   | "insights"
+  | "investors"
   | "about"
   | "contact"
   | "privacy"
