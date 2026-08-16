@@ -150,7 +150,6 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-4 py-5 text-xs text-white/40 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <span>© {new Date().getFullYear()} {company.legalName}. {t("rights")}</span>
-          <span className="text-white/25">Sverige · Distans & på plats</span>
         </div>
       </div>
     </footer>

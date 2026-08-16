@@ -49,71 +49,162 @@ export default async function HomePage({ params }: Props) {
       <JsonLd data={[organizationJsonLd(), websiteJsonLd(locale)]} />
 
       {/* ── Hero ── */}
-      <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-brand-900 text-white">
-        {/* Background video – muted autoplay, pauses when motion is reduced */}
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
+      <section className="relative flex min-h-[88vh] items-center overflow-hidden text-white" style={{background: 'linear-gradient(150deg, #001e2d 0%, #003347 45%, #004869 100%)'}}>
+
+        {/* Dot-grid atmospheric overlay */}
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{backgroundImage: 'radial-gradient(circle, rgba(188,234,242,0.35) 1px, transparent 1px)', backgroundSize: '44px 44px'}}
           aria-hidden
-          suppressHydrationWarning
-        >
-          <source src="/videos/hero-bg.mp4?v=2" type="video/mp4" />
-        </video>
+        />
 
-        {/* Dark gradient overlay for contrast */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-900/90 via-brand-900/75 to-brand-900/60" aria-hidden />
-        {/* Subtle bottom vignette */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-brand-900/80 to-transparent" aria-hidden />
+        {/* Radial glow spots */}
+        <div className="absolute -left-40 top-0 h-[600px] w-[600px] rounded-full bg-[#007a96]/15 blur-3xl" aria-hidden />
+        <div className="absolute -right-20 bottom-10 h-[400px] w-[400px] rounded-full bg-[#176be0]/10 blur-3xl" aria-hidden />
 
-        <div className="relative mx-auto w-full max-w-5xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
-          {/* Headline */}
-          <h1 className="mb-7 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
-            {t("heroTitle")}
-          </h1>
+        {/* Bottom fade */}
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#001e2d]/80 to-transparent" aria-hidden />
 
-          {/* Subtitle */}
-          <p className="mb-10 max-w-2xl text-lg leading-relaxed text-white/80 lg:text-xl">
-            {t("heroSubtitle")}
-          </p>
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-          {/* CTAs */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-brand-900 transition-all hover:bg-signal focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
-            >
-              {t("ctaPrimary")}
-            </Link>
-            <Link
-              href="/delivery-capability"
-              className="inline-flex items-center justify-center rounded-lg border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
-            >
-              {t("ctaSecondary")}
-            </Link>
-          </div>
+            {/* Left: Copy */}
+            <div>
+              <h1 className="mb-7 font-display text-4xl font-bold leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.5rem]">
+                {t("heroTitle")}
+              </h1>
+              <p className="mb-10 max-w-xl text-lg leading-relaxed text-white/80 lg:text-xl">
+                {t("heroSubtitle")}
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-brand-900 transition-all hover:bg-signal focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
+                >
+                  {t("ctaPrimary")}
+                </Link>
+                <Link
+                  href="/delivery-capability"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
+                >
+                  {t("ctaSecondary")}
+                </Link>
+              </div>
 
-          {/* Trust strip */}
-          <ul className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-8 text-sm text-white/60">
-            {(["heroTrustItem1", "heroTrustItem2", "heroTrustItem3"] as const).map((key) => (
-              <li key={key} className="flex items-center gap-2">
-                <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
-                  <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
-                </svg>
-                {t(key)}
-              </li>
-            ))}
-            <li className="flex items-center gap-2">
-              <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
-                <path fillRule="evenodd" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v1c0 5.523 4.477 10 10 10h1a1.5 1.5 0 0 0 1.5-1.5v-1.09a1.5 1.5 0 0 0-1.077-1.443l-2.2-.628a1.5 1.5 0 0 0-1.585.526l-.388.51a.75.75 0 0 1-.92.22 8.5 8.5 0 0 1-3.977-3.978.75.75 0 0 1 .22-.919l.51-.388a1.5 1.5 0 0 0 .526-1.585L3.59 3.077A1.5 1.5 0 0 0 2.5 2H1.5Z" clipRule="evenodd" />
+              {/* Trust strip */}
+              <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-8 text-sm text-white/60">
+                {(["heroTrustItem1", "heroTrustItem2", "heroTrustItem3"] as const).map((key) => (
+                  <li key={key} className="flex items-center gap-2">
+                    <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                      <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
+                    </svg>
+                    {t(key)}
+                  </li>
+                ))}
+                <li className="flex items-center gap-2">
+                  <svg className="h-4 w-4 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                    <path fillRule="evenodd" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v1c0 5.523 4.477 10 10 10h1a1.5 1.5 0 0 0 1.5-1.5v-1.09a1.5 1.5 0 0 0-1.077-1.443l-2.2-.628a1.5 1.5 0 0 0-1.585.526l-.388.51a.75.75 0 0 1-.92.22 8.5 8.5 0 0 1-3.977-3.978.75.75 0 0 1 .22-.919l.51-.388a1.5 1.5 0 0 0 .526-1.585L3.59 3.077A1.5 1.5 0 0 0 2.5 2H1.5Z" clipRule="evenodd" />
+                  </svg>
+                  <a href={contacts.phoneHref} className="transition-colors hover:text-white">
+                    {contacts.phoneDisplay}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Right: Abstract civic-tech illustration */}
+            <div className="hidden lg:flex lg:items-center lg:justify-center" aria-hidden>
+              <svg viewBox="0 0 460 460" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-md opacity-90">
+                {/* Outer ring */}
+                <circle cx="230" cy="230" r="200" stroke="rgba(188,234,242,0.10)" strokeWidth="1" />
+                <circle cx="230" cy="230" r="155" stroke="rgba(188,234,242,0.08)" strokeWidth="1" />
+                <circle cx="230" cy="230" r="105" stroke="rgba(188,234,242,0.06)" strokeWidth="1" />
+
+                {/* City silhouette – buildings */}
+                <rect x="30" y="320" width="50" height="110" rx="2" fill="rgba(188,234,242,0.06)" stroke="rgba(188,234,242,0.12)" strokeWidth="1" />
+                <rect x="40" y="340" width="8" height="8" fill="rgba(188,234,242,0.2)" />
+                <rect x="54" y="340" width="8" height="8" fill="rgba(188,234,242,0.15)" />
+                <rect x="40" y="354" width="8" height="8" fill="rgba(188,234,242,0.1)" />
+                <rect x="54" y="354" width="8" height="8" fill="rgba(188,234,242,0.2)" />
+
+                <rect x="92" y="280" width="70" height="150" rx="2" fill="rgba(188,234,242,0.08)" stroke="rgba(188,234,242,0.14)" strokeWidth="1" />
+                <rect x="103" y="298" width="9" height="9" fill="rgba(188,234,242,0.25)" />
+                <rect x="119" y="298" width="9" height="9" fill="rgba(188,234,242,0.15)" />
+                <rect x="135" y="298" width="9" height="9" fill="rgba(188,234,242,0.20)" />
+                <rect x="103" y="314" width="9" height="9" fill="rgba(188,234,242,0.10)" />
+                <rect x="119" y="314" width="9" height="9" fill="rgba(188,234,242,0.25)" />
+                <rect x="135" y="314" width="9" height="9" fill="rgba(188,234,242,0.15)" />
+                <rect x="103" y="330" width="9" height="9" fill="rgba(188,234,242,0.20)" />
+                <rect x="119" y="330" width="9" height="9" fill="rgba(188,234,242,0.10)" />
+                <rect x="135" y="330" width="9" height="9" fill="rgba(188,234,242,0.20)" />
+
+                <rect x="178" y="240" width="90" height="190" rx="2" fill="rgba(188,234,242,0.10)" stroke="rgba(188,234,242,0.18)" strokeWidth="1" />
+                <rect x="190" y="258" width="10" height="10" fill="rgba(188,234,242,0.30)" />
+                <rect x="208" y="258" width="10" height="10" fill="rgba(188,234,242,0.20)" />
+                <rect x="226" y="258" width="10" height="10" fill="rgba(188,234,242,0.25)" />
+                <rect x="244" y="258" width="10" height="10" fill="rgba(188,234,242,0.15)" />
+                <rect x="190" y="276" width="10" height="10" fill="rgba(188,234,242,0.15)" />
+                <rect x="208" y="276" width="10" height="10" fill="rgba(188,234,242,0.30)" />
+                <rect x="226" y="276" width="10" height="10" fill="rgba(188,234,242,0.20)" />
+                <rect x="244" y="276" width="10" height="10" fill="rgba(188,234,242,0.25)" />
+                <rect x="190" y="294" width="10" height="10" fill="rgba(188,234,242,0.20)" />
+                <rect x="208" y="294" width="10" height="10" fill="rgba(188,234,242,0.15)" />
+                <rect x="226" y="294" width="10" height="10" fill="rgba(188,234,242,0.30)" />
+                <rect x="244" y="294" width="10" height="10" fill="rgba(188,234,242,0.20)" />
+
+                <rect x="282" y="268" width="72" height="162" rx="2" fill="rgba(188,234,242,0.08)" stroke="rgba(188,234,242,0.14)" strokeWidth="1" />
+                <rect x="293" y="284" width="9" height="9" fill="rgba(188,234,242,0.20)" />
+                <rect x="308" y="284" width="9" height="9" fill="rgba(188,234,242,0.15)" />
+                <rect x="323" y="284" width="9" height="9" fill="rgba(188,234,242,0.25)" />
+                <rect x="293" y="300" width="9" height="9" fill="rgba(188,234,242,0.15)" />
+                <rect x="308" y="300" width="9" height="9" fill="rgba(188,234,242,0.25)" />
+                <rect x="323" y="300" width="9" height="9" fill="rgba(188,234,242,0.10)" />
+                <rect x="293" y="316" width="9" height="9" fill="rgba(188,234,242,0.25)" />
+                <rect x="308" y="316" width="9" height="9" fill="rgba(188,234,242,0.10)" />
+                <rect x="323" y="316" width="9" height="9" fill="rgba(188,234,242,0.20)" />
+
+                <rect x="366" y="300" width="55" height="130" rx="2" fill="rgba(188,234,242,0.06)" stroke="rgba(188,234,242,0.12)" strokeWidth="1" />
+                <rect x="376" y="316" width="8" height="8" fill="rgba(188,234,242,0.20)" />
+                <rect x="390" y="316" width="8" height="8" fill="rgba(188,234,242,0.15)" />
+                <rect x="376" y="330" width="8" height="8" fill="rgba(188,234,242,0.10)" />
+                <rect x="390" y="330" width="8" height="8" fill="rgba(188,234,242,0.20)" />
+
+                {/* Ground line */}
+                <line x1="20" y1="430" x2="440" y2="430" stroke="rgba(188,234,242,0.12)" strokeWidth="1" />
+
+                {/* Network nodes above buildings */}
+                <circle cx="105" cy="180" r="6" fill="rgba(188,234,242,0.6)" />
+                <circle cx="200" cy="120" r="8" fill="rgba(188,234,242,0.8)" />
+                <circle cx="310" cy="150" r="6" fill="rgba(188,234,242,0.6)" />
+                <circle cx="380" cy="100" r="5" fill="rgba(188,234,242,0.5)" />
+                <circle cx="60" cy="200" r="4" fill="rgba(188,234,242,0.4)" />
+                <circle cx="420" cy="200" r="4" fill="rgba(188,234,242,0.4)" />
+
+                {/* Connection lines between nodes */}
+                <line x1="105" y1="180" x2="200" y2="120" stroke="rgba(188,234,242,0.25)" strokeWidth="1" strokeDasharray="4 4" />
+                <line x1="200" y1="120" x2="310" y2="150" stroke="rgba(188,234,242,0.25)" strokeWidth="1" strokeDasharray="4 4" />
+                <line x1="310" y1="150" x2="380" y2="100" stroke="rgba(188,234,242,0.20)" strokeWidth="1" strokeDasharray="4 4" />
+                <line x1="60" y1="200" x2="105" y2="180" stroke="rgba(188,234,242,0.18)" strokeWidth="1" strokeDasharray="4 4" />
+                <line x1="420" y1="200" x2="380" y2="100" stroke="rgba(188,234,242,0.18)" strokeWidth="1" strokeDasharray="4 4" />
+                <line x1="105" y1="180" x2="223" y2="280" stroke="rgba(188,234,242,0.12)" strokeWidth="1" strokeDasharray="3 6" />
+                <line x1="310" y1="150" x2="318" y2="268" stroke="rgba(188,234,242,0.12)" strokeWidth="1" strokeDasharray="3 6" />
+
+                {/* Floating data cards */}
+                <rect x="148" y="60" width="110" height="42" rx="8" fill="rgba(0,72,105,0.7)" stroke="rgba(188,234,242,0.25)" strokeWidth="1" />
+                <circle cx="170" cy="81" r="7" fill="rgba(188,234,242,0.2)" />
+                <rect x="184" y="73" width="56" height="6" rx="3" fill="rgba(188,234,242,0.35)" />
+                <rect x="184" y="84" width="36" height="4" rx="2" fill="rgba(188,234,242,0.18)" />
+
+                <rect x="300" y="50" width="120" height="38" rx="8" fill="rgba(0,51,71,0.8)" stroke="rgba(188,234,242,0.20)" strokeWidth="1" />
+                <rect x="315" y="62" width="80" height="5" rx="2" fill="rgba(188,234,242,0.30)" />
+                <rect x="315" y="73" width="55" height="4" rx="2" fill="rgba(188,234,242,0.15)" />
+
+                {/* Signal glow on tallest building node */}
+                <circle cx="200" cy="120" r="18" fill="rgba(188,234,242,0.06)" />
+                <circle cx="200" cy="120" r="28" fill="rgba(188,234,242,0.03)" />
               </svg>
-              <a href={contacts.phoneHref} className="transition-colors hover:text-white">
-                {contacts.phoneDisplay}
-              </a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -122,17 +213,53 @@ export default async function HomePage({ params }: Props) {
       <PartnerTicker />
 
       {/* ── Mission statement – Civica big-text style ── */}
-      <section className="bg-paper py-20">
+      <section className="relative overflow-hidden bg-paper py-20">
+        {/* Decorative circle accent */}
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full border border-brand-800/8" aria-hidden />
+        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-brand-800/6" aria-hidden />
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand-800">
-            {t("missionEyebrow")}
-          </p>
-          <h2 className="mt-4 max-w-4xl font-display text-3xl font-bold leading-snug text-brand-900 lg:text-5xl">
-            {t("missionTitle")}
-          </h2>
-          <p className="mt-6 max-w-3xl text-xl leading-relaxed text-ink-700">
-            {t("missionBody")}
-          </p>
+          <div className="grid items-center gap-14 lg:grid-cols-5">
+            <div className="lg:col-span-3">
+              <p className="text-sm font-semibold uppercase tracking-widest text-brand-800">
+                {t("missionEyebrow")}
+              </p>
+              <h2 className="mt-4 font-display text-3xl font-bold leading-snug text-brand-900 lg:text-5xl">
+                {t("missionTitle")}
+              </h2>
+              <p className="mt-6 text-xl leading-relaxed text-ink-700">
+                {t("missionBody")}
+              </p>
+            </div>
+
+            {/* Visual accent: process strip */}
+            <div className="lg:col-span-2" aria-hidden>
+              <div className="grid gap-3">
+                {[
+                  { num: "01", label: "Förankra", icon: "M12 1v22M1 12h22" },
+                  { num: "02", label: "Planera", icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" },
+                  { num: "03", label: "Genomföra", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
+                  { num: "04", label: "Följa upp", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
+                  { num: "05", label: "Säkra kontinuitet", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" },
+                ].map((step, i, arr) => (
+                  <div key={step.num} className="flex items-center gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-900 text-white">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5" aria-hidden>
+                        <path d={step.icon} />
+                      </svg>
+                    </div>
+                    {i < arr.length - 1 && (
+                      <div className="absolute ml-[18px] mt-10 h-3 w-px bg-brand-800/20" aria-hidden />
+                    )}
+                    <div>
+                      <span className="text-xs font-semibold text-brand-800/60 uppercase tracking-wide">{step.num}</span>
+                      <p className="font-semibold text-brand-900">{step.label}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -177,8 +304,16 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* ── "Our solutions support you to" – Civica checklist ── */}
-      <section className="bg-brand-900 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-brand-900 py-20 text-white">
+        {/* Background dot grid */}
+        <div
+          className="absolute inset-0 opacity-15"
+          style={{backgroundImage: 'radial-gradient(circle, rgba(188,234,242,0.4) 1px, transparent 1px)', backgroundSize: '36px 36px'}}
+          aria-hidden
+        />
+        <div className="absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-[#007a96]/15 blur-3xl" aria-hidden />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-signal">
@@ -201,8 +336,8 @@ export default async function HomePage({ params }: Props) {
             </div>
             <ul className="grid gap-4 sm:grid-cols-2">
               {solutionItems.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-signal/20">
+                <li key={item} className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm">
+                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-signal/25">
                     <svg className="h-3 w-3 text-signal" viewBox="0 0 12 12" fill="currentColor" aria-hidden>
                       <path d="M10.28 2.28a.75.75 0 0 0-1.06 0L4.5 7l-1.72-1.72a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 0 0 0-1.06z" />
                     </svg>
