@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -5,6 +7,8 @@ import { company, contacts } from "@/content/site";
 import { footerNav1, footerNav2, legalNav } from "@/lib/nav";
 import { LanguageSwitcher } from "./language-switcher";
 import { NewsletterForm } from "@/components/newsletter/newsletter-form";
+import { TrackedLink } from "@/components/analytics/tracked-link";
+import { trackEvent } from "@/lib/analytics";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -42,12 +46,14 @@ export function Footer() {
 
             {/* CTA button */}
             <div className="shrink-0">
-              <Link
+              <TrackedLink
                 href="/contact"
+                event="cta_click"
+                eventData={{ placement: "footer_band" }}
                 className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/8 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 {t("bookMeeting")}
-              </Link>
+              </TrackedLink>
             </div>
           </div>
         </div>
@@ -67,7 +73,11 @@ export function Footer() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-signal/70" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
                   <path fillRule="evenodd" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v1c0 5.523 4.477 10 10 10h1a1.5 1.5 0 0 0 1.5-1.5v-1.09a1.5 1.5 0 0 0-1.077-1.443l-2.2-.628a1.5 1.5 0 0 0-1.585.526l-.388.51a.75.75 0 0 1-.92.22 8.5 8.5 0 0 1-3.977-3.978.75.75 0 0 1 .22-.919l.51-.388a1.5 1.5 0 0 0 .526-1.585L3.59 3.077A1.5 1.5 0 0 0 2.5 2H1.5Z" clipRule="evenodd" />
                 </svg>
-                <a href={contacts.phoneHref} className="hover:text-white transition-colors">
+                <a
+                  href={contacts.phoneHref}
+                  onClick={() => trackEvent("cta_click", { placement: "footer_phone" })}
+                  className="hover:text-white transition-colors"
+                >
                   {contacts.phoneDisplay}
                 </a>
               </li>

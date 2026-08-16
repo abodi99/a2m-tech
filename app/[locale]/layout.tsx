@@ -9,6 +9,8 @@ import { Footer } from "@/components/layout/footer";
 import { SkipLink } from "@/components/layout/skip-link";
 import { SetHtmlLang } from "@/components/layout/set-html-lang";
 import { CookieConsent } from "@/components/analytics/cookie-consent";
+import { ScrollDepthTracker } from "@/components/analytics/scroll-depth";
+import { EngagementPrompt } from "@/components/analytics/engagement-prompt";
 
 const umamiUrl = process.env.NEXT_PUBLIC_UMAMI_URL ?? "";
 const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ?? "";
@@ -85,6 +87,8 @@ export default async function LocaleLayout({ children, params }: Props) {
         </Script>
       )}
 
+      <ScrollDepthTracker />
+      <EngagementPrompt />
       <CookieConsent />
     </NextIntlClientProvider>
   );

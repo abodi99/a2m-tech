@@ -1,6 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import NextLink from "next/link";
 import { company, contacts } from "@/content/site";
 import {
   JsonLd,
@@ -9,6 +8,8 @@ import {
   websiteJsonLd,
 } from "@/lib/seo";
 import { PartnerTicker } from "@/components/partners/partner-ticker";
+import { TrackedLink } from "@/components/analytics/tracked-link";
+import { TrackedHref } from "@/components/analytics/tracked-href";
 import {
   getPublishedArticles,
   categoryLabels,
@@ -61,21 +62,28 @@ function InsightPreviewRow({
           </span>
         </div>
         <h3 className="mb-3 font-display text-2xl font-bold leading-snug text-[#003347] transition-colors duration-150 group-hover:text-[#176BE0] lg:text-3xl">
-          <NextLink href={href} className="focus:outline-none focus-visible:underline">
+          <TrackedHref
+            href={href}
+            event="insight_open"
+            eventData={{ slug: article.slug, placement: "home_featured" }}
+            className="focus:outline-none focus-visible:underline"
+          >
             {article.title}
-          </NextLink>
+          </TrackedHref>
         </h3>
         <p className="mb-5 max-w-2xl text-base leading-relaxed text-[#334B58]">
           {article.description}
         </p>
-        <NextLink
+        <TrackedHref
           href={href}
+          event="insight_open"
+          eventData={{ slug: article.slug, placement: "home_featured_cta" }}
           className="inline-flex items-center gap-2 text-sm font-semibold text-[#176BE0] transition-all duration-150 hover:gap-3 focus:outline-none focus-visible:underline"
           aria-label={`${readLabel}: ${article.title}`}
         >
           {readLabel}
           <span aria-hidden className="transition-transform duration-150 group-hover:translate-x-1">→</span>
-        </NextLink>
+        </TrackedHref>
       </article>
     );
   }
@@ -92,21 +100,28 @@ function InsightPreviewRow({
         </time>
       </div>
       <h3 className="mb-2 font-display text-lg font-bold leading-snug text-[#003347] transition-colors duration-150 group-hover:text-[#176BE0]">
-        <NextLink href={href} className="focus:outline-none focus-visible:underline">
+        <TrackedHref
+          href={href}
+          event="insight_open"
+          eventData={{ slug: article.slug, placement: "home_secondary" }}
+          className="focus:outline-none focus-visible:underline"
+        >
           {article.title}
-        </NextLink>
+        </TrackedHref>
       </h3>
       <p className="mb-3 text-sm leading-relaxed text-[#334B58] line-clamp-3">
         {article.description}
       </p>
-      <NextLink
+      <TrackedHref
         href={href}
+        event="insight_open"
+        eventData={{ slug: article.slug, placement: "home_secondary_cta" }}
         className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#176BE0] transition-all duration-150 hover:gap-2.5 focus:outline-none focus-visible:underline"
         aria-label={`${readLabel}: ${article.title}`}
       >
         {readLabel}
         <span aria-hidden className="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
-      </NextLink>
+      </TrackedHref>
     </article>
   );
 }
@@ -169,13 +184,15 @@ async function InsightsSection({ locale }: { locale: string }) {
 
         {/* See all link */}
         <div className="mt-8 flex justify-end">
-          <NextLink
+          <TrackedHref
             href={insightsHref}
+            event="cta_click"
+            eventData={{ placement: "home_insights_all" }}
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#176BE0] transition-all duration-150 hover:gap-3 focus:outline-none focus-visible:underline"
           >
             {allLabel}
             <span aria-hidden className="transition-transform duration-150">→</span>
-          </NextLink>
+          </TrackedHref>
         </div>
       </div>
     </section>
@@ -246,12 +263,14 @@ export default async function HomePage({ params }: Props) {
                 {t("heroSubtitle")}
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Link
+                <TrackedLink
                   href="/contact"
+                  event="cta_click"
+                  eventData={{ placement: "hero_primary" }}
                   className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-brand-900 transition-all hover:bg-signal focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
                 >
                   {t("ctaPrimary")}
-                </Link>
+                </TrackedLink>
                 <a
                   href={contacts.phoneHref}
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-900"
@@ -734,12 +753,14 @@ export default async function HomePage({ params }: Props) {
               </h2>
               <p className="mb-10 max-w-lg text-lg leading-relaxed text-ink-700">{t("closeBody")}</p>
               <div className="flex flex-wrap gap-4">
-                <Link
+                <TrackedLink
                   href="/contact"
+                  event="cta_click"
+                  eventData={{ placement: "home_close" }}
                   className="inline-flex items-center justify-center rounded-lg bg-brand-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-900 focus:ring-offset-2"
                 >
                   {t("closeCta")}
-                </Link>
+                </TrackedLink>
                 <a
                   href={contacts.phoneHref}
                   className="inline-flex items-center gap-2.5 rounded-lg border border-line px-8 py-4 text-base font-semibold text-brand-900 transition-all hover:border-brand-800/50 hover:bg-surface focus:outline-none focus:ring-2 focus:ring-brand-900 focus:ring-offset-2"

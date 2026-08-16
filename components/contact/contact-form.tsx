@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { collectAttribution } from "@/lib/attribution";
+import { trackEvent } from "@/lib/analytics";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -78,10 +79,7 @@ export function ContactForm({ className }: { className?: string }) {
       setData(initialData);
       formRef.current?.reset();
 
-      const w = window as Window & {
-        umami?: { track: (event: string, props?: Record<string, string>) => void };
-      };
-      w.umami?.track("contact_submit", {
+      trackEvent("contact_submit", {
         source: attribution.page,
         locale,
       });

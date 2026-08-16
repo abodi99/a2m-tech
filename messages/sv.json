@@ -725,5 +725,14 @@
     "necessaryOnly": "Utan Google Analytics",
     "gotIt": "Jag förstår",
     "policy": "Cookiepolicy"
+  },
+  "engagementPrompt": {
+    "eyebrow": "Håll dig uppdaterad",
+    "title": "Vill ni följa våra insikter?",
+    "body": "Prenumerera på uppdateringar om offentlig sektor och digital leverans, eller skicka en förfrågan direkt.",
+    "subscribeCta": "Prenumerera på mejllistan",
+    "contactCta": "Skicka en förfrågan",
+    "close": "Stäng",
+    "back": "Tillbaka"
   }
 }

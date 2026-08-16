@@ -725,5 +725,14 @@
     "necessaryOnly": "Without Google Analytics",
     "gotIt": "Got it",
     "policy": "Cookie policy"
+  },
+  "engagementPrompt": {
+    "eyebrow": "Stay informed",
+    "title": "Want to follow our insights?",
+    "body": "Subscribe for updates on public-sector delivery, or send us an enquiry directly.",
+    "subscribeCta": "Subscribe to the list",
+    "contactCta": "Send an enquiry",
+    "close": "Close",
+    "back": "Back"
   }
 }

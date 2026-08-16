@@ -4,6 +4,7 @@ import { useEffect, useId, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { TrackedLink } from "@/components/analytics/tracked-link";
 import { primaryNav } from "@/lib/nav";
 import { LanguageSwitcher } from "./language-switcher";
 import { buttonVariants } from "@/components/ui/button";
@@ -72,12 +73,14 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <LanguageSwitcher className="hidden sm:inline-flex" />
-          <Link
+          <TrackedLink
             href="/contact"
+            event="cta_click"
+            eventData={{ placement: "header" }}
             className={cn(buttonVariants({ size: "sm" }), "hidden sm:inline-flex")}
           >
             {t("contact")}
-          </Link>
+          </TrackedLink>
 
           <button
             type="button"
@@ -129,21 +132,26 @@ export function Header() {
                 {t(item.key)}
               </Link>
             ))}
-            <Link
+            <TrackedLink
               href="/contact"
+              event="cta_click"
+              eventData={{ placement: "header_mobile" }}
               className="rounded-sm px-3 py-3 text-base font-medium text-ink-950 hover:bg-accent"
               onClick={() => setOpen(false)}
             >
               {t("contact")}
-            </Link>
+            </TrackedLink>
             <div className="mt-3 flex flex-col gap-3 border-t border-line pt-3">
               <LanguageSwitcher />
-              <Link
+              <TrackedLink
                 href="/contact"
+                event="cta_click"
+                eventData={{ placement: "header_mobile_button" }}
                 className={cn(buttonVariants(), "w-full")}
+                onClick={() => setOpen(false)}
               >
                 {t("contact")}
-              </Link>
+              </TrackedLink>
             </div>
           </nav>
         </div>

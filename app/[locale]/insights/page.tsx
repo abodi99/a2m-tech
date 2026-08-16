@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { JsonLd, breadcrumbJsonLd, buildPageMetadata } from "@/lib/seo";
+import { TrackedHref } from "@/components/analytics/tracked-href";
 import {
   getPublishedArticles,
   categoryLabels,
@@ -79,17 +79,24 @@ function ArticleRow({
             </div>
 
             <h2 className="mb-3 font-display text-xl font-bold leading-snug text-[#003347] transition-colors duration-150 group-hover:text-[#176BE0] lg:text-2xl">
-              <Link href={href} className="focus:outline-none focus-visible:underline">
+              <TrackedHref
+                href={href}
+                event="insight_open"
+                eventData={{ slug: article.slug, placement: "insights_list" }}
+                className="focus:outline-none focus-visible:underline"
+              >
                 {article.title}
-              </Link>
+              </TrackedHref>
             </h2>
 
             <p className="mb-5 max-w-prose text-base leading-relaxed text-[#334B58]">
               {article.description}
             </p>
 
-            <Link
+            <TrackedHref
               href={href}
+              event="insight_open"
+              eventData={{ slug: article.slug, placement: "insights_list_cta" }}
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#176BE0] transition-all duration-150 hover:gap-3 focus:outline-none focus-visible:underline"
               aria-label={`${readLabel}: ${article.title}`}
             >
@@ -97,7 +104,7 @@ function ArticleRow({
               <span aria-hidden className="transition-transform duration-150 group-hover:translate-x-1">
                 →
               </span>
-            </Link>
+            </TrackedHref>
           </div>
 
           {/* Meta sidebar on desktop */}

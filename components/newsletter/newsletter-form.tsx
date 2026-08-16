@@ -9,19 +9,30 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import { collectAttribution } from "@/lib/attribution";
+import { trackEvent } from "@/lib/analytics";
 
 type State = "idle" | "submitting" | "success" | "error" | "invalid";
 
 interface NewsletterFormProps {
   source?: string;
   className?: string;
+  /** Footer uses dark surface; engagement prompt uses light. */
+  tone?: "onDark" | "onLight";
+  /** Hide heading/body when parent already provides copy */
+  compact?: boolean;
 }
 
-export function NewsletterForm({ source = "footer", className }: NewsletterFormProps) {
+export function NewsletterForm({
+  source = "footer",
+  className,
+  tone = "onDark",
+  compact = false,
+}: NewsletterFormProps) {
   const t = useTranslations("newsletter");
   const locale = useLocale();
   const [email, setEmail] = useState("");
   const [state, setState] = useState<State>("idle");
+  const light = tone === "onLight";
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -49,13 +60,7 @@ export function NewsletterForm({ source = "footer", className }: NewsletterFormP
       if (!res.ok) throw new Error("submit_failed");
       setState("success");
       setEmail("");
-
-      const w = window as Window & {
-        umami?: { track: (event: string, props?: Record<string, string>) => void };
-        gtag?: (...args: unknown[]) => void;
-      };
-      w.umami?.track("newsletter_signup", { source, locale });
-      w.gtag?.("event", "newsletter_signup", { event_category: "engagement", source });
+      trackEvent("newsletter_signup", { source, locale });
     } catch {
       setState("error");
     }
@@ -63,24 +68,40 @@ export function NewsletterForm({ source = "footer", className }: NewsletterFormP
 
   if (state === "success") {
     return (
-      <div className={cn("rounded-xl border border-white/20 bg-white/10 p-5 text-center", className)}>
-        <div className="mx-auto mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-          <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <p className="text-sm font-semibold text-white">{t("successTitle")}</p>
-        <p className="mt-1 text-xs text-white/65">{t("successBody")}</p>
+      <div
+        className={cn(
+          "rounded-xl p-5 text-center",
+          light ? "border border-green-200 bg-green-50" : "border border-white/20 bg-white/10",
+          className
+        )}
+      >
+        <p className={cn("text-sm font-semibold", light ? "text-green-900" : "text-white")}>
+          {t("successTitle")}
+        </p>
+        <p className={cn("mt-1 text-xs", light ? "text-green-700" : "text-white/65")}>
+          {t("successBody")}
+        </p>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} noValidate className={cn("space-y-3", className)}>
-      <p className="text-xs font-semibold uppercase tracking-widest text-white/45">
-        {t("heading")}
-      </p>
-      <p className="text-sm leading-relaxed text-white/70">{t("body")}</p>
+      {!compact && (
+        <>
+          <p
+            className={cn(
+              "text-xs font-semibold uppercase tracking-widest",
+              light ? "text-[#176BE0]" : "text-white/45"
+            )}
+          >
+            {t("heading")}
+          </p>
+          <p className={cn("text-sm leading-relaxed", light ? "text-[#334B58]" : "text-white/70")}>
+            {t("body")}
+          </p>
+        </>
+      )}
 
       <div className="flex gap-2 pt-1">
         <input
@@ -95,27 +116,39 @@ export function NewsletterForm({ source = "footer", className }: NewsletterFormP
           aria-label={t("placeholder")}
           aria-invalid={state === "invalid"}
           className={cn(
-            "min-w-0 flex-1 rounded-lg border bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/40 transition focus:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/50",
-            state === "invalid" ? "border-red-400" : "border-white/20"
+            "min-w-0 flex-1 rounded-lg border px-4 py-2.5 text-sm transition focus:outline-none focus:ring-2",
+            light
+              ? "border-[#D7E1E5] bg-white text-[#003347] placeholder:text-[#334B58]/50 focus:ring-[#003347]/40"
+              : "border-white/20 bg-white/10 text-white placeholder:text-white/40 focus:bg-white/15 focus:ring-white/50",
+            state === "invalid" && (light ? "border-red-400" : "border-red-400")
           )}
         />
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="shrink-0 rounded-lg border border-white/25 bg-white/8 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-white/50 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/50 disabled:opacity-60"
+          className={cn(
+            "shrink-0 rounded-lg px-4 py-2.5 text-sm font-semibold transition focus:outline-none focus:ring-2 disabled:opacity-60",
+            light
+              ? "bg-[#003347] text-white hover:bg-[#004869] focus:ring-[#003347]"
+              : "border border-white/25 bg-white/8 text-white hover:border-white/50 hover:bg-white/15 focus:ring-white/50"
+          )}
         >
           {state === "submitting" ? "…" : t("submit")}
         </button>
       </div>
 
       {state === "invalid" && (
-        <p role="alert" className="text-xs text-red-300">{t("invalidEmail")}</p>
+        <p role="alert" className={cn("text-xs", light ? "text-red-600" : "text-red-300")}>
+          {t("invalidEmail")}
+        </p>
       )}
       {state === "error" && (
-        <p role="alert" className="text-xs text-red-300">{t("errorGeneral")}</p>
+        <p role="alert" className={cn("text-xs", light ? "text-red-600" : "text-red-300")}>
+          {t("errorGeneral")}
+        </p>
       )}
 
-      <p className="text-xs text-white/35">{t("disclaimer")}</p>
+      <p className={cn("text-xs", light ? "text-[#334B58]/60" : "text-white/35")}>{t("disclaimer")}</p>
     </form>
   );
 }
