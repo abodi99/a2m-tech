@@ -87,7 +87,9 @@
     "cookies": "Cookies"
   },
   "footer": {
-    "tagline": "Digitala leveranser med ansvar över tid – för offentlig sektor och etablerade verksamheter.",
+    "tagline": "Digitala leveranser med ansvar över tid.",
+    "taglineBody": "Vi stödjer offentlig sektor och etablerade verksamheter med strukturerade digitala uppdrag – från dag ett till förvaltning.",
+    "trustNote": "Bolagsinfo, leveransbeskrivning och kontaktvägar finns tillgängligt utan krav på NDA.",
     "navigation": "Navigering",
     "contact": "Kontakt",
     "legal": "Juridik",

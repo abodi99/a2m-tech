@@ -69,14 +69,6 @@ export default async function HomePage({ params }: Props) {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-brand-900/80 to-transparent" aria-hidden />
 
         <div className="relative mx-auto w-full max-w-5xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
-          {/* Eyebrow */}
-          <div className="mb-8">
-            <span className="inline-flex items-center gap-2 rounded-full border border-signal/30 bg-signal/10 px-4 py-1.5 text-sm font-medium text-signal">
-              <span className="h-1.5 w-1.5 rounded-full bg-signal" aria-hidden />
-              {t("eyebrow")}
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="mb-7 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
             {t("heroTitle")}
@@ -356,7 +348,7 @@ export default async function HomePage({ params }: Props) {
               </Link>
             </div>
             <ul className="space-y-4">
-              {(["t1", "t2", "t3", "t4"] as const).map((key) => (
+              {(["t1", "t2", "t3"] as const).map((key) => (
                 <li key={key} className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/5 p-5">
                   <div className="mt-0.5 h-6 w-6 shrink-0 rounded-full bg-signal/20 flex items-center justify-center">
                     <svg className="h-3.5 w-3.5 text-signal" viewBox="0 0 12 12" fill="currentColor" aria-hidden>
@@ -485,12 +477,6 @@ export default async function HomePage({ params }: Props) {
                   </li>
                 ))}
               </ol>
-              <div className="mt-8 flex items-center gap-3 rounded-xl border border-signal/20 bg-signal/5 px-4 py-3">
-                <svg className="h-5 w-5 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
-                  <path fillRule="evenodd" d="M8 1a.75.75 0 0 1 .75.75V6h3.5a.75.75 0 0 1 0 1.5H8.75v3.5a.75.75 0 0 1-1.5 0V7.5H3.75a.75.75 0 0 1 0-1.5h3.5V1.75A.75.75 0 0 1 8 1Z" clipRule="evenodd" />
-                </svg>
-                <p className="text-xs font-medium text-ink-700">{t("ctaNoCommit")}</p>
-              </div>
             </div>
           </div>
         </div>
