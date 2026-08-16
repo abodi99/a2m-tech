@@ -1,0 +1,4 @@
+# Deny direct browser access to local config files (credentials).
+<FilesMatch "\.config\.php$">
+  Require all denied
+</FilesMatch>
