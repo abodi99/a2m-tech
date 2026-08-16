@@ -2,47 +2,26 @@
 
 /**
  * Newsletter / mailing-list subscription form.
- *
- * Self-contained client component — reads its own translations via next-intl
- * and locale via useLocale(). Can be dropped into any server component.
- *
- * Submits to /api/subscribe.php which:
- *  - Saves the subscriber to a CSV (importable into Listmonk or Mailchimp)
- *  - Sends a notification email to the admin
- *  - Captures source page, UTM parameters, and locale for attribution
+ * Syncs to Listmonk and emails admin with attribution context.
  */
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
+import { collectAttribution } from "@/lib/attribution";
 
 type State = "idle" | "submitting" | "success" | "error" | "invalid";
 
 interface NewsletterFormProps {
-  /** Which section triggered this form (used for attribution tracking) */
   source?: string;
   className?: string;
 }
 
 export function NewsletterForm({ source = "footer", className }: NewsletterFormProps) {
-  const t      = useTranslations("newsletter");
+  const t = useTranslations("newsletter");
   const locale = useLocale();
-  const [email, setEmail]   = useState("");
-  const [state, setState]   = useState<State>("idle");
-  const [utmParams, setUtmParams] = useState<Record<string, string>>({});
-
-  // Capture UTM parameters from URL on mount (client-side only)
-  useEffect(() => {
-    try {
-      const sp = new URLSearchParams(window.location.search);
-      const params: Record<string, string> = {};
-      ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach((k) => {
-        const v = sp.get(k);
-        if (v) params[k] = v;
-      });
-      setUtmParams(params);
-    } catch { /* noop */ }
-  }, []);
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState<State>("idle");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -56,16 +35,14 @@ export function NewsletterForm({ source = "footer", className }: NewsletterFormP
     setState("submitting");
 
     try {
-      const page = typeof window !== "undefined" ? window.location.pathname : "";
+      const attribution = collectAttribution(locale);
       const res = await fetch("/api/subscribe.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: trimmed,
           source,
-          locale,
-          page,
-          ...utmParams,
+          ...attribution,
         }),
       });
 
@@ -73,15 +50,12 @@ export function NewsletterForm({ source = "footer", className }: NewsletterFormP
       setState("success");
       setEmail("");
 
-      // Fire analytics event if Umami or GA4 is active
-      if (typeof window !== "undefined") {
-        const w = window as Window & {
-          umami?: { track: (event: string, props?: Record<string, string>) => void };
-          gtag?: (...args: unknown[]) => void;
-        };
-        w.umami?.track("newsletter_signup", { source, locale });
-        w.gtag?.("event", "newsletter_signup", { event_category: "engagement", source });
-      }
+      const w = window as Window & {
+        umami?: { track: (event: string, props?: Record<string, string>) => void };
+        gtag?: (...args: unknown[]) => void;
+      };
+      w.umami?.track("newsletter_signup", { source, locale });
+      w.gtag?.("event", "newsletter_signup", { event_category: "engagement", source });
     } catch {
       setState("error");
     }

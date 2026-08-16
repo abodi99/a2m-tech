@@ -62,10 +62,22 @@ if (!is_array($body)) {
 $email  = strtolower(trim(strip_tags($body['email']  ?? '')));
 $source = trim(strip_tags($body['source'] ?? 'unknown'));
 $locale = in_array($body['locale'] ?? '', ['sv', 'en']) ? $body['locale'] : 'sv';
-$page   = trim(strip_tags($body['page']   ?? ''));
-$utmSource   = trim(strip_tags($body['utm_source']   ?? ''));
-$utmMedium   = trim(strip_tags($body['utm_medium']   ?? ''));
-$utmCampaign = trim(strip_tags($body['utm_campaign'] ?? ''));
+$page        = substr(trim(strip_tags($body['page'] ?? '')), 0, 500);
+$landing     = substr(trim(strip_tags($body['landing'] ?? '')), 0, 500);
+$referrer    = substr(trim(strip_tags($body['referrer'] ?? '')), 0, 500);
+$language    = substr(trim(strip_tags($body['language'] ?? '')), 0, 40);
+$timezone    = substr(trim(strip_tags($body['timezone'] ?? '')), 0, 60);
+$screen      = substr(trim(strip_tags($body['screen'] ?? '')), 0, 40);
+$utmSource   = substr(trim(strip_tags($body['utm_source'] ?? '')), 0, 100);
+$utmMedium   = substr(trim(strip_tags($body['utm_medium'] ?? '')), 0, 100);
+$utmCampaign = substr(trim(strip_tags($body['utm_campaign'] ?? '')), 0, 100);
+$utmContent  = substr(trim(strip_tags($body['utm_content'] ?? '')), 0, 100);
+$utmTerm     = substr(trim(strip_tags($body['utm_term'] ?? '')), 0, 100);
+$gclid       = substr(trim(strip_tags($body['gclid'] ?? '')), 0, 200);
+$fbclid      = substr(trim(strip_tags($body['fbclid'] ?? '')), 0, 200);
+$msclkid     = substr(trim(strip_tags($body['msclkid'] ?? '')), 0, 200);
+$ip          = $_SERVER['REMOTE_ADDR'] ?? '';
+$ua          = substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 250);
 
 // ── Validate email ─────────────────────────────────────────────────────────
 if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 254) {
@@ -75,41 +87,30 @@ if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email
 }
 
 // ── Append to CSV subscriber list ─────────────────────────────────────────
-// File is stored in a writable directory outside webroot when possible.
-// On Hostinger, /tmp is writable; adjust path to a private dir if available.
 $csvPath = sys_get_temp_dir() . '/a2m_subscribers.csv';
 $isNew   = !file_exists($csvPath);
+$when    = date('Y-m-d H:i:s');
 
 $row = [
-    date('Y-m-d H:i:s'),
-    $email,
-    $locale,
-    $source,
-    $page,
-    $utmSource,
-    $utmMedium,
-    $utmCampaign,
-    $_SERVER['REMOTE_ADDR'] ?? '',
+    $when, $email, $locale, $source, $page, $landing, $referrer,
+    $utmSource, $utmMedium, $utmCampaign, $utmContent, $utmTerm,
+    $gclid, $fbclid, $msclkid, $language, $timezone, $screen, $ip,
 ];
 
 $fp = fopen($csvPath, 'a');
 if ($fp) {
     if ($isNew) {
-        fputcsv($fp, ['timestamp', 'email', 'locale', 'source', 'page',
-                      'utm_source', 'utm_medium', 'utm_campaign', 'ip']);
+        fputcsv($fp, [
+            'timestamp', 'email', 'locale', 'source', 'page', 'landing', 'referrer',
+            'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+            'gclid', 'fbclid', 'msclkid', 'language', 'timezone', 'screen', 'ip',
+        ]);
     }
     fputcsv($fp, $row);
     fclose($fp);
 }
 
 // ── Optional: forward to Listmonk (Coolify) ────────────────────────────────
-// Create public/api/subscribe.config.php (gitignored) with:
-//   return [
-//     'listmonk_url'  => 'https://list.yourdomain.com',
-//     'listmonk_user' => 'api_user',
-//     'listmonk_pass' => 'api_token',
-//     'listmonk_list' => 1, // list ID in Listmonk
-//   ];
 $listmonkOk = null;
 $configPath = __DIR__ . '/subscribe.config.php';
 if (is_readable($configPath)) {
@@ -125,14 +126,24 @@ if (is_readable($configPath)) {
             'name'   => '',
             'status' => 'enabled',
             'lists'  => [(int) $cfg['listmonk_list']],
-            'attribs'=> [
+            'attribs'=> array_filter([
                 'source'       => $source,
                 'locale'       => $locale,
                 'page'         => $page,
+                'landing'      => $landing,
+                'referrer'     => $referrer,
                 'utm_source'   => $utmSource,
                 'utm_medium'   => $utmMedium,
                 'utm_campaign' => $utmCampaign,
-            ],
+                'utm_content'  => $utmContent,
+                'utm_term'     => $utmTerm,
+                'gclid'        => $gclid,
+                'fbclid'       => $fbclid,
+                'msclkid'      => $msclkid,
+                'language'     => $language,
+                'timezone'     => $timezone,
+                'screen'       => $screen,
+            ], fn($v) => $v !== '' && $v !== null),
         ]);
         $ch = curl_init(rtrim($cfg['listmonk_url'], '/') . '/api/subscribers');
         curl_setopt_array($ch, [
@@ -146,7 +157,6 @@ if (is_readable($configPath)) {
         $resp = curl_exec($ch);
         $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        // 200 = created, 409 = already exists — both OK
         $listmonkOk = ($code === 200 || $code === 409);
     }
 }
@@ -156,20 +166,34 @@ $adminEmail = 'abbe.mofleh@a2m-tech.com';
 $adminSubject = "Ny prenumerant – {$email}";
 $listmonkLine = $listmonkOk === null
     ? 'Listmonk: ej konfigurerad'
-    : ($listmonkOk ? 'Listmonk: synkad' : 'Listmonk: misslyckades (CSV sparad)');
+    : ($listmonkOk ? 'Listmonk: synkad till A2M Tech Insights' : 'Listmonk: misslyckades (CSV sparad)');
 $adminBody = <<<TEXT
 Ny prenumerant på a2m-tech.com
 ==============================
-E-post:       {$email}
-Språk:        {$locale}
-Källa:        {$source}
-Sida:         {$page}
-UTM source:   {$utmSource}
-UTM medium:   {$utmMedium}
-UTM campaign: {$utmCampaign}
-IP:           {$_SERVER['REMOTE_ADDR']}
-Tid:          {$row[0]}
+E-post:         {$email}
+Språk (site):   {$locale}
+Källa (form):   {$source}
+Sida:           {$page}
+Landningssida:  {$landing}
+Referrer:       {$referrer}
+Språk (browser):{$language}
+Tidszon:        {$timezone}
+Skärm:          {$screen}
+UTM source:     {$utmSource}
+UTM medium:     {$utmMedium}
+UTM campaign:   {$utmCampaign}
+UTM content:    {$utmContent}
+UTM term:       {$utmTerm}
+gclid:          {$gclid}
+fbclid:         {$fbclid}
+msclkid:        {$msclkid}
+IP:             {$ip}
+User-Agent:     {$ua}
+Tid:            {$when}
 {$listmonkLine}
+
+Listmonk: https://lm.volontera.se
+Umami:    https://umami.volontera.se
 TEXT;
 
 $headers  = "From: noreply@a2m-tech.com\r\n";

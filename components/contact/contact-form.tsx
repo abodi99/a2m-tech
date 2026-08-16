@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
+import { collectAttribution } from "@/lib/attribution";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -24,6 +25,7 @@ const initialData: FormData = {
 
 export function ContactForm({ className }: { className?: string }) {
   const t = useTranslations("contactForm");
+  const locale = useLocale();
   const [state, setState] = useState<FormState>("idle");
   const [data, setData] = useState<FormData>(initialData);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
@@ -59,6 +61,7 @@ export function ContactForm({ className }: { className?: string }) {
     setState("submitting");
 
     try {
+      const attribution = collectAttribution(locale);
       const res = await fetch("/api/contact.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -67,12 +70,21 @@ export function ContactForm({ className }: { className?: string }) {
           organization: data.organization,
           contact: data.contact,
           message: data.message,
+          ...attribution,
         }),
       });
       if (!res.ok) throw new Error("submit_failed");
       setState("success");
       setData(initialData);
       formRef.current?.reset();
+
+      const w = window as Window & {
+        umami?: { track: (event: string, props?: Record<string, string>) => void };
+      };
+      w.umami?.track("contact_submit", {
+        source: attribution.page,
+        locale,
+      });
     } catch {
       setState("error");
     }
