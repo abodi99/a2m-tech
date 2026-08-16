@@ -287,7 +287,9 @@
     "closeTitle": "Looking for an accountable partner for an upcoming assignment?",
     "closeBody": "We respond quickly and prepare from the information you share — without manufactured urgency.",
     "closeCta": "Send an enquiry",
-    "ctaInfoTitle": "What happens after you contact us",
+    "ctaEyebrow": "Next step",
+    "ctaInfoTitle": "What happens when you get in touch?",
+    "ctaNoCommit": "No commitment. You choose how we proceed.",
     "ctaInfo": {
       "i1": "We respond within one business day",
       "i2": "You choose whether to meet or continue in writing",

@@ -511,45 +511,61 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gradient-to-r from-brand-900 to-brand-800 py-24 text-white">
+      <section className="relative overflow-hidden bg-paper py-24">
+        {/* Accent top border */}
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-signal via-signal/60 to-transparent" aria-hidden />
+
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-[1fr_400px] lg:items-start">
+            {/* Left: headline + CTAs */}
             <div>
-              <h2 className="mb-6 font-display text-4xl font-bold lg:text-5xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-signal">
+                {t("ctaEyebrow")}
+              </p>
+              <h2 className="mb-5 font-display text-4xl font-bold leading-tight text-brand-900 lg:text-5xl">
                 {t("closeTitle")}
               </h2>
-              <p className="mb-8 text-xl text-white/90 leading-relaxed">{t("closeBody")}</p>
+              <p className="mb-10 max-w-lg text-lg leading-relaxed text-ink-700">{t("closeBody")}</p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-brand-900 transition-all hover:bg-signal"
+                  className="inline-flex items-center justify-center rounded-lg bg-brand-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-900 focus:ring-offset-2"
                 >
                   {t("closeCta")}
                 </Link>
                 <a
                   href={contacts.phoneHref}
-                  className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-white hover:bg-white/10"
+                  className="inline-flex items-center gap-2.5 rounded-lg border border-line px-8 py-4 text-base font-semibold text-brand-900 transition-all hover:border-brand-800/50 hover:bg-surface focus:outline-none focus:ring-2 focus:ring-brand-900 focus:ring-offset-2"
                 >
+                  <svg className="h-4 w-4 text-ink-400" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                    <path fillRule="evenodd" d="M3.5 2A1.5 1.5 0 0 0 2 3.5v1c0 5.523 4.477 10 10 10h1a1.5 1.5 0 0 0 1.5-1.5v-1.09a1.5 1.5 0 0 0-1.077-1.443l-2.2-.628a1.5 1.5 0 0 0-1.585.526l-.388.51a.75.75 0 0 1-.92.22 8.5 8.5 0 0 1-3.977-3.978.75.75 0 0 1 .22-.919l.51-.388a1.5 1.5 0 0 0 .526-1.585L5.59 3.077A1.5 1.5 0 0 0 4.5 2H3.5Z" clipRule="evenodd" />
+                  </svg>
                   {contacts.phoneDisplay}
                 </a>
               </div>
             </div>
 
-            {/* Mini contact info box */}
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-              <h3 className="mb-6 font-display text-xl font-semibold">{t("ctaInfoTitle")}</h3>
-              <ul className="space-y-4 text-white/90">
-                {(["i1", "i2", "i3"] as const).map((key) => (
-                  <li key={key} className="flex items-start gap-3">
-                    <div className="mt-1 h-5 w-5 shrink-0 rounded-full bg-signal/20 flex items-center justify-center">
-                      <svg className="h-3 w-3 text-signal" viewBox="0 0 12 12" fill="currentColor" aria-hidden>
-                        <path d="M10.28 2.28a.75.75 0 0 0-1.06 0L4.5 7l-1.72-1.72a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 0 0 0-1.06z" />
-                      </svg>
-                    </div>
-                    <span>{t(`ctaInfo.${key}`)}</span>
+            {/* Right: process card */}
+            <div className="rounded-2xl border border-line bg-white p-8 shadow-sm">
+              <h3 className="mb-6 font-display text-lg font-semibold text-brand-900">
+                {t("ctaInfoTitle")}
+              </h3>
+              <ol className="space-y-5">
+                {(["i1", "i2", "i3"] as const).map((key, idx) => (
+                  <li key={key} className="flex items-start gap-4">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-900 text-xs font-bold text-white">
+                      {idx + 1}
+                    </span>
+                    <p className="pt-0.5 text-sm leading-relaxed text-ink-700">{t(`ctaInfo.${key}`)}</p>
                   </li>
                 ))}
-              </ul>
+              </ol>
+              <div className="mt-8 flex items-center gap-3 rounded-xl border border-signal/20 bg-signal/5 px-4 py-3">
+                <svg className="h-5 w-5 shrink-0 text-signal" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                  <path fillRule="evenodd" d="M8 1a.75.75 0 0 1 .75.75V6h3.5a.75.75 0 0 1 0 1.5H8.75v3.5a.75.75 0 0 1-1.5 0V7.5H3.75a.75.75 0 0 1 0-1.5h3.5V1.75A.75.75 0 0 1 8 1Z" clipRule="evenodd" />
+                </svg>
+                <p className="text-xs font-medium text-ink-700">{t("ctaNoCommit")}</p>
+              </div>
             </div>
           </div>
         </div>

@@ -287,7 +287,9 @@
     "closeTitle": "Söker ni en ansvarstagande partner för ett kommande uppdrag?",
     "closeBody": "Vi svarar snabbt och förbereder oss utifrån den information ni delar – utan påhittad brådska.",
     "closeCta": "Skicka en förfrågan",
-    "ctaInfoTitle": "Vad som händer efter ni kontaktar oss",
+    "ctaEyebrow": "Nästa steg",
+    "ctaInfoTitle": "Vad händer när ni hör av er?",
+    "ctaNoCommit": "Ingen bindning. Ni väljer hur vi går vidare.",
     "ctaInfo": {
       "i1": "Vi svarar inom en arbetsdag",
       "i2": "Ni väljer om ni vill ha ett möte eller skriftlig dialog",
