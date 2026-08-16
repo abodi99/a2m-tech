@@ -29,8 +29,8 @@
       "description": "Collaboration in larger commitments: team delivery, specialist reinforcement and partnership without overstated claims."
     },
     "insights": {
-      "title": "Insights | A2M Tech",
-      "description": "Planned articles on delivery governance, continuity and materials for procuring organizations."
+      "title": "Insights & updates | A2M Tech",
+      "description": "Perspectives and practical guides on digital delivery, public procurement, quality, security and long-term maintenance."
     },
     "about": {
       "title": "About | A2M Tech",
@@ -170,12 +170,30 @@
     "crossCapTitle": "Cross-functional capability areas",
     "crossCapSubtitle": "Integrated competence covering the full assignment lifecycle.",
     "crossCap": {
-      "c1": { "title": "Digital development & integrations", "body": "Business-near system development, API integrations and technical architecture." },
-      "c2": { "title": "Data & information support", "body": "Structured information flow and decision support with traceability and accountability." },
-      "c3": { "title": "Security & compliance", "body": "Handling of access control, documentation and follow-up according to requirements." },
-      "c4": { "title": "Operations & modernization", "body": "Stabilization, modernization and long-term operation of existing systems." },
-      "c5": { "title": "Team reinforcement & specialist", "body": "Complementary competence or coordinated team with shared plan and status." },
-      "c6": { "title": "Procurement & partner collaboration", "body": "Capacity to participate with other suppliers in larger commitments." }
+      "c1": {
+        "title": "Digital development & integrations",
+        "body": "Business-near system development, API integrations and technical architecture."
+      },
+      "c2": {
+        "title": "Data & information support",
+        "body": "Structured information flow and decision support with traceability and accountability."
+      },
+      "c3": {
+        "title": "Security & compliance",
+        "body": "Handling of access control, documentation and follow-up according to requirements."
+      },
+      "c4": {
+        "title": "Operations & modernization",
+        "body": "Stabilization, modernization and long-term operation of existing systems."
+      },
+      "c5": {
+        "title": "Team reinforcement & specialist",
+        "body": "Complementary competence or coordinated team with shared plan and status."
+      },
+      "c6": {
+        "title": "Procurement & partner collaboration",
+        "body": "Capacity to participate with other suppliers in larger commitments."
+      }
     },
     "caseStudiesTitle": "How we work",
     "caseStudiesSubtitle": "Concrete examples of our delivery model in practice.",
@@ -224,21 +242,54 @@
     "predictableTitle": "Predictable to order. Clear to follow up.",
     "predictableIntro": "We describe delivery practices that make assignments easier to order and follow up — without claiming certifications or awarded contracts.",
     "predictable": {
-      "p1": { "title": "Clear ownership and fixed contact points", "body": "You should know who owns the dialogue and how decisions are documented." },
-      "p2": { "title": "Planned governance and reporting", "body": "Status, deviations and follow-up follow an agreed rhythm." },
-      "p3": { "title": "Traceable requirements and agreements", "body": "Requirements, decisions and changes should be followable during the assignment." },
-      "p4": { "title": "Documentation, handover and continuity", "body": "Knowledge should remain in your organization when people or phases change." },
-      "p5": { "title": "Quality and security during the contract period", "body": "Controls and follow-up are part of how we work — not detached promises." }
+      "p1": {
+        "title": "Clear ownership and fixed contact points",
+        "body": "You should know who owns the dialogue and how decisions are documented."
+      },
+      "p2": {
+        "title": "Planned governance and reporting",
+        "body": "Status, deviations and follow-up follow an agreed rhythm."
+      },
+      "p3": {
+        "title": "Traceable requirements and agreements",
+        "body": "Requirements, decisions and changes should be followable during the assignment."
+      },
+      "p4": {
+        "title": "Documentation, handover and continuity",
+        "body": "Knowledge should remain in your organization when people or phases change."
+      },
+      "p5": {
+        "title": "Quality and security during the contract period",
+        "body": "Controls and follow-up are part of how we work — not detached promises."
+      }
     },
     "needsTitle": "Needs we address",
     "needsSubtitle": "A needs index — not a technology catalogue.",
     "needs": {
-      "n1": { "title": "Business-near digital development", "body": "When you need to develop or adapt digital services close to operational requirements, with clear acceptance and handover." },
-      "n2": { "title": "Information and decision support", "body": "When information must flow, be assembled and support decisions without losing traceability." },
-      "n3": { "title": "Secure and robust digital environments", "body": "When solutions must run with controlled access, documentation and follow-up." },
-      "n4": { "title": "Modernization and operations", "body": "When existing solutions need modernization, stabilization or long-term operations." },
-      "n5": { "title": "Specialist reinforcement and team delivery", "body": "When you need complementary competence or a coordinated team with a shared plan and status." },
-      "n6": { "title": "Collaboration in procurements and larger commitments", "body": "When complementary capacity is needed alongside other suppliers in a larger assignment." }
+      "n1": {
+        "title": "Business-near digital development",
+        "body": "When you need to develop or adapt digital services close to operational requirements, with clear acceptance and handover."
+      },
+      "n2": {
+        "title": "Information and decision support",
+        "body": "When information must flow, be assembled and support decisions without losing traceability."
+      },
+      "n3": {
+        "title": "Secure and robust digital environments",
+        "body": "When solutions must run with controlled access, documentation and follow-up."
+      },
+      "n4": {
+        "title": "Modernization and operations",
+        "body": "When existing solutions need modernization, stabilization or long-term operations."
+      },
+      "n5": {
+        "title": "Specialist reinforcement and team delivery",
+        "body": "When you need complementary competence or a coordinated team with a shared plan and status."
+      },
+      "n6": {
+        "title": "Collaboration in procurements and larger commitments",
+        "body": "When complementary capacity is needed alongside other suppliers in a larger assignment."
+      }
     },
     "modelTitle": "Five-stage delivery model",
     "modelSubtitle": "Continuity from need to operations.",
@@ -269,10 +320,22 @@
     "procuringCta": "Open the fact sheet",
     "riskTitle": "How we reduce delivery risk",
     "riskItems": {
-      "r1": { "title": "Designated ownership", "body": "Clear contact points and ownership of the assignment dialogue." },
-      "r2": { "title": "Documented handover", "body": "So knowledge and status can be carried forward." },
-      "r3": { "title": "Change and deviation handling", "body": "Changes and deviations are handled visibly and in writing." },
-      "r4": { "title": "Continuity through staff changes", "body": "Delivery should continue without person dependence." }
+      "r1": {
+        "title": "Designated ownership",
+        "body": "Clear contact points and ownership of the assignment dialogue."
+      },
+      "r2": {
+        "title": "Documented handover",
+        "body": "So knowledge and status can be carried forward."
+      },
+      "r3": {
+        "title": "Change and deviation handling",
+        "body": "Changes and deviations are handled visibly and in writing."
+      },
+      "r4": {
+        "title": "Continuity through staff changes",
+        "body": "Delivery should continue without person dependence."
+      }
     },
     "processTitle": "How we work",
     "processBody": "Clear documentation and regular follow-up create the conditions for sustainable digital deliveries.",
@@ -416,10 +479,22 @@
     "title": "Quality and security",
     "intro": "Here we describe how we work with quality, information security and follow-up in digital assignments — as practices, not certification claims.",
     "items": {
-      "q1": { "title": "Traceability", "body": "Requirements, decisions and changes are documented so they can be followed during the assignment." },
-      "q2": { "title": "Deviation handling", "body": "Deviations are communicated on time, with action and follow-up." },
-      "q3": { "title": "Documentation", "body": "Documentation must be hand-overable and usable in your organization." },
-      "q4": { "title": "Robust digital services", "body": "We plan for operability, access control and controlled change." }
+      "q1": {
+        "title": "Traceability",
+        "body": "Requirements, decisions and changes are documented so they can be followed during the assignment."
+      },
+      "q2": {
+        "title": "Deviation handling",
+        "body": "Deviations are communicated on time, with action and follow-up."
+      },
+      "q3": {
+        "title": "Documentation",
+        "body": "Documentation must be hand-overable and usable in your organization."
+      },
+      "q4": {
+        "title": "Robust digital services",
+        "body": "We plan for operability, access control and controlled change."
+      }
     },
     "note": "We do not list ISO certificates, clearances or frameworks without documented verification.",
     "cta": "To the procuring-organization fact sheet",
@@ -429,9 +504,18 @@
     "title": "Partnership",
     "intro": "A2M Tech can complement larger commitments with other actors. We describe delivery forms — not awarded framework agreements.",
     "items": {
-      "p1": { "title": "Team delivery", "body": "A coordinated team with a shared plan, status and documentation." },
-      "p2": { "title": "Specialist reinforcement", "body": "Complementary competence inside an existing organization for a limited period." },
-      "p3": { "title": "Partner collaboration", "body": "When the assignment needs broader capacity alongside other suppliers." }
+      "p1": {
+        "title": "Team delivery",
+        "body": "A coordinated team with a shared plan, status and documentation."
+      },
+      "p2": {
+        "title": "Specialist reinforcement",
+        "body": "Complementary competence inside an existing organization for a limited period."
+      },
+      "p3": {
+        "title": "Partner collaboration",
+        "body": "When the assignment needs broader capacity alongside other suppliers."
+      }
     },
     "note": "Governance of subcontractors and partners is described in dialogue based on the assignment’s requirements.",
     "cta": "Send an enquiry"
@@ -442,33 +526,35 @@
     "body": "A2M Tech collaborates with specialist firms and complementary suppliers when an assignment requires broader capacity or specific expertise. Collaboration is structured with clear accountability and shared delivery governance.",
     "disclaimer": "All partner organisations are fictional example partners for illustrative purposes.",
     "desc": {
-      "nordlank":     "System integration for Nordic public-sector organisations",
-      "civora":       "Digital case management and governance in the municipal sector",
-      "styrpunkt":    "Project management and procurement support for complex deliveries",
-      "kontinuum":    "Continuity solutions and operational environment stabilisation",
-      "databro":      "Data flows, API integrations and technical infrastructure",
-      "tryggnod":     "Information security, access control and GDPR compliance",
-      "forankra":     "Organisational development and structured change leadership",
+      "nordlank": "System integration for Nordic public-sector organisations",
+      "civora": "Digital case management and governance in the municipal sector",
+      "styrpunkt": "Project management and procurement support for complex deliveries",
+      "kontinuum": "Continuity solutions and operational environment stabilisation",
+      "databro": "Data flows, API integrations and technical infrastructure",
+      "tryggnod": "Information security, access control and GDPR compliance",
+      "forankra": "Organisational development and structured change leadership",
       "flodesverket": "Process automation and digital case flow management",
-      "samband":      "Communication and coordination in complex multi-party projects",
-      "klarlinje":    "Documentation, traceability and delivery quality assurance",
-      "veridion":     "Verification, audit and independent quality review",
-      "infraholm":    "IT infrastructure, server operations and on-premises environments"
+      "samband": "Communication and coordination in complex multi-party projects",
+      "klarlinje": "Documentation, traceability and delivery quality assurance",
+      "veridion": "Verification, audit and independent quality review",
+      "infraholm": "IT infrastructure, server operations and on-premises environments"
     }
   },
   "insights": {
-    "title": "Insights",
-    "intro": "Articles are published only when content is complete and fact-checked. Below are planned topics — not published articles.",
-    "roadmapNote": "See the full editorial plan in the documentation.",
-    "topics": {
-      "t1": "From award to operations: creating a followable delivery",
-      "t2": "What should a continuity and handover plan contain?",
-      "t3": "What materials does a procuring organization need from a digital supplier?",
-      "t4": "How buyers and suppliers handle deviations without losing pace",
-      "t5": "Checklist for clear ownership in digital assignments",
-      "t6": "How to evaluate a long-term delivery partner"
-    },
-    "cta": "Contact us"
+    "pageTitle": "Insights & updates",
+    "pageIntro": "Perspectives and practical guides on digital delivery, public procurement, quality, security and long-term maintenance.",
+    "homeSectionEyebrow": "INSIGHTS & UPDATES",
+    "homeSectionHeading": "Insights for clearer digital deliveries",
+    "homeSectionIntro": "Perspectives, guides and practical thinking on procurement, delivery governance, quality and long-term maintenance.",
+    "readArticle": "Read article",
+    "viewAll": "View all insights",
+    "featured": "Featured",
+    "minuteRead": "min read",
+    "published": "Published",
+    "category": "Category",
+    "readingTime": "Reading time",
+    "relatedInsights": "RELATED INSIGHTS",
+    "noArticles": "No published articles yet."
   },
   "procuring": {
     "title": "For procuring organizations",

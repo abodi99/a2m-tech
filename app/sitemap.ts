@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing, type AppPathname } from "@/i18n/routing";
 import { absoluteLocalizedUrl } from "@/lib/locale-url";
 import { demoCases } from "@/content/demo-cases";
+import { getPublishedArticles, crossRefMap } from "@/content/insights-articles";
 
 const pathnames: AppPathname[] = [
   "/",
@@ -47,5 +48,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticEntries, ...caseEntries];
+  // Insight article pages with hreflang alternates
+  const svArticles = getPublishedArticles("sv");
+  const insightEntries = svArticles.flatMap((svArticle) => {
+    const enSlug =
+      crossRefMap.svToEn[svArticle.slug as keyof typeof crossRefMap.svToEn];
+    const svUrl = `https://a2m-tech.com/sv/insikter/${svArticle.slug}`;
+    const enUrl = enSlug
+      ? `https://a2m-tech.com/en/insights/${enSlug}`
+      : null;
+
+    const entries: MetadataRoute.Sitemap[number][] = [
+      {
+        url: svUrl,
+        lastModified: new Date(svArticle.publishedAt),
+        alternates: {
+          languages: {
+            sv: svUrl,
+            ...(enUrl ? { en: enUrl } : {}),
+            "x-default": svUrl,
+          },
+        },
+      },
+    ];
+
+    if (enUrl) {
+      entries.push({
+        url: enUrl,
+        lastModified: new Date(svArticle.publishedAt),
+        alternates: {
+          languages: {
+            sv: svUrl,
+            en: enUrl,
+            "x-default": svUrl,
+          },
+        },
+      });
+    }
+
+    return entries;
+  });
+
+  return [...staticEntries, ...caseEntries, ...insightEntries];
 }

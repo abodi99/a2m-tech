@@ -29,8 +29,8 @@
       "description": "Samverkan i större åtaganden: teamleverans, specialistförstärkning och partnerskap utan överdrivna löften."
     },
     "insights": {
-      "title": "Insikter | A2M Tech",
-      "description": "Planerade artiklar om leveransstyrning, kontinuitet och underlag för upphandlande organisationer."
+      "title": "Insikter & aktuellt | A2M Tech",
+      "description": "Perspektiv och praktiska guider om digital leverans, offentlig upphandling, kvalitet, säkerhet och långsiktig förvaltning."
     },
     "about": {
       "title": "Om oss | A2M Tech",
@@ -170,12 +170,30 @@
     "crossCapTitle": "Tvärfunktionella kompetensområden",
     "crossCapSubtitle": "Sammanhängande kompetens som täcker hela uppdragscykeln.",
     "crossCap": {
-      "c1": { "title": "Digital utveckling & integrationer", "body": "Verksamhetsnära systemutveckling, API-integrationer och teknisk arkitektur." },
-      "c2": { "title": "Data & informationsstöd", "body": "Strukturerat informationsflöde och beslutsstöd med spårbarhet och ansvar." },
-      "c3": { "title": "Säkerhet & efterlevnad", "body": "Hantering av åtkomstkontroll, dokumentation och uppföljning enligt krav." },
-      "c4": { "title": "Förvaltning & modernisering", "body": "Stabilisering, modernisering och långsiktig drift av befintliga system." },
-      "c5": { "title": "Teamförstärkning & specialist", "body": "Kompletterande kompetens eller samlat team med delad plan och status." },
-      "c6": { "title": "Upphandling & partnersamverkan", "body": "Kapacitet att ingå i samverkan med andra leverantörer i större åtaganden." }
+      "c1": {
+        "title": "Digital utveckling & integrationer",
+        "body": "Verksamhetsnära systemutveckling, API-integrationer och teknisk arkitektur."
+      },
+      "c2": {
+        "title": "Data & informationsstöd",
+        "body": "Strukturerat informationsflöde och beslutsstöd med spårbarhet och ansvar."
+      },
+      "c3": {
+        "title": "Säkerhet & efterlevnad",
+        "body": "Hantering av åtkomstkontroll, dokumentation och uppföljning enligt krav."
+      },
+      "c4": {
+        "title": "Förvaltning & modernisering",
+        "body": "Stabilisering, modernisering och långsiktig drift av befintliga system."
+      },
+      "c5": {
+        "title": "Teamförstärkning & specialist",
+        "body": "Kompletterande kompetens eller samlat team med delad plan och status."
+      },
+      "c6": {
+        "title": "Upphandling & partnersamverkan",
+        "body": "Kapacitet att ingå i samverkan med andra leverantörer i större åtaganden."
+      }
     },
     "caseStudiesTitle": "Hur vi arbetar",
     "caseStudiesSubtitle": "Konkreta exempel på vår leveransmodell i praktiken.",
@@ -224,21 +242,54 @@
     "predictableTitle": "Förutsägbart att beställa. Tydligt att följa upp.",
     "predictableIntro": "Vi beskriver leveranspraktiker som gör uppdraget lättare att beställa och följa upp – utan att påstå certifieringar eller tilldelade avtal.",
     "predictable": {
-      "p1": { "title": "Tydligt ansvar och fasta kontaktvägar", "body": "Ni ska veta vem som äger dialogen och hur beslut dokumenteras." },
-      "p2": { "title": "Planerad styrning och rapportering", "body": "Status, avvikelser och uppföljning sker enligt överenskommen rytm." },
-      "p3": { "title": "Spårbara krav och överenskommelser", "body": "Krav, beslut och förändringar ska kunna följas bakåt under uppdraget." },
-      "p4": { "title": "Dokumentation, överlämning och kontinuitet", "body": "Kunskap ska kunna stanna i er organisation när personer eller faser byts." },
-      "p5": { "title": "Kvalitet och säkerhet under avtalstiden", "body": "Kontroller och uppföljning ingår i hur vi arbetar – inte som lösa löften." }
+      "p1": {
+        "title": "Tydligt ansvar och fasta kontaktvägar",
+        "body": "Ni ska veta vem som äger dialogen och hur beslut dokumenteras."
+      },
+      "p2": {
+        "title": "Planerad styrning och rapportering",
+        "body": "Status, avvikelser och uppföljning sker enligt överenskommen rytm."
+      },
+      "p3": {
+        "title": "Spårbara krav och överenskommelser",
+        "body": "Krav, beslut och förändringar ska kunna följas bakåt under uppdraget."
+      },
+      "p4": {
+        "title": "Dokumentation, överlämning och kontinuitet",
+        "body": "Kunskap ska kunna stanna i er organisation när personer eller faser byts."
+      },
+      "p5": {
+        "title": "Kvalitet och säkerhet under avtalstiden",
+        "body": "Kontroller och uppföljning ingår i hur vi arbetar – inte som lösa löften."
+      }
     },
     "needsTitle": "Behov vi möter",
     "needsSubtitle": "Ett behovsindex – inte en teknikkatalog.",
     "needs": {
-      "n1": { "title": "Verksamhetsnära digital utveckling", "body": "När ni behöver utveckla eller anpassa digitala tjänster nära verksamhetens krav, med tydlig acceptans och överlämning." },
-      "n2": { "title": "Informations- och beslutsstöd", "body": "När information ska kunna flöda, sammanställas och stödja beslut utan att tappa spårbarhet." },
-      "n3": { "title": "Säkra och robusta digitala miljöer", "body": "När lösningar ska kunna drivas med kontrollerad åtkomst, dokumentation och uppföljning." },
-      "n4": { "title": "Modernisering och förvaltning", "body": "När befintliga lösningar behöver moderniseras, stabiliseras eller förvaltas över tid." },
-      "n5": { "title": "Specialistförstärkning och teamleverans", "body": "När ni behöver kompletterande kompetens eller ett samlat team med gemensam plan och status." },
-      "n6": { "title": "Samverkan i upphandlingar och större åtaganden", "body": "När kompletterande kapacitet behövs i samverkan med andra leverantörer i ett större uppdrag." }
+      "n1": {
+        "title": "Verksamhetsnära digital utveckling",
+        "body": "När ni behöver utveckla eller anpassa digitala tjänster nära verksamhetens krav, med tydlig acceptans och överlämning."
+      },
+      "n2": {
+        "title": "Informations- och beslutsstöd",
+        "body": "När information ska kunna flöda, sammanställas och stödja beslut utan att tappa spårbarhet."
+      },
+      "n3": {
+        "title": "Säkra och robusta digitala miljöer",
+        "body": "När lösningar ska kunna drivas med kontrollerad åtkomst, dokumentation och uppföljning."
+      },
+      "n4": {
+        "title": "Modernisering och förvaltning",
+        "body": "När befintliga lösningar behöver moderniseras, stabiliseras eller förvaltas över tid."
+      },
+      "n5": {
+        "title": "Specialistförstärkning och teamleverans",
+        "body": "När ni behöver kompletterande kompetens eller ett samlat team med gemensam plan och status."
+      },
+      "n6": {
+        "title": "Samverkan i upphandlingar och större åtaganden",
+        "body": "När kompletterande kapacitet behövs i samverkan med andra leverantörer i ett större uppdrag."
+      }
     },
     "modelTitle": "Leveransmodell i fem steg",
     "modelSubtitle": "Kontinuitet från behov till förvaltning.",
@@ -269,10 +320,22 @@
     "procuringCta": "Öppna faktabladet",
     "riskTitle": "Så minskar vi leveransrisk",
     "riskItems": {
-      "r1": { "title": "Utsett ansvar", "body": "Tydliga kontaktvägar och ägarskap för uppdragets dialog." },
-      "r2": { "title": "Dokumenterad överlämning", "body": "Så att kunskap och status kan föras vidare." },
-      "r3": { "title": "Ändrings- och avvikelsehantering", "body": "Förändringar och avvikelser hanteras synligt och skriftligt." },
-      "r4": { "title": "Kontinuitet vid personbyten", "body": "Leveransen ska kunna fortgå utan personberoende." }
+      "r1": {
+        "title": "Utsett ansvar",
+        "body": "Tydliga kontaktvägar och ägarskap för uppdragets dialog."
+      },
+      "r2": {
+        "title": "Dokumenterad överlämning",
+        "body": "Så att kunskap och status kan föras vidare."
+      },
+      "r3": {
+        "title": "Ändrings- och avvikelsehantering",
+        "body": "Förändringar och avvikelser hanteras synligt och skriftligt."
+      },
+      "r4": {
+        "title": "Kontinuitet vid personbyten",
+        "body": "Leveransen ska kunna fortgå utan personberoende."
+      }
     },
     "processTitle": "Så arbetar vi",
     "processBody": "Tydlig dokumentation och regelbunden uppföljning skapar förutsättningar för hållbara digitala leveranser.",
@@ -416,10 +479,22 @@
     "title": "Kvalitet och säkerhet",
     "intro": "Här beskriver vi hur vi arbetar med kvalitet, informationssäkerhet och uppföljning i digitala uppdrag – som praktiker, inte som certifikatslöften.",
     "items": {
-      "q1": { "title": "Spårbarhet", "body": "Krav, beslut och förändringar dokumenteras så att de går att följa under uppdraget." },
-      "q2": { "title": "Avvikelsehantering", "body": "Avvikelser kommuniceras i tid, med åtgärd och uppföljning." },
-      "q3": { "title": "Dokumentation", "body": "Dokumentation ska kunna överlämnas och användas i er organisation." },
-      "q4": { "title": "Robusta digitala tjänster", "body": "Vi planerar för förvaltningsbarhet, behörigheter och kontrollerad förändring." }
+      "q1": {
+        "title": "Spårbarhet",
+        "body": "Krav, beslut och förändringar dokumenteras så att de går att följa under uppdraget."
+      },
+      "q2": {
+        "title": "Avvikelsehantering",
+        "body": "Avvikelser kommuniceras i tid, med åtgärd och uppföljning."
+      },
+      "q3": {
+        "title": "Dokumentation",
+        "body": "Dokumentation ska kunna överlämnas och användas i er organisation."
+      },
+      "q4": {
+        "title": "Robusta digitala tjänster",
+        "body": "Vi planerar för förvaltningsbarhet, behörigheter och kontrollerad förändring."
+      }
     },
     "note": "Vi listar inte ISO-certifikat, clearance eller ramavtal utan dokumenterad verifiering.",
     "cta": "Till faktablad för upphandlare",
@@ -429,9 +504,18 @@
     "title": "Partnerskap",
     "intro": "A2M Tech kan komplettera större åtaganden tillsammans med andra aktörer. Vi beskriver leveransformer – inte tilldelade ramavtal.",
     "items": {
-      "p1": { "title": "Teamleverans", "body": "Ett samlat team med gemensam plan, status och dokumentation." },
-      "p2": { "title": "Specialistförstärkning", "body": "Kompletterande kompetens i befintlig organisation under en begränsad period." },
-      "p3": { "title": "Partnersamverkan", "body": "När uppdraget kräver bredare kapacitet i samverkan med andra leverantörer." }
+      "p1": {
+        "title": "Teamleverans",
+        "body": "Ett samlat team med gemensam plan, status och dokumentation."
+      },
+      "p2": {
+        "title": "Specialistförstärkning",
+        "body": "Kompletterande kompetens i befintlig organisation under en begränsad period."
+      },
+      "p3": {
+        "title": "Partnersamverkan",
+        "body": "När uppdraget kräver bredare kapacitet i samverkan med andra leverantörer."
+      }
     },
     "note": "Styrning av underleverantörer och partners beskrivs i dialog utifrån uppdragets krav.",
     "cta": "Skicka en förfrågan"
@@ -442,33 +526,35 @@
     "body": "A2M Tech samverkar med specialistbolag och kompletterande leverantörer när ett uppdrag kräver bredare kapacitet eller specifik expertis som stärker helheten. Samverkan sker strukturerat med tydlig ansvarsfördelning och gemensam leveransstyrning.",
     "disclaimer": "Samtliga partnerbolag är fiktiva exempelpartners för illustrativt syfte.",
     "desc": {
-      "nordlank":     "Systemintegration för nordiska offentliga aktörer",
-      "civora":       "Digital förvaltning och ärendehantering i kommunal sektor",
-      "styrpunkt":    "Projektledning och upphandlingsstöd för komplexa leveranser",
-      "kontinuum":    "Kontinuitetslösningar och stabilisering av driftsmiljöer",
-      "databro":      "Dataflöden, API-integrationer och teknisk infrastruktur",
-      "tryggnod":     "Informationssäkerhet, åtkomstkontroll och GDPR-efterlevnad",
-      "forankra":     "Verksamhetsutveckling och strukturerat förändringsledarskap",
+      "nordlank": "Systemintegration för nordiska offentliga aktörer",
+      "civora": "Digital förvaltning och ärendehantering i kommunal sektor",
+      "styrpunkt": "Projektledning och upphandlingsstöd för komplexa leveranser",
+      "kontinuum": "Kontinuitetslösningar och stabilisering av driftsmiljöer",
+      "databro": "Dataflöden, API-integrationer och teknisk infrastruktur",
+      "tryggnod": "Informationssäkerhet, åtkomstkontroll och GDPR-efterlevnad",
+      "forankra": "Verksamhetsutveckling och strukturerat förändringsledarskap",
       "flodesverket": "Processautomation och digitala ärendeflöden",
-      "samband":      "Kommunikation och samordning i komplexa fleraktörsprojekt",
-      "klarlinje":    "Dokumentation, spårbarhet och kvalitetssäkring av leveranser",
-      "veridion":     "Verifiering, revision och oberoende kvalitetsgranskning",
-      "infraholm":    "IT-infrastruktur, serverdrift och driftsmiljöer på premiss"
+      "samband": "Kommunikation och samordning i komplexa fleraktörsprojekt",
+      "klarlinje": "Dokumentation, spårbarhet och kvalitetssäkring av leveranser",
+      "veridion": "Verifiering, revision och oberoende kvalitetsgranskning",
+      "infraholm": "IT-infrastruktur, serverdrift och driftsmiljöer på premiss"
     }
   },
   "insights": {
-    "title": "Insikter",
-    "intro": "Artiklar publiceras först när innehållet är färdigt och faktakontrollerat. Nedan är planerade ämnen – inte publicerade artiklar.",
-    "roadmapNote": "Se den fullständiga redaktionella planen i dokumentationen.",
-    "topics": {
-      "t1": "Från tilldelning till förvaltning: så skapas en uppföljningsbar leverans",
-      "t2": "Vad bör en kontinuitets- och överlämningsplan innehålla?",
-      "t3": "Vilket underlag behöver en upphandlande organisation från en digital leverantör?",
-      "t4": "Så arbetar beställare och leverantör med avvikelser utan att tappa tempo",
-      "t5": "Checklista för tydlig ansvarsfördelning i digitala uppdrag",
-      "t6": "Så utvärderar ni en långsiktig leveranspartner"
-    },
-    "cta": "Kontakta oss"
+    "pageTitle": "Insikter & aktuellt",
+    "pageIntro": "Perspektiv och praktiska guider om digital leverans, offentlig upphandling, kvalitet, säkerhet och långsiktig förvaltning.",
+    "homeSectionEyebrow": "INSIKTER & AKTUELLT",
+    "homeSectionHeading": "Insikter för tydligare digitala leveranser",
+    "homeSectionIntro": "Perspektiv, guider och praktiska resonemang kring upphandling, leveransstyrning, kvalitet och långsiktig förvaltning.",
+    "readArticle": "Läs artikeln",
+    "viewAll": "Se alla insikter",
+    "featured": "Utvald",
+    "minuteRead": "min läsning",
+    "published": "Publicerad",
+    "category": "Kategori",
+    "readingTime": "Lästid",
+    "relatedInsights": "RELATERADE INSIKTER",
+    "noArticles": "Inga publicerade artiklar ännu."
   },
   "procuring": {
     "title": "För upphandlande organisationer",

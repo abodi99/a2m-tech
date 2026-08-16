@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import NextLink from "next/link";
 import { company, contacts } from "@/content/site";
 import {
   JsonLd,
@@ -8,10 +9,178 @@ import {
   websiteJsonLd,
 } from "@/lib/seo";
 import { PartnerTicker } from "@/components/partners/partner-ticker";
+import {
+  getPublishedArticles,
+  categoryLabels,
+  type InsightArticle,
+} from "@/content/insights-articles";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+// ─── Insights Section ────────────────────────────────────────────────────────
+
+function InsightPreviewRow({
+  article,
+  locale,
+  featured,
+}: {
+  article: InsightArticle;
+  locale: string;
+  featured: boolean;
+}) {
+  const catLabel = categoryLabels[article.category][locale as "sv" | "en"];
+  const href = `/${locale}/${locale === "sv" ? "insikter" : "insights"}/${article.slug}`;
+  const readLabel = locale === "sv" ? "Läs artikeln" : "Read article";
+
+  const d = new Date(article.publishedAt);
+  const dateStr = d.toLocaleDateString(locale === "sv" ? "sv-SE" : "en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+
+  if (featured) {
+    return (
+      <article className="group border-b border-[#D7E1E5] pb-10">
+        <div className="mb-3 flex flex-wrap items-center gap-3">
+          <span className="rounded-full bg-[#BCEAF2]/30 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-widest text-[#004869]">
+            {locale === "sv" ? "Utvald" : "Featured"}
+          </span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#176BE0]">
+            {catLabel}
+          </span>
+          <span className="text-[#D7E1E5]" aria-hidden>·</span>
+          <time dateTime={article.publishedAt} className="text-xs text-[#334B58]">
+            {dateStr}
+          </time>
+          <span className="text-[#D7E1E5]" aria-hidden>·</span>
+          <span className="text-xs text-[#334B58]">
+            {article.readingMinutes}&nbsp;{locale === "sv" ? "min" : "min"}
+          </span>
+        </div>
+        <h3 className="mb-3 font-display text-2xl font-bold leading-snug text-[#003347] transition-colors duration-150 group-hover:text-[#176BE0] lg:text-3xl">
+          <NextLink href={href} className="focus:outline-none focus-visible:underline">
+            {article.title}
+          </NextLink>
+        </h3>
+        <p className="mb-5 max-w-2xl text-base leading-relaxed text-[#334B58]">
+          {article.description}
+        </p>
+        <NextLink
+          href={href}
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#176BE0] transition-all duration-150 hover:gap-3 focus:outline-none focus-visible:underline"
+          aria-label={`${readLabel}: ${article.title}`}
+        >
+          {readLabel}
+          <span aria-hidden className="transition-transform duration-150 group-hover:translate-x-1">→</span>
+        </NextLink>
+      </article>
+    );
+  }
+
+  return (
+    <article className="group">
+      <div className="mb-2 flex flex-wrap items-center gap-2">
+        <span className="text-xs font-semibold uppercase tracking-widest text-[#176BE0]">
+          {catLabel}
+        </span>
+        <span className="text-[#D7E1E5]" aria-hidden>·</span>
+        <time dateTime={article.publishedAt} className="text-xs text-[#334B58]">
+          {dateStr}
+        </time>
+      </div>
+      <h3 className="mb-2 font-display text-lg font-bold leading-snug text-[#003347] transition-colors duration-150 group-hover:text-[#176BE0]">
+        <NextLink href={href} className="focus:outline-none focus-visible:underline">
+          {article.title}
+        </NextLink>
+      </h3>
+      <p className="mb-3 text-sm leading-relaxed text-[#334B58] line-clamp-3">
+        {article.description}
+      </p>
+      <NextLink
+        href={href}
+        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#176BE0] transition-all duration-150 hover:gap-2.5 focus:outline-none focus-visible:underline"
+        aria-label={`${readLabel}: ${article.title}`}
+      >
+        {readLabel}
+        <span aria-hidden className="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
+      </NextLink>
+    </article>
+  );
+}
+
+async function InsightsSection({ locale }: { locale: string }) {
+  const articles = getPublishedArticles(locale as "sv" | "en").slice(0, 3);
+  if (articles.length === 0) return null;
+
+  const insightsHref = `/${locale}/${locale === "sv" ? "insikter" : "insights"}`;
+  const eyebrow = locale === "sv" ? "INSIKTER & AKTUELLT" : "INSIGHTS & UPDATES";
+  const heading =
+    locale === "sv"
+      ? "Insikter för tydligare digitala leveranser"
+      : "Insights for clearer digital deliveries";
+  const intro =
+    locale === "sv"
+      ? "Perspektiv, guider och praktiska resonemang kring upphandling, leveransstyrning, kvalitet och långsiktig förvaltning."
+      : "Perspectives, guides and practical thinking on procurement, delivery governance, quality and long-term maintenance.";
+  const allLabel = locale === "sv" ? "Se alla insikter" : "View all insights";
+
+  const [featured, ...rest] = articles;
+
+  return (
+    <section className="bg-white py-20" aria-labelledby="insights-heading">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-12 max-w-2xl">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#176BE0]">
+            {eyebrow}
+          </p>
+          <h2
+            id="insights-heading"
+            className="mb-4 font-display text-4xl font-bold leading-tight text-[#003347] lg:text-5xl"
+          >
+            {heading}
+          </h2>
+          <p className="text-lg leading-relaxed text-[#334B58]">{intro}</p>
+        </div>
+
+        {/* Featured article */}
+        <InsightPreviewRow
+          article={featured}
+          locale={locale}
+          featured={true}
+        />
+
+        {/* Secondary articles grid */}
+        {rest.length > 0 && (
+          <div className="mt-10 grid gap-8 border-b border-[#D7E1E5] pb-10 sm:grid-cols-2">
+            {rest.map((a) => (
+              <InsightPreviewRow
+                key={a.slug}
+                article={a}
+                locale={locale}
+                featured={false}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* See all link */}
+        <div className="mt-8 flex justify-end">
+          <NextLink
+            href={insightsHref}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#176BE0] transition-all duration-150 hover:gap-3 focus:outline-none focus-visible:underline"
+          >
+            {allLabel}
+            <span aria-hidden className="transition-transform duration-150">→</span>
+          </NextLink>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
@@ -544,6 +713,9 @@ export default async function HomePage({ params }: Props) {
           </ol>
         </div>
       </section>
+
+      {/* ── Insights section ── */}
+      <InsightsSection locale={locale} />
 
       {/* ── CTA ── */}
       <section className="relative overflow-hidden bg-paper py-24">
