@@ -45,12 +45,13 @@ export function Header() {
           aria-label="A2M Tech – Hem"
         >
           <Image
-            src="/logo.png"
+            src="/logo-cropped.png"
             alt="A2M Tech"
-            width={160}
-            height={48}
-            className="h-12 w-auto object-contain transition-opacity group-hover:opacity-85"
+            width={460}
+            height={170}
+            className="h-11 w-auto object-contain transition-opacity group-hover:opacity-85"
             priority
+            unoptimized
           />
         </Link>
 

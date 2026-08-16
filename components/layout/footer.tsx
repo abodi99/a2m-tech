@@ -17,13 +17,13 @@ export function Footer() {
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
 
-            {/* Outline logo – inverted to white */}
+            {/* Logo – transparent bg, invert to white for dark footer */}
             <div className="shrink-0">
               <Image
-                src="/logo-outline.png"
+                src="/logo-cropped.png"
                 alt="A2M Tech"
-                width={220}
-                height={64}
+                width={460}
+                height={170}
                 className="h-14 w-auto object-contain brightness-0 invert"
                 unoptimized
               />
