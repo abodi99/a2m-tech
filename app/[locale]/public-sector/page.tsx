@@ -75,16 +75,18 @@ export default async function PublicSectorPage({ params }: Props) {
           </div>
         </div>
       </div>
-      <p className="mt-8 text-sm text-ink-500">{t("note")}</p>
       <div className="mt-10 flex flex-wrap gap-3">
-        <Link href="/about" className={cn(buttonVariants())}>
-          {t("ctaDelivery")}
-        </Link>
         <Link
           href="/for-procuring-organizations"
-          className={cn(buttonVariants({ variant: "outline" }))}
+          className={cn(buttonVariants())}
         >
           {t("ctaProcuring")}
+        </Link>
+        <Link
+          href="/contact"
+          className={cn(buttonVariants({ variant: "outline" }))}
+        >
+          {t("ctaContact")}
         </Link>
       </div>
     </PageShell>

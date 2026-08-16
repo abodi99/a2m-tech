@@ -15,25 +15,24 @@ export type NavItem = {
     | "investors";
 };
 
-/** Compact primary nav per brief */
+/** Primary navigation – concise and purposeful */
 export const primaryNav: NavItem[] = [
-  { href: "/services", key: "services" },
   { href: "/public-sector", key: "publicSector" },
-  { href: "/about", key: "about" },
+  { href: "/quality-security", key: "quality" },
+  { href: "/insights", key: "insights" },
   { href: "/for-procuring-organizations", key: "procuring" },
+  { href: "/investors", key: "investors" },
 ];
 
-/** Footer nav split into two columns for symmetry */
+/** Footer nav split into two balanced columns */
 export const footerNav1: NavItem[] = [
-  { href: "/services", key: "services" },
   { href: "/public-sector", key: "publicSector" },
   { href: "/quality-security", key: "quality" },
   { href: "/partnership", key: "partnership" },
+  { href: "/for-procuring-organizations", key: "procuring" },
 ];
 
 export const footerNav2: NavItem[] = [
-  { href: "/for-procuring-organizations", key: "procuring" },
-  { href: "/about", key: "about" },
   { href: "/insights", key: "insights" },
   { href: "/cases", key: "cases" },
   { href: "/investors", key: "investors" },

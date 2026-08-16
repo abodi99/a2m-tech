@@ -1,6 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { company, contacts, supplierFacts } from "@/content/site";
-import { FactSheetVisual } from "@/components/brand/visual-system";
+import { contacts, supplierFacts } from "@/content/site";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { PageHero, PageShell } from "@/components/layout/page-shell";
 import { JsonLd, breadcrumbJsonLd, buildPageMetadata } from "@/lib/seo";
@@ -50,71 +49,10 @@ export default async function ProcuringPage({ params }: Props) {
         ])}
       />
       <Breadcrumbs locale={locale} items={[{ labelKey: "procuring" }]} />
-      <PageHero
-        title={t("title")}
-        intro={t("intro")}
-        visual={
-          <FactSheetVisual
-            caption={t("visualCaption")}
-            rows={[
-              { label: t("legalName"), value: company.legalName },
-              { label: common("phone"), value: contacts.phoneDisplay },
-              { label: t("geographyTitle"), value: t("geographyBody") },
-              { label: t("languagesTitle"), value: t("languages") },
-            ]}
-          />
-        }
-      />
+      <PageHero title={t("title")} intro={t("intro")} />
       <p className="mt-4 text-sm text-ink-500">
-        {common("lastUpdated")}: {supplierFacts.lastUpdated} · {t("printHint")}
+        {common("lastUpdated")}: {supplierFacts.lastUpdated}
       </p>
-
-      <section className="mt-12 border-t border-line pt-8">
-        <h2 className="font-display text-xl font-semibold text-brand-900">
-          {t("companyTitle")}
-        </h2>
-        <dl className="mt-6 grid gap-4 sm:grid-cols-2">
-          <div>
-            <dt className="text-xs font-semibold uppercase tracking-wider text-ink-500">
-              {t("legalName")}
-            </dt>
-            <dd className="mt-1 text-ink-950">{company.legalName}</dd>
-          </div>
-          <div>
-            <dt className="text-xs font-semibold uppercase tracking-wider text-ink-500">
-              {common("phone")}
-            </dt>
-            <dd className="mt-1 text-ink-950">
-              <a href={contacts.phoneHref}>{contacts.phoneDisplay}</a>
-            </dd>
-          </div>
-        </dl>
-      </section>
-
-      <section className="mt-12 border-t border-line pt-8">
-        <h2 className="font-display text-xl font-semibold text-brand-900">
-          {t("deliveryTitle")}
-        </h2>
-        <ul className="mt-4 list-disc space-y-2 pl-5 text-ink-700">
-          {supplierFacts.deliveryModels.map((model) => (
-            <li key={model}>{t(`models.${model}`)}</li>
-          ))}
-        </ul>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <div>
-            <h3 className="text-sm font-semibold text-ink-950">
-              {t("languagesTitle")}
-            </h3>
-            <p className="mt-1 text-ink-700">{t("languages")}</p>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-ink-950">
-              {t("geographyTitle")}
-            </h3>
-            <p className="mt-1 text-ink-700">{supplierFacts.geography.value}</p>
-          </div>
-        </div>
-      </section>
 
       <section className="mt-12 border-t border-line pt-8">
         <h2 className="font-display text-xl font-semibold text-brand-900">
