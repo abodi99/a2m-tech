@@ -12,8 +12,8 @@ type LanguageSwitcherProps = {
 };
 
 const options = [
-  { locale: "sv" as const, label: "Svenska" },
-  { locale: "en" as const, label: "English" },
+  { locale: "sv" as const, label: "Svenska", short: "SV" },
+  { locale: "en" as const, label: "English", short: "EN" },
 ];
 
 export function LanguageSwitcher({
@@ -58,28 +58,40 @@ export function LanguageSwitcher({
       <button
         type="button"
         className={cn(
-          "inline-flex min-h-11 items-center gap-2 rounded-sm border px-3 font-medium transition-colors",
+          "inline-flex min-h-9 items-center gap-1.5 rounded-md px-2.5 text-xs font-semibold tracking-wide transition-colors",
           tone === "onDark"
-            ? "border-white/25 text-white hover:border-white/45 hover:bg-white/5"
-            : "border-line text-brand-900 hover:border-brand-800/40 hover:bg-surface"
+            ? "text-white/70 hover:bg-white/10 hover:text-white"
+            : "text-ink-500 hover:bg-accent hover:text-brand-900"
         )}
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-controls={listId}
-        aria-label="Language"
+        aria-label="Switch language"
         onClick={() => setOpen((value) => !value)}
       >
-        <span lang={locale}>{current.label}</span>
+        {/* Globe icon */}
         <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden
+          className={tone === "onDark" ? "text-white/50" : "text-ink-400"}
+        >
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.2" />
+          <path d="M8 1.5C6.5 3.5 5.5 5.6 5.5 8s1 4.5 2.5 6.5M8 1.5C9.5 3.5 10.5 5.6 10.5 8s-1 4.5-2.5 6.5M1.5 8h13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        </svg>
+        <span lang={locale}>{current.short}</span>
+        <svg
+          width="10"
+          height="10"
           viewBox="0 0 12 12"
           fill="none"
           aria-hidden
           className={cn(
             "transition-transform",
             open && "rotate-180",
-            tone === "onDark" ? "text-white/70" : "text-ink-500"
+            tone === "onDark" ? "text-white/40" : "text-ink-400"
           )}
         >
           <path
@@ -114,7 +126,7 @@ export function LanguageSwitcher({
                   aria-selected={selected}
                   lang={option.locale}
                   className={cn(
-                    "flex w-full min-h-11 items-center px-3 text-left font-medium transition-colors",
+                    "flex w-full min-h-10 items-center gap-3 px-3 text-left text-sm font-medium transition-colors",
                     tone === "onDark"
                       ? selected
                         ? "bg-white/10 text-white"
@@ -125,7 +137,15 @@ export function LanguageSwitcher({
                   )}
                   onClick={() => switchLocale(option.locale)}
                 >
+                  <span className="w-5 text-xs font-bold tracking-wide opacity-60">
+                    {option.short}
+                  </span>
                   {option.label}
+                  {selected && (
+                    <svg className="ml-auto h-3.5 w-3.5 shrink-0 text-signal" viewBox="0 0 14 14" fill="currentColor" aria-hidden>
+                      <path d="M11.28 3.28a.75.75 0 0 0-1.06 0L5.5 8l-1.72-1.72a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 0 0 0-1.06z" />
+                    </svg>
+                  )}
                 </button>
               </li>
             );

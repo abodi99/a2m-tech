@@ -93,7 +93,7 @@
     "legal": "Legal",
     "privacy": "Privacy",
     "cookies": "Cookies",
-    "bookMeeting": "Start a dialogue",
+    "bookMeeting": "Send an enquiry",
     "rights": "All rights reserved."
   },
   "common": {
@@ -111,12 +111,14 @@
     "registeredOffice": "Helsingborg"
   },
   "home": {
-    "eyebrow": "Delivery partner for the public sector and established organizations",
-    "title": "Digital delivery with accountability over time.",
-    "subtitle": "A2M Tech helps organizations develop, introduce and operate digital solutions with clear governance, traceable quality and a responsible partner throughout delivery.",
-    "heroTitle": "Digital delivery with accountability over time",
-    "heroSubtitle": "Reliable partner for public sector and established organizations",
-    "heroEstablished": "Established 2019",
+    "eyebrow": "IT delivery for public sector and established organisations",
+    "title": "Your IT partner who owns results, not just code.",
+    "subtitle": "A2M Tech combines technical expertise with structured delivery ownership, traceable documentation and a named point of contact — from day one through long-term management.",
+    "heroTitle": "Your IT partner who owns results, not just code",
+    "heroSubtitle": "A2M Tech combines technical expertise with clear delivery ownership. Structured processes, traceable documentation and a named point of contact — from day one through long-term management.",
+    "heroTrustItem1": "Named point of contact",
+    "heroTrustItem2": "Traceable documentation",
+    "heroTrustItem3": "Accountability after delivery",
     "learnMore": "Learn more",
     "stat1Value": "2019",
     "stat1Label": "Year established",
@@ -209,7 +211,7 @@
     "testimonial2Initials": "MA",
     "testimonial2Name": "IT Manager",
     "testimonial2Role": "Government Agency",
-    "ctaPrimary": "Start a dialogue",
+    "ctaPrimary": "Send an enquiry",
     "ctaSecondary": "Review our delivery capability",
     "factsTitle": "Company facts",
     "factsOrg": "Org. no.",

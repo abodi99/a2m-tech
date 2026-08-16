@@ -93,7 +93,7 @@
     "legal": "Juridik",
     "privacy": "Integritet",
     "cookies": "Cookies",
-    "bookMeeting": "Inled en dialog",
+    "bookMeeting": "Skicka en förfrågan",
     "rights": "Alla rättigheter förbehållna."
   },
   "common": {
@@ -111,12 +111,14 @@
     "registeredOffice": "Helsingborg"
   },
   "home": {
-    "eyebrow": "Leveranspartner för offentlig sektor och etablerade verksamheter",
-    "title": "Digitala leveranser med ansvar över tid.",
-    "subtitle": "A2M Tech hjälper organisationer att utveckla, införa och förvalta digitala lösningar med tydlig styrning, spårbar kvalitet och en ansvarig partner genom hela leveransen.",
-    "heroTitle": "Digitala leveranser med ansvar över tid",
-    "heroSubtitle": "Pålitlig partner för offentlig sektor och etablerade verksamheter",
-    "heroEstablished": "Etablerat 2019",
+    "eyebrow": "IT-leveranser för offentlig sektor och etablerade verksamheter",
+    "title": "Er IT-partner som äger resultaten, inte bara koden.",
+    "subtitle": "A2M Tech kombinerar teknisk spetskompetens med strukturerat leveransägarskap, spårbar dokumentation och en namngiven kontaktperson – från dag ett till förvaltning.",
+    "heroTitle": "Er IT-partner som äger resultaten, inte bara koden",
+    "heroSubtitle": "A2M Tech kombinerar teknisk spetskompetens med tydligt leveransägarskap. Strukturerade processer, spårbar dokumentation och en namngiven kontaktperson – från dag ett till förvaltning.",
+    "heroTrustItem1": "Namngiven kontaktperson",
+    "heroTrustItem2": "Spårbar dokumentation",
+    "heroTrustItem3": "Ansvar efter leverans",
     "learnMore": "Läs mer",
     "stat1Value": "2019",
     "stat1Label": "Etableringsår",
@@ -209,7 +211,7 @@
     "testimonial2Initials": "MA",
     "testimonial2Name": "IT-ansvarig",
     "testimonial2Role": "Statlig myndighet",
-    "ctaPrimary": "Inled en dialog",
+    "ctaPrimary": "Skicka en förfrågan",
     "ctaSecondary": "Granska vår leveransförmåga",
     "factsTitle": "Bolagsfakta",
     "factsOrg": "Org.nr",

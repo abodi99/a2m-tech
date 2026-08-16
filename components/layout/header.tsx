@@ -41,19 +41,24 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-3 rounded-sm focus-visible:outline-offset-4"
+          className="group flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-offset-4"
         >
-          <Image
-            src="/brand/logo.png"
-            alt="A2M Tech"
-            width={40}
-            height={40}
-            className="h-10 w-10"
-            priority
-          />
-          <span className="font-display text-lg font-bold tracking-tight text-brand-900">
-            A2M Tech
-          </span>
+          <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-brand-900 shadow-sm ring-1 ring-brand-900/10 transition-transform group-hover:scale-105">
+            <Image
+              src="/brand/logo.png"
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
+              priority
+            />
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className="font-display text-base font-bold tracking-tight text-brand-900">
+              A2M Tech
+            </span>
+            <span className="text-[10px] font-medium tracking-wide text-ink-400 uppercase">AB</span>
+          </div>
         </Link>
 
         <nav

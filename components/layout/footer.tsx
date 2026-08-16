@@ -52,14 +52,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href={contacts.calendly}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
+                <Link href="/contact" className="hover:text-white">
                   {t("bookMeeting")}
-                </a>
+                </Link>
               </li>
               <li>
                 <a
