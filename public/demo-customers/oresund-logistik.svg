@@ -1,0 +1,10 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Right-flowing arrow (upper lane) -->
+  <line x1="8" y1="22" x2="46" y2="22" stroke="#003347" stroke-width="3" stroke-linecap="round"/>
+  <polyline points="40,16 48,22 40,28" stroke="#003347" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Left-flowing arrow (lower lane) -->
+  <line x1="18" y1="42" x2="56" y2="42" stroke="#003347" stroke-width="3" stroke-linecap="round"/>
+  <polyline points="24,36 16,42 24,48" stroke="#003347" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Connection between lanes -->
+  <line x1="32" y1="22" x2="32" y2="42" stroke="#003347" stroke-width="1.5" stroke-dasharray="3 3"/>
+</svg>

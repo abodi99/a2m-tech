@@ -1,0 +1,10 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Roof / A peak -->
+  <polyline points="32,8 54,36 10,36" stroke="#003347" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Building body -->
+  <rect x="14" y="36" width="36" height="20" stroke="#003347" stroke-width="3" fill="none" rx="1"/>
+  <!-- Door -->
+  <rect x="26" y="44" width="12" height="12" stroke="#003347" stroke-width="2.5" fill="none" rx="1"/>
+  <!-- Ridge line (long-term maintenance / stability) -->
+  <line x1="14" y1="58" x2="50" y2="58" stroke="#003347" stroke-width="3" stroke-linecap="round"/>
+</svg>

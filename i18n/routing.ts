@@ -46,6 +46,10 @@ export const routing = defineRouting({
       sv: "/cookies",
       en: "/cookies",
     },
+    "/cases": {
+      sv: "/kundcase",
+      en: "/cases",
+    },
   },
 });
 

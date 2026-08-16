@@ -66,6 +66,7 @@
     "procuring": "För upphandlare",
     "about": "Om A2M Tech",
     "insights": "Insikter",
+    "cases": "Kundcase",
     "contact": "Kontakt",
     "bookMeeting": "Inled en dialog",
     "menu": "Meny",
@@ -82,6 +83,7 @@
     "procuring": "För upphandlande organisationer",
     "about": "Om A2M Tech",
     "insights": "Insikter",
+    "cases": "Kundcase",
     "contact": "Kontakt",
     "privacy": "Integritet",
     "cookies": "Cookies"
@@ -588,5 +590,27 @@
     "body": "Adressen finns inte eller har flyttats. Gå till startsidan eller välj en sida i menyn.",
     "home": "Till startsidan",
     "contact": "Kontakt"
+  },
+  "cases": {
+    "metaTitle": "Kundcase | A2M Tech",
+    "metaDescription": "Illustrativa kundcase som visar hur A2M Tech arbetar med dokumentation, modernisering och systemintegration. Ej faktiska kundreferenser.",
+    "banner": "Illustrativa kundcase – ej faktiska A2M Tech-referenser",
+    "bannerDetail": "Alla organisationer, uppdrag och resultat nedan är fiktiva designexempel. De presenteras aldrig som verkliga A2M Tech-kundrelationer.",
+    "pageTitle": "Kundcase",
+    "pageIntro": "Illustrativa scenarion som visar hur A2M Tech kan arbeta med dokumentation, modernisering och systemintegration i en offentlig eller verksamhetsnära kontext.",
+    "readCase": "Läs case →",
+    "backToAll": "← Alla kundcase",
+    "disclaimer": "Illustrativt exempel – inte en faktisk kundreferens.",
+    "disclaimer_long": "Alla organisationer, uppdrag och resultat i detta case är fiktiva designexempel. De presenteras aldrig som verkliga A2M Tech-kundrelationer eller faktiska prestationspåståenden.",
+    "sectionUtgangslage": "Utgångsläge",
+    "sectionUppdrag": "Uppdrag",
+    "sectionGenomforande": "Genomförande",
+    "sectionLeverans": "Leverans",
+    "sectionResultat": "Resultat",
+    "capabilitiesTitle": "Relevanta kompetenser",
+    "ctaTitle": "Diskutera ett liknande behov",
+    "ctaBody": "Har ni ett liknande uppdrag eller vill förstå hur A2M Tech kan bistå i er situation? Vi tar ett kort inledande samtal utan bindning.",
+    "ctaButton": "Ta kontakt",
+    "sector": "Sektor"
   }
 }

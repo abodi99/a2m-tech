@@ -10,7 +10,8 @@ export type NavItem = {
     | "contact"
     | "quality"
     | "partnership"
-    | "insights";
+    | "insights"
+    | "cases";
 };
 
 /** Compact primary nav per brief */
@@ -32,7 +33,7 @@ export const footerNav1: NavItem[] = [
 export const footerNav2: NavItem[] = [
   { href: "/for-procuring-organizations", key: "procuring" },
   { href: "/about", key: "about" },
-  { href: "/insights", key: "insights" },
+  { href: "/cases", key: "cases" },
   { href: "/contact", key: "contact" },
 ];
 

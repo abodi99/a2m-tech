@@ -66,6 +66,7 @@
     "procuring": "For procuring orgs",
     "about": "About A2M Tech",
     "insights": "Insights",
+    "cases": "Cases",
     "contact": "Contact",
     "bookMeeting": "Start a dialogue",
     "menu": "Menu",
@@ -82,6 +83,7 @@
     "procuring": "For procuring organizations",
     "about": "About A2M Tech",
     "insights": "Insights",
+    "cases": "Cases",
     "contact": "Contact",
     "privacy": "Privacy",
     "cookies": "Cookies"
@@ -588,5 +590,27 @@
     "body": "This address does not exist or has moved. Go to the home page or choose a page from the menu.",
     "home": "Go to home",
     "contact": "Contact"
+  },
+  "cases": {
+    "metaTitle": "Cases | A2M Tech",
+    "metaDescription": "Illustrative cases showing how A2M Tech works with documentation, modernisation and systems integration. Not actual client references.",
+    "banner": "Illustrative cases – not actual A2M Tech client references",
+    "bannerDetail": "All organisations, assignments and outcomes below are fictional design examples. They are never presented as real A2M Tech client relationships.",
+    "pageTitle": "Cases",
+    "pageIntro": "Illustrative scenarios showing how A2M Tech can work with documentation, modernisation and systems integration in a public-sector or business context.",
+    "readCase": "Read case →",
+    "backToAll": "← All cases",
+    "disclaimer": "Illustrative example – not an actual client reference.",
+    "disclaimer_long": "All organisations, assignments and outcomes in this case are fictional design examples. They are never presented as real A2M Tech client relationships or actual performance claims.",
+    "sectionUtgangslage": "Background",
+    "sectionUppdrag": "Assignment",
+    "sectionGenomforande": "Approach",
+    "sectionLeverans": "Delivery",
+    "sectionResultat": "Outcome",
+    "capabilitiesTitle": "Relevant capabilities",
+    "ctaTitle": "Discuss a similar need",
+    "ctaBody": "Do you have a similar assignment or want to understand how A2M Tech can assist in your situation? We are happy to have a brief initial conversation with no obligation.",
+    "ctaButton": "Get in touch",
+    "sector": "Sector"
   }
 }
